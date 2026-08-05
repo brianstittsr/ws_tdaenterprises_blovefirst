@@ -23,9 +23,9 @@ export async function POST(request: NextRequest) {
     } = body;
 
     // Validate required fields
-    if (!accountId || !["legacy83", "gmail"].includes(accountId)) {
+    if (!accountId || !["tda", "bluv"].includes(accountId)) {
       return NextResponse.json(
-        { error: "Invalid account ID. Must be 'legacy83' or 'gmail'" },
+        { error: "Invalid account ID. Must be 'tda' or 'bluv'" },
         { status: 400 }
       );
     }

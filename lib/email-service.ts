@@ -1,10 +1,10 @@
 /**
  * SMTP Email Service
- * 
+ *
  * Provides email sending capabilities via SMTP for:
- * - info@legacy83business.com
- * - williamsicy@gmail.com
- * 
+ * - info@tdaenterprises.com (TDA Enterprises)
+ * - blovefoundation@yahoo.com (BLUV First / B Love Foundation, Inc.)
+ *
  * Uses nodemailer for SMTP transport
  */
 
@@ -50,34 +50,34 @@ export interface SendEmailResult {
 
 // Pre-configured email accounts
 export const EMAIL_ACCOUNTS: Record<string, Omit<EmailAccount, "password">> = {
-  legacy83: {
-    id: "legacy83",
-    name: "Legacy 83 Business",
-    email: "info@legacy83business.com",
-    smtpHost: process.env.LEGACY83_SMTP_HOST || "smtp.office365.com",
-    smtpPort: parseInt(process.env.LEGACY83_SMTP_PORT || "587"),
-    secure: process.env.LEGACY83_SMTP_SECURE === "true",
-    user: process.env.LEGACY83_SMTP_USER || "info@legacy83business.com",
+  tda: {
+    id: "tda",
+    name: "TDA Enterprises",
+    email: "info@tdaenterprises.com",
+    smtpHost: process.env.TDA_SMTP_HOST || "smtp.office365.com",
+    smtpPort: parseInt(process.env.TDA_SMTP_PORT || "587"),
+    secure: process.env.TDA_SMTP_SECURE === "true",
+    user: process.env.TDA_SMTP_USER || "info@tdaenterprises.com",
   },
-  gmail: {
-    id: "gmail",
-    name: "Icy Williams Gmail",
-    email: "williamsicy@gmail.com",
-    smtpHost: process.env.GMAIL_SMTP_HOST || "smtp.gmail.com",
-    smtpPort: parseInt(process.env.GMAIL_SMTP_PORT || "587"),
-    secure: process.env.GMAIL_SMTP_SECURE === "true",
-    user: process.env.GMAIL_SMTP_USER || "williamsicy@gmail.com",
+  bluv: {
+    id: "bluv",
+    name: "BLUV First",
+    email: "blovefoundation@yahoo.com",
+    smtpHost: process.env.BLUV_SMTP_HOST || "smtp.gmail.com",
+    smtpPort: parseInt(process.env.BLUV_SMTP_PORT || "587"),
+    secure: process.env.BLUV_SMTP_SECURE === "true",
+    user: process.env.BLUV_SMTP_USER || "blovefoundation@yahoo.com",
   },
 };
 
 /**
  * Create a nodemailer transporter for a specific account
  */
-function createTransporter(accountId: "legacy83" | "gmail"): nodemailer.Transporter {
+function createTransporter(accountId: "tda" | "bluv"): nodemailer.Transporter {
   const account = EMAIL_ACCOUNTS[accountId];
-  const password = accountId === "legacy83" 
-    ? process.env.LEGACY83_SMTP_PASSWORD 
-    : process.env.GMAIL_SMTP_PASSWORD;
+  const password = accountId === "tda"
+    ? process.env.TDA_SMTP_PASSWORD
+    : process.env.BLUV_SMTP_PASSWORD;
 
   if (!password) {
     throw new Error(`SMTP password not configured for ${accountId}`);
@@ -101,7 +101,7 @@ function createTransporter(accountId: "legacy83" | "gmail"): nodemailer.Transpor
  * Send an email using a specific account
  */
 export async function sendEmail(
-  accountId: "legacy83" | "gmail",
+  accountId: "tda" | "bluv",
   message: EmailMessage
 ): Promise<SendEmailResult> {
   try {
@@ -151,23 +151,23 @@ export async function sendEmail(
 }
 
 /**
- * Send email from Legacy 83 Business account
+ * Send email from TDA Enterprises account
  */
-export async function sendFromLegacy83(message: EmailMessage): Promise<SendEmailResult> {
-  return sendEmail("legacy83", message);
+export async function sendFromTDA(message: EmailMessage): Promise<SendEmailResult> {
+  return sendEmail("tda", message);
 }
 
 /**
- * Send email from Gmail account
+ * Send email from BLUV First account
  */
-export async function sendFromGmail(message: EmailMessage): Promise<SendEmailResult> {
-  return sendEmail("gmail", message);
+export async function sendFromBLUV(message: EmailMessage): Promise<SendEmailResult> {
+  return sendEmail("bluv", message);
 }
 
 /**
  * Verify SMTP connection for an account
  */
-export async function verifyConnection(accountId: "legacy83" | "gmail"): Promise<boolean> {
+export async function verifyConnection(accountId: "tda" | "bluv"): Promise<boolean> {
   try {
     const transporter = createTransporter(accountId);
     await transporter.verify();
@@ -182,7 +182,7 @@ export async function verifyConnection(accountId: "legacy83" | "gmail"): Promise
  * Send a templated notification email
  */
 export async function sendNotificationEmail(
-  accountId: "legacy83" | "gmail",
+  accountId: "tda" | "bluv",
   to: string | string[],
   subject: string,
   content: string,
@@ -208,7 +208,7 @@ export async function sendNotificationEmail(
               <!-- Header -->
               <tr>
                 <td style="padding: 30px 40px; background-color: #1e293b; border-radius: 8px 8px 0 0;">
-                  <h1 style="margin: 0; color: #f59e0b; font-size: 24px;">Legacy 83 Business</h1>
+                  <h1 style="margin: 0; color: #f59e0b; font-size: 24px;">TDA Enterprises | BLUV First</h1>
                 </td>
               </tr>
               <!-- Content -->
@@ -231,10 +231,10 @@ export async function sendNotificationEmail(
               <tr>
                 <td style="padding: 20px 40px; background-color: #f8fafc; border-radius: 0 0 8px 8px; border-top: 1px solid #e2e8f0;">
                   <p style="margin: 0; color: #94a3b8; font-size: 12px;">
-                    ${options?.footerText || "This email was sent from Legacy 83 Business. Please do not reply directly to this email."}
+                    ${options?.footerText || "This email was sent from TDA Enterprises | BLUV First. Please do not reply directly to this email."}
                   </p>
                   <p style="margin: 10px 0 0; color: #94a3b8; font-size: 12px;">
-                    © ${new Date().getFullYear()} Legacy 83 Business Inc. All rights reserved.
+                    © ${new Date().getFullYear()} TDA Enterprises / B Love Foundation, Inc. All rights reserved.
                   </p>
                 </td>
               </tr>
@@ -258,7 +258,7 @@ export async function sendNotificationEmail(
  * Send a meeting invitation email
  */
 export async function sendMeetingInvitation(
-  accountId: "legacy83" | "gmail",
+  accountId: "tda" | "bluv",
   to: string | string[],
   meetingDetails: {
     title: string;

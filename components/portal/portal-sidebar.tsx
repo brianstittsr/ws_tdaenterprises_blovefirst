@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import NextImage from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { auth, db } from "@/lib/firebase";
 import { isSuperAdmin } from "@/lib/permissions";
@@ -157,8 +156,8 @@ const adminItems: { title: string; href: string; icon: React.ElementType; badge?
   },
 ];
 
-// Legacy 83 Business
-const legacy83BusinessItems: { title: string; href: string; icon: React.ElementType; badge?: string; featureKey: FeatureKey }[] = [
+// Platform
+const platformItems: { title: string; href: string; icon: React.ElementType; badge?: string; featureKey: FeatureKey }[] = [
   {
     title: "Bug Tracker",
     href: "/portal/bug-tracker",
@@ -424,7 +423,7 @@ export function PortalSidebar() {
     affiliateCenter: false,
     content: false,
     admin: false,
-    legacy83Business: true,
+    platform: true,
   });
 
   const toggleSection = (section: keyof typeof openSections) => {
@@ -502,13 +501,10 @@ export function PortalSidebar() {
     <Sidebar>
       <SidebarHeader className="border-b border-sidebar-border">
         <Link href="/portal" className="flex items-center gap-2 px-2 py-4">
-          <NextImage
-            src="/legacy83Logo.webp"
-            alt="Legacy 83 Business Inc"
-            width={160}
-            height={53}
-            className="h-10 w-auto"
-          />
+          <div className="h-9 w-9 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold">
+            SV+
+          </div>
+          <span className="font-bold text-sidebar-foreground">SV+ Platform</span>
         </Link>
       </SidebarHeader>
 
@@ -522,13 +518,13 @@ export function PortalSidebar() {
           </div>
         )}
 
-        {/* Legacy 83 Business */}
-        <Collapsible open={openSections.legacy83Business} onOpenChange={() => toggleSection("legacy83Business")}>
+        {/* Platform */}
+        <Collapsible open={openSections.platform} onOpenChange={() => toggleSection("platform")}>
           <SidebarGroup>
             <CollapsibleTrigger asChild>
               <SidebarGroupLabel className="cursor-pointer hover:bg-sidebar-accent/50 rounded-md flex items-center justify-between pr-2">
-                <span>Legacy 83 Business</span>
-                {openSections.legacy83Business ? (
+                <span>Platform</span>
+                {openSections.platform ? (
                   <ChevronDown className="h-4 w-4 text-sidebar-foreground/60" />
                 ) : (
                   <ChevronRight className="h-4 w-4 text-sidebar-foreground/60" />
@@ -538,7 +534,7 @@ export function PortalSidebar() {
             <CollapsibleContent>
               <SidebarGroupContent>
                 <SidebarMenu>
-                  {legacy83BusinessItems.filter(item => canSeeFeature(item.featureKey)).map((item) => (
+                  {platformItems.filter((item: typeof platformItems[number]) => canSeeFeature(item.featureKey)).map((item: typeof platformItems[number]) => (
                     <SidebarMenuItem key={item.href}>
                       <SidebarMenuButton
                         asChild

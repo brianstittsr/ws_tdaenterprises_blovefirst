@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-const INTERNAL_NOTIFY_EMAIL = "info@legacy83business.com";
-const CC_EMAIL = "brianstittsr@gmail.com";
-const FROM_EMAIL = process.env.GMAIL_SMTP_USER || "bookings@legacy83business.com";
+const INTERNAL_NOTIFY_EMAIL = process.env.TDA_SMTP_USER || "info@tdaenterprises.com";
+const CC_EMAIL = process.env.BLUV_SMTP_USER || "blovefoundation@yahoo.com";
+const FROM_EMAIL = process.env.TDA_SMTP_USER || "info@tdaenterprises.com";
 
 interface BugTrackerNotificationRequest {
   id: string;
@@ -59,11 +59,11 @@ export async function POST(request: NextRequest) {
       resolvedAt,
     } = body;
 
-    const gmailUser = process.env.GMAIL_SMTP_USER;
-    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
+    const tdaUser = process.env.TDA_SMTP_USER;
+    const tdaPassword = process.env.TDA_SMTP_PASSWORD;
 
-    if (!gmailUser || !gmailAppPassword) {
-      console.error("Gmail SMTP credentials not configured — bug tracker notification not sent");
+    if (!tdaUser || !tdaPassword) {
+      console.error("TDA_SMTP_USER or TDA_SMTP_PASSWORD not configured — bug tracker notification not sent");
       return NextResponse.json(
         { error: "Email credentials not configured", success: false },
         { status: 500 }
@@ -71,12 +71,12 @@ export async function POST(request: NextRequest) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: process.env.GMAIL_SMTP_HOST || "smtp.gmail.com",
-      port: Number(process.env.GMAIL_SMTP_PORT) || 587,
+      host: process.env.TDA_SMTP_HOST || "smtp.office365.com",
+      port: Number(process.env.TDA_SMTP_PORT) || 587,
       secure: false,
       auth: {
-        user: gmailUser,
-        pass: gmailAppPassword,
+        user: tdaUser,
+        pass: tdaPassword,
       },
     });
 
@@ -203,7 +203,7 @@ export async function POST(request: NextRequest) {
     const subject = `Bug Tracker: ${typeLabel} Resolved - ${title}`;
 
     await transporter.sendMail({
-      from: `"Legacy 83 Business" <${gmailUser}>`,
+      from: `"TDA Enterprises | BLUV First" <${tdaUser}>`,
       to: INTERNAL_NOTIFY_EMAIL,
       cc: CC_EMAIL,
       subject,

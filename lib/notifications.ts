@@ -209,7 +209,7 @@ export async function showBrowserNotification(
   
   new Notification(`${icon} ${title}`, {
     body: message,
-    icon: "/legacy83Logo.webp",
+    icon: "/icons/icon-192x192.svg",
     tag: eventType,
   });
   

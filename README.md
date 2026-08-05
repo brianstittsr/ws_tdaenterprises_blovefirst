@@ -1,10 +1,10 @@
 # Strategic Value+ Platform
 
-A modern **Next.js 16** application serving as both a **marketing website** and an **intelligent business orchestration platform** for Strategic Value Plus (Legacy83 Business).
+A modern **Next.js 16** application serving as both a **dual-brand marketing website** and an **intelligent business orchestration platform** for TDA Enterprises and BLUV First (B Love Foundation, Inc.).
 
 ## Overview
 
-Strategic Value+ helps small- and mid-sized U.S. manufacturers (25-500 employees) win OEM contracts through supplier qualification, ISO certification, and operational readiness.
+This platform powers two brands: **TDA Enterprises** (professional environmental, health, and safety services) and **BLUV First** (faith-based nonprofit community outreach).
 
 This platform unifies:
 - **Marketing Website** - Lead capture, service showcase, event promotion
@@ -52,13 +52,25 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 svp-platform/
 ├── app/
 │   ├── (marketing)/          # Public marketing pages
-│   │   ├── page.tsx          # Homepage with Hero Carousel
-│   │   ├── about/
-│   │   ├── contact/
+│   │   ├── page.tsx          # Brand selector (TDA Enterprises | BLUV First)
+│   │   ├── business/         # TDA Enterprises EHS site
+│   │   │   ├── page.tsx
+│   │   │   ├── about/
+│   │   │   ├── services/
+│   │   │   ├── training/
+│   │   │   ├── industries/
+│   │   │   ├── case-studies/
+│   │   │   ├── free-assessment/
+│   │   │   └── contact/
+│   │   ├── foundation/       # BLUV First nonprofit site
+│   │   │   ├── page.tsx
+│   │   │   ├── about/
+│   │   │   ├── programs/
+│   │   │   ├── events/
+│   │   │   ├── give-love/
+│   │   │   ├── community-partners/
+│   │   │   └── contact/
 │   │   ├── academy/          # LMS public pages
-│   │   │   ├── cart/         # Shopping cart
-│   │   │   ├── courses/      # Course catalog
-│   │   │   └── checkout/     # Stripe checkout
 │   │   ├── events/           # Event listings & ticketing
 │   │   └── ...
 │   ├── (portal)/             # Authenticated portal
@@ -96,11 +108,11 @@ svp-platform/
 ## Key Features
 
 ### Marketing Website
-- **Homepage** with dynamic Hero Carousel (admin-managed)
-- **Service Pages** for V+ EDGE, TwinEDGE, IntellEDGE
-- **Contact Form** with lead capture
-- **About Page** with team and mission
-- **Events** with Stripe ticketing integration
+- **Brand Selector Homepage** routing visitors to TDA Enterprises or BLUV First
+- **TDA Enterprises Site** — EHS services, training, industries, case studies, and free safety assessment
+- **BLUV First Site** — nonprofit programs, events, giving, community partners, and contact
+- **Dual-brand Navbar/Footer** with brand-specific color themes and navigation
+- **Image Manager** backend for WebP conversion and Image Library storage
 
 ### Academy / LMS
 - **Course Catalog** - Browse and purchase courses
@@ -257,9 +269,10 @@ Configure Stripe in: `Portal → Settings → Integrations → Stripe`
 
 ## License
 
-Proprietary - Strategic Value+ Solutions (Legacy83 Business)
+Proprietary - TDA Enterprises / B Love Foundation, Inc.
 
 ## Contact
 
-- Website: [legacy83.com](https://legacy83.com)
-- Email: info@legacy83.com
+- Website: [tdaenterprises.com](https://tdaenterprises.com) | [blovefirst.org](https://blovefirst.org)
+- Email: info@tdaenterprises.com | blovefoundation@yahoo.com
+- Phone: 615-673-4323

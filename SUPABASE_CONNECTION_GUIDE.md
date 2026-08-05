@@ -1,6 +1,6 @@
 # Connecting Your Application to Supabase
 
-This guide shows you how to connect your Legacy83 application to your Supabase instance on EasyPanel.
+This guide shows you how to connect the SV+ Platform to your Supabase instance on EasyPanel.
 
 ---
 
@@ -9,7 +9,7 @@ This guide shows you how to connect your Legacy83 application to your Supabase i
 Before connecting, you need:
 
 1. ✅ Supabase instance running on EasyPanel
-2. ✅ Legacy83 schema deployed (tables created)
+2. ✅ `legacy83` schema deployed (tables created)
 3. ✅ Database credentials from EasyPanel
 4. ✅ Supabase API keys
 
@@ -468,4 +468,4 @@ DATABASE_URL=postgresql://postgres:password@your-domain.com:5432/postgres
 
 **Your application is now connected to Supabase!** 🎉
 
-Use the `supabase` client in your components and `supabaseAdmin` in API routes to interact with your Legacy83 database.
+Use the `supabase` client in your components and `supabaseAdmin` in API routes to interact with your platform database.

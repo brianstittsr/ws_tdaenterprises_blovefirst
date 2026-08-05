@@ -397,7 +397,7 @@ export default function QuizResultsPage() {
                 </Button>
 
                 <p className="text-xs text-gray-500 text-center">
-                  By submitting, you agree to receive your results and occasional insights from Legacy 83. 
+                  By submitting, you agree to receive your results and occasional insights from TDA Enterprises and BLUV First. 
                   We respect your privacy and will never spam you.
                 </p>
               </form>
@@ -546,8 +546,8 @@ export default function QuizResultsPage() {
               Ready to Build Your Legacy?
             </h2>
             <p className="text-amber-100 mb-6 max-w-xl mx-auto">
-              Schedule a free 30-minute strategy call with Icy Williams to discuss your results 
-              and create a personalized action plan for your business.
+              Schedule a free 30-minute strategy call with our team to discuss your results
+              and create a personalized action plan for your business or community.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button

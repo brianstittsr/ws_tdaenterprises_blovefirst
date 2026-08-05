@@ -1,6 +1,6 @@
 /**
- * Target Company Types for Legacy 83 Business
- * 
+ * Target Company Types for the SV+ Platform
+ *
  * These types define the structure for prospect/target company management
  */
 

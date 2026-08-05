@@ -98,7 +98,7 @@ const pastWorkshops = [
   {
     id: "p2",
     title: "Hiring A-Players Workshop",
-    description: "Learn the Legacy 83 method for attracting and hiring top talent.",
+    description: "Learn the SV+ Platform method for attracting and hiring top talent.",
     date: "December 8, 2024",
     duration: "2 hours",
     type: "recorded",

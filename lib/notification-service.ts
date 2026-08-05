@@ -183,7 +183,7 @@ export async function showBrowserNotification(
 
   const notification = new Notification(title, {
     body: message,
-    icon: options?.icon || "/legacy83Logo.webp",
+    icon: options?.icon || "/icons/icon-192x192.svg",
     tag: options?.tag,
   });
 

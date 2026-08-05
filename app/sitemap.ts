@@ -1,54 +1,48 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://legacy83business.com";
+  const baseUrl = "https://tdaenterprises.com";
 
   // Static pages
   const staticPages = [
     "",
-    "/about",
-    "/company",
-    "/leadership",
-    "/contact",
-    "/services",
-    "/v-edge",
-    "/v-edge/quality",
-    "/v-edge/reshore",
-    "/twinedge",
-    "/intelledge",
-    "/affiliates",
-    "/case-studies",
-    "/resources",
-    "/resources/blog",
-    "/resources/guides",
-    "/resources/webinars",
-    "/events",
-    "/faq",
-    "/news",
-    "/careers",
+    "/business",
+    "/business/about",
+    "/business/services",
+    "/business/training",
+    "/business/industries",
+    "/business/case-studies",
+    "/business/free-assessment",
+    "/business/contact",
+    "/foundation",
+    "/foundation/about",
+    "/foundation/programs",
+    "/foundation/events",
+    "/foundation/give-love",
+    "/foundation/community-partners",
+    "/foundation/contact",
     "/privacy",
     "/terms",
-    "/cookies",
     "/accessibility",
-    "/legacy-journal",
-    "/schedule-a-call",
-    "/quiz",
-    "/quiz-intro",
   ];
 
   const staticSitemap: MetadataRoute.Sitemap = staticPages.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: route === "" ? "daily" : "weekly",
-    priority: route === "" ? 1 : route.startsWith("/v-edge") || route.startsWith("/twinedge") || route.startsWith("/intelledge") ? 0.9 : 0.8,
+    priority: route === "" ? 1 : route.startsWith("/business") || route.startsWith("/foundation") ? 0.9 : 0.8,
   }));
 
   // Service pages with higher priority
   const servicePages = [
-    { url: `${baseUrl}/services/supplier-readiness`, priority: 0.9 },
-    { url: `${baseUrl}/services/iso-certification`, priority: 0.9 },
-    { url: `${baseUrl}/services/digital-transformation`, priority: 0.9 },
-    { url: `${baseUrl}/services/lean-manufacturing`, priority: 0.9 },
+    { url: `${baseUrl}/business/services/osha-training`, priority: 0.9 },
+    { url: `${baseUrl}/business/services/safety-audits`, priority: 0.9 },
+    { url: `${baseUrl}/business/services/program-development`, priority: 0.9 },
+    { url: `${baseUrl}/business/services/equipment-inspection`, priority: 0.9 },
+    { url: `${baseUrl}/foundation/programs/youth-enrichment`, priority: 0.9 },
+    { url: `${baseUrl}/foundation/programs/occupational-empowerment`, priority: 0.9 },
+    { url: `${baseUrl}/foundation/programs/supportive-services`, priority: 0.9 },
+    { url: `${baseUrl}/foundation/programs/environmental-health-safety`, priority: 0.9 },
   ];
 
   const serviceSitemap: MetadataRoute.Sitemap = servicePages.map((page) => ({
@@ -58,25 +52,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: page.priority,
   }));
 
-  // Blog article pages
-  const blogArticles = [
-    { slug: "5-signs-business-would-collapse-without-you", priority: 0.8 },
-    { slug: "succession-planning-checklist", priority: 0.8 },
-    { slug: "build-leadership-team-you-can-trust", priority: 0.8 },
-    { slug: "exit-strategy-sell-transition-close", priority: 0.8 },
-    { slug: "90-day-business-transformation-blueprint", priority: 0.8 },
-    { slug: "why-most-business-coaches-fail", priority: 0.8 },
-    { slug: "founder-to-ceo-mindset-shift", priority: 0.8 },
-    { slug: "building-business-that-outlives-you", priority: 0.8 },
-    { slug: "hidden-cost-being-indispensable", priority: 0.8 },
-  ];
-
-  const blogSitemap: MetadataRoute.Sitemap = blogArticles.map((article) => ({
-    url: `${baseUrl}/legacy-journal/${article.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: article.priority,
-  }));
-
-  return [...staticSitemap, ...serviceSitemap, ...blogSitemap];
+  return [...staticSitemap, ...serviceSitemap];
 }

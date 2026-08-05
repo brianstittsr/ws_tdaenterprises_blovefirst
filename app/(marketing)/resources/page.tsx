@@ -6,9 +6,9 @@ import { Badge } from "@/components/ui/badge";
 import { BookOpen, Video, FileText, Download, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Resources | Legacy 83 Business",
+  title: "Resources | SV+ Platform",
   description:
-    "Free resources, guides, and tools to help you build a lasting business legacy. Download our playbooks, read articles, and watch educational content.",
+    "Free resources, guides, and tools from TDA Enterprises and BLUV First. Download playbooks, read articles, and watch educational content.",
 };
 
 const resources = [

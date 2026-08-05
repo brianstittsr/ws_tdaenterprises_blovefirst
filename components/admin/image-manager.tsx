@@ -49,6 +49,7 @@ import {
   FileImage,
   RefreshCw,
 } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
 import {
   uploadImage,
   listImages,
@@ -91,6 +92,7 @@ function ImageUploadForm({ onSuccess, onCancel }: ImageUploadFormProps) {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState<ImageCategory>("other");
   const [tags, setTags] = useState("");
+  const [useWebp, setUseWebp] = useState(true);
   const [uploading, setUploading] = useState(false);
   const [compressing, setCompressing] = useState(false);
 
@@ -106,10 +108,11 @@ function ImageUploadForm({ onSuccess, onCancel }: ImageUploadFormProps) {
 
     // If file is too large, offer to compress
     const MAX_SIZE = 1 * 1024 * 1024; // 1MB
-    if (selectedFile.size > MAX_SIZE) {
+    const format = useWebp ? "image/webp" : "image/jpeg";
+    if (selectedFile.size > MAX_SIZE || useWebp) {
       setCompressing(true);
       try {
-        const compressed = await compressImage(selectedFile, 1200, 0.8);
+        const compressed = await compressImage(selectedFile, 1200, 0.8, format);
         if (compressed.size > MAX_SIZE) {
           toast.error("Image is too large even after compression. Please use a smaller image.");
           setCompressing(false);
@@ -117,7 +120,7 @@ function ImageUploadForm({ onSuccess, onCancel }: ImageUploadFormProps) {
         }
         setFile(compressed);
         setPreview(URL.createObjectURL(compressed));
-        toast.success("Image compressed successfully");
+        toast.success(`Image compressed${useWebp ? " to WebP" : ""} successfully`);
       } catch (error) {
         toast.error("Failed to compress image");
         console.error(error);
@@ -184,6 +187,19 @@ function ImageUploadForm({ onSuccess, onCancel }: ImageUploadFormProps) {
             Compressing image...
           </p>
         )}
+      </div>
+
+      <div className="flex items-center justify-between rounded-lg border p-3">
+        <div className="space-y-0.5">
+          <Label htmlFor="image-webp-toggle" className="text-sm">Convert to WebP</Label>
+          <p className="text-xs text-muted-foreground">Smaller files, faster loads</p>
+        </div>
+        <Switch
+          id="image-webp-toggle"
+          checked={useWebp}
+          onCheckedChange={setUseWebp}
+          disabled={uploading || compressing}
+        />
       </div>
 
       {preview && (

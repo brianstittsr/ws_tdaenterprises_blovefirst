@@ -18,9 +18,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Core Team",
+  title: "Core Team | SV+ Platform",
   description:
-    "Meet the Legacy 83 team - veteran experts with complementary expertise in business consulting, finance, international business, and technology.",
+    "Meet the SV+ Platform team - experts behind TDA Enterprises and BLUV First with complementary expertise in EHS consulting, community programs, and technology.",
 };
 
 const expertiseAreas = [

@@ -13,7 +13,7 @@ export default function SetupUserPage() {
   const [result, setResult] = useState<any>(null);
   const { linkedTeamMember, refreshLinkedTeamMember } = useUserProfile();
 
-  const setupIcyWilliams = async () => {
+  const setupAdministrator = async () => {
     if (!db) {
       toast.error("Firebase not initialized");
       return;
@@ -21,12 +21,12 @@ export default function SetupUserPage() {
 
     setLoading(true);
     try {
-      const ICY_EMAIL = "info@legacy83business.com";
+      const ADMIN_EMAIL = "info@tdaenterprises.com";
       const now = Timestamp.now();
 
       // Check if there's already a team member with this email
       const teamMembersRef = collection(db, "teamMembers");
-      const teamMemberQuery = query(teamMembersRef, where("emailPrimary", "==", ICY_EMAIL));
+      const teamMemberQuery = query(teamMembersRef, where("emailPrimary", "==", ADMIN_EMAIL));
       const teamMemberSnapshot = await getDocs(teamMemberQuery);
 
       let teamMemberId: string | null = null;
@@ -41,8 +41,8 @@ export default function SetupUserPage() {
         
         // Update existing team member with superadmin role AND name
         await updateDoc(existingTeamMember.ref, {
-          firstName: "Icy",
-          lastName: "Williams",
+          firstName: "Platform",
+          lastName: "Administrator",
           role: "superadmin",
           updatedAt: now,
         });
@@ -55,9 +55,9 @@ export default function SetupUserPage() {
         
         await setDoc(newTeamMemberRef, {
           id: teamMemberId,
-          emailPrimary: ICY_EMAIL,
-          firstName: "Icy",
-          lastName: "Williams",
+          emailPrimary: ADMIN_EMAIL,
+          firstName: "Platform",
+          lastName: "Administrator",
           expertise: "",
           role: "superadmin",
           status: "active",
@@ -71,10 +71,10 @@ export default function SetupUserPage() {
         const userRef = doc(db, "users", firebaseUid);
         await setDoc(userRef, {
           id: firebaseUid,
-          email: ICY_EMAIL,
-          firstName: "Icy",
-          lastName: "Williams",
-          displayName: "Icy Williams",
+          email: ADMIN_EMAIL,
+          firstName: "Platform",
+          lastName: "Administrator",
+          displayName: "Platform Administrator",
           role: "superadmin",
           status: "active",
           createdAt: now,
@@ -88,14 +88,14 @@ export default function SetupUserPage() {
 
       setResult({
         success: true,
-        email: ICY_EMAIL,
+        email: ADMIN_EMAIL,
         teamMemberId,
         firebaseUid: firebaseUid || "Not linked yet - sign out and sign back in",
         role: "superadmin",
         previousData: currentData,
       });
 
-      toast.success("Icy Williams setup complete! Please sign out and sign back in to see changes.");
+      toast.success("Platform Administrator setup complete! Please sign out and sign back in to see changes.");
     } catch (error) {
       console.error("Error setting up user:", error);
       toast.error("Failed to setup user: " + String(error));
@@ -111,7 +111,7 @@ export default function SetupUserPage() {
         <CardHeader>
           <CardTitle>Setup Admin User</CardTitle>
           <CardDescription>
-            Create User document for Icy Williams and link to authentication
+            Create User document for the Platform Administrator and link to authentication
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -131,18 +131,18 @@ export default function SetupUserPage() {
           <div className="p-4 bg-muted rounded-lg">
             <p className="font-medium">Will Update To:</p>
             <ul className="mt-2 space-y-1 text-sm">
-              <li><strong>Name:</strong> Icy Williams</li>
-              <li><strong>Email:</strong> info@legacy83business.com</li>
+              <li><strong>Name:</strong> Platform Administrator</li>
+              <li><strong>Email:</strong> info@tdaenterprises.com</li>
               <li><strong>Role:</strong> Admin</li>
             </ul>
           </div>
 
           <Button 
-            onClick={setupIcyWilliams} 
+            onClick={setupAdministrator} 
             disabled={loading}
             className="w-full"
           >
-            {loading ? "Setting up..." : "Create/Update Icy Williams as Admin"}
+            {loading ? "Setting up..." : "Create/Update Platform Administrator"}
           </Button>
 
           {result && (

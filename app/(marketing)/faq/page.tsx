@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "FAQ | Legacy 83 Business",
+  title: "FAQ | SV+ Platform",
   description:
-    "Frequently asked questions about Legacy 83 Business coaching services, the G.R.O.W.S. framework, pricing, and how we help business owners build lasting legacies.",
+    "Frequently asked questions about the SV+ Platform, TDA Enterprises, BLUV First, services, programs, and how we help businesses and communities grow safely.",
 };
 
 const faqCategories = [

@@ -2,14 +2,14 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Legacy 83 Business Inc | Business Growth & Transformation",
-    short_name: "Legacy 83",
+    name: "TDA Enterprises | BLUV First",
+    short_name: "TDA | BLUV",
     description:
-      "We help businesses grow, optimize operations, and achieve strategic goals through expert consulting, technology, and business development solutions.",
+      "TDA Enterprises provides professional EHS services. BLUV First (B Love Foundation, Inc.) offers faith-based community outreach and empowerment programs.",
     start_url: "/",
     display: "standalone",
-    background_color: "#000000",
-    theme_color: "#37ca37",
+    background_color: "#f8fafc",
+    theme_color: "#1e40af",
     orientation: "portrait-primary",
     icons: [
       {
@@ -25,9 +25,9 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: "any",
       },
       {
-        src: "/legacy83Logo.webp",
+        src: "/icons/icon-192x192.svg",
         sizes: "any",
-        type: "image/webp",
+        type: "image/svg+xml",
       },
     ],
     categories: ["business", "productivity"],

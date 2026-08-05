@@ -15,37 +15,37 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://legacy83business.com"),
+  metadataBase: new URL("https://tdaenterprises.com"),
   title: {
-    default: "Legacy 83 Business | Build Wealth. Inspire Teams. Leave a Legacy.",
-    template: "%s | Legacy 83 Business",
+    default: "TDA Enterprises | BLUV First — Empowering Safety. Transforming Lives.",
+    template: "%s | TDA Enterprises",
   },
   description:
-    "Legacy 83 Business helps entrepreneurs and business owners build sustainable wealth, develop high-performing teams, and create lasting legacies through strategic coaching and the G.R.O.W.S. framework.",
+    "TDA Enterprises provides professional environmental, health, and safety services. BLUV First (B Love Foundation, Inc.) offers faith-based community outreach, youth enrichment, and occupational empowerment.",
   keywords: [
-    "business coaching",
-    "executive coaching",
-    "leadership development",
-    "strategic planning",
-    "business succession",
-    "legacy planning",
-    "operational excellence",
-    "team development",
-    "business growth",
-    "entrepreneur coaching",
-    "wealth building",
-    "business transformation",
+    "TDA Enterprises",
+    "BLUV First",
+    "B Love Foundation",
+    "EHS services",
+    "OSHA training",
+    "safety audits",
+    "workplace safety",
+    "environmental health and safety",
+    "nonprofit outreach",
+    "youth enrichment",
+    "occupational empowerment",
+    "community outreach",
   ],
-  authors: [{ name: "Legacy 83 Business Inc", url: "https://legacy83business.com" }],
-  creator: "Legacy 83 Business Inc",
-  publisher: "Legacy 83 Business Inc",
+  authors: [{ name: "TDA Enterprises / BLUV First", url: "https://blovefirst.org" }],
+  creator: "TDA Enterprises / BLUV First",
+  publisher: "TDA Enterprises / BLUV First",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   alternates: {
-    canonical: "https://legacy83business.com",
+    canonical: "https://tdaenterprises.com",
   },
   robots: {
     index: true,
@@ -61,32 +61,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://legacy83business.com",
-    siteName: "Legacy 83 Business",
-    title: "Legacy 83 Business | Build Wealth. Inspire Teams. Leave a Legacy.",
+    url: "https://tdaenterprises.com",
+    siteName: "TDA Enterprises | BLUV First",
+    title: "TDA Enterprises | BLUV First — Empowering Safety. Transforming Lives.",
     description:
-      "Legacy 83 Business helps entrepreneurs and business owners build sustainable wealth, develop high-performing teams, and create lasting legacies through strategic coaching and the G.R.O.W.S. framework.",
-    images: [
-      {
-        url: "/legacy83Logo.webp",
-        width: 1200,
-        height: 630,
-        alt: "Legacy 83 Business - Build Wealth. Inspire Teams. Leave a Legacy.",
-      },
-    ],
+      "TDA Enterprises provides professional environmental, health, and safety services. BLUV First offers faith-based community outreach, youth enrichment, and occupational empowerment.",
+    images: [],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Legacy 83 Business | Build Wealth. Inspire Teams. Leave a Legacy.",
+    title: "TDA Enterprises | BLUV First",
     description:
-      "Legacy 83 Business helps entrepreneurs and business owners build sustainable wealth, develop high-performing teams, and create lasting legacies through strategic coaching and the G.R.O.W.S. framework.",
-    images: ["/legacy83Logo.webp"],
-    creator: "@legacy83business",
+      "TDA Enterprises provides professional environmental, health, and safety services. BLUV First offers faith-based community outreach.",
+    creator: "@tdaentrprz",
   },
   verification: {
     google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
   },
   category: "business",
 };

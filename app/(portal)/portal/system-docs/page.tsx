@@ -433,7 +433,7 @@ const systemDocumentation: FeatureDoc[] = [
     title: "Academy Admin",
     category: "Admin",
     icon: GraduationCap,
-    description: "Manage the Legacy 83 Academy learning management system. Create courses, manage enrollments, and track progress.",
+    description: "Manage the SV+ Platform Academy learning management system. Create courses, manage enrollments, and track progress.",
     features: [
       "Course creation and management",
       "Lesson and module organization",

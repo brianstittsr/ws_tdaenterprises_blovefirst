@@ -1,5 +1,8 @@
-import { Legacy83Navbar } from "@/components/shared/legacy83-navbar";
-import { Legacy83Footer } from "@/components/shared/legacy83-footer";
+"use client";
+
+import { usePathname } from "next/navigation";
+import { BrandNavbar } from "@/components/shared/brand-navbar";
+import { BrandFooter } from "@/components/shared/brand-footer";
 import { ContactPopup } from "@/components/marketing/contact-popup";
 import { EventCartProvider } from "@/contexts/event-cart-context";
 import { CourseCartProvider } from "@/contexts/course-cart-context";
@@ -13,12 +16,15 @@ export default function MarketingLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const brandClass = pathname.startsWith("/foundation") ? "brand-bluv" : "brand-tda";
+
   return (
     <UserProfileProvider>
       <CartProvider>
         <EventCartProvider>
           <CourseCartProvider>
-            <div className="flex min-h-screen flex-col">
+            <div className={`flex min-h-screen flex-col ${brandClass}`}>
               <Script
                 src="https://widgets.leadconnectorhq.com/loader.js"
                 data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
@@ -26,12 +32,12 @@ export default function MarketingLayout({
                 data-source="WEB_USER"
                 strategy="afterInteractive"
               />
-              <Legacy83Navbar />
+              <BrandNavbar />
               {/* Main content landmark with skip link target - WCAG 2.4.1 */}
               <main id="main-content" className="flex-1" role="main" tabIndex={-1}>
                 {children}
               </main>
-              <Legacy83Footer />
+              <BrandFooter brandId={pathname.startsWith("/foundation") ? "bluv" : "tda"} />
               <ContactPopup />
               <CourseCartDrawer />
             </div>

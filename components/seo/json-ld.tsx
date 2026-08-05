@@ -5,20 +5,13 @@ export function OrganizationJsonLd() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Legacy 83 Business Inc",
-    alternateName: "Legacy 83",
-    url: "https://legacy83business.com",
-    logo: "https://legacy83business.com/legacy83Logo.webp",
+    name: "TDA Enterprises / B Love Foundation, Inc.",
+    alternateName: "TDA Enterprises | BLUV First",
+    url: "https://tdaenterprises.com",
+    logo: "https://tdaenterprises.com/icons/icon-192x192.svg",
     description:
-      "Legacy 83 Business helps entrepreneurs and business owners build sustainable wealth, develop high-performing teams, and create lasting legacies through strategic coaching.",
+      "TDA Enterprises provides professional environmental, health, and safety services. BLUV First (B Love Foundation, Inc.) offers faith-based community outreach, youth enrichment, and occupational empowerment.",
     foundingDate: "2020",
-    founders: [
-      {
-        "@type": "Person",
-        name: "Icy Williams",
-        jobTitle: "Founder & CEO",
-      },
-    ],
     address: {
       "@type": "PostalAddress",
       addressCountry: "US",
@@ -26,34 +19,34 @@ export function OrganizationJsonLd() {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+1-513-555-0183",
+        telephone: "+1-615-673-4323",
         contactType: "sales",
         availableLanguage: ["English"],
       },
       {
         "@type": "ContactPoint",
-        email: "info@legacy83business.com",
+        email: "info@tdaenterprises.com",
         contactType: "customer service",
       },
     ],
     sameAs: [
-      "https://www.linkedin.com/company/legacy83business",
-      "https://twitter.com/legacy83business",
-      "https://www.facebook.com/legacy83business",
+      "https://www.linkedin.com/company/tda-enterprises",
+      "https://www.instagram.com/tdaentrprz",
+      "https://www.facebook.com/blovefirst",
     ],
     areaServed: {
       "@type": "Country",
       name: "United States",
     },
     knowsAbout: [
-      "Business Coaching",
-      "Executive Coaching",
-      "Leadership Development",
-      "Strategic Planning",
-      "Business Succession",
-      "Legacy Planning",
-      "Operational Excellence",
-      "Team Development",
+      "Environmental Health and Safety",
+      "OSHA Training",
+      "Safety Audits",
+      "Workplace Safety",
+      "Community Outreach",
+      "Youth Enrichment",
+      "Occupational Empowerment",
+      "Nonprofit Services",
     ],
   };
 
@@ -71,26 +64,26 @@ export function LocalBusinessJsonLd() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Legacy 83 Business Inc",
-    image: "https://legacy83business.com/legacy83Logo.webp",
-    url: "https://legacy83business.com",
-    telephone: "+1-513-555-0183",
-    email: "info@legacy83business.com",
-    priceRange: "$$$$",
+    name: "TDA Enterprises",
+    image: "https://tdaenterprises.com/icons/icon-192x192.svg",
+    url: "https://tdaenterprises.com",
+    telephone: "+1-615-673-4323",
+    email: "info@tdaenterprises.com",
+    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       addressCountry: "US",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 39.1031,
-      longitude: -84.5120,
+      latitude: 36.1627,
+      longitude: -86.7816,
     },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "09:00",
+        opens: "08:00",
         closes: "17:00",
       },
     ],
@@ -123,7 +116,7 @@ export function ServiceJsonLd({
   name,
   description,
   url,
-  provider = "Legacy 83 Business Inc",
+  provider = "TDA Enterprises",
   areaServed = "United States",
 }: ServiceJsonLdProps) {
   const serviceSchema = {
@@ -135,13 +128,13 @@ export function ServiceJsonLd({
     provider: {
       "@type": "Organization",
       name: provider,
-      url: "https://legacy83business.com",
+      url: "https://tdaenterprises.com",
     },
     areaServed: {
       "@type": "Country",
       name: areaServed,
     },
-    serviceType: "Business Coaching",
+    serviceType: "Environmental Health and Safety Services",
   };
 
   return (
@@ -252,10 +245,10 @@ export function ArticleJsonLd({
     },
     publisher: {
       "@type": "Organization",
-      name: "Legacy 83 Business Inc",
+      name: "TDA Enterprises / B Love Foundation, Inc.",
       logo: {
         "@type": "ImageObject",
-        url: "https://legacy83business.com/legacy83Logo.webp",
+        url: "https://tdaenterprises.com/icons/icon-192x192.svg",
       },
     },
     mainEntityOfPage: {
@@ -278,14 +271,14 @@ export function WebsiteJsonLd() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Legacy 83 Business",
-    alternateName: "Legacy 83 Business Inc",
-    url: "https://legacy83business.com",
+    name: "TDA Enterprises | BLUV First",
+    alternateName: "TDA Enterprises / B Love Foundation, Inc.",
+    url: "https://tdaenterprises.com",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://legacy83business.com/search?q={search_term_string}",
+        urlTemplate: "https://tdaenterprises.com/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },

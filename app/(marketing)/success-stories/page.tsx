@@ -3,9 +3,9 @@ import { Badge } from "@/components/ui/badge";
 import { SuccessStoriesContent } from "@/components/marketing/success-stories-content";
 
 export const metadata: Metadata = {
-  title: "Success Stories | Legacy 83 Business",
+  title: "Success Stories | SV+ Platform",
   description:
-    "Real results from real business owners. See how Legacy 83 has helped entrepreneurs build lasting legacies through strategic coaching.",
+    "Real results from businesses and communities served by TDA Enterprises and BLUV First.",
 };
 
 export default function SuccessStoriesPage() {
@@ -23,8 +23,8 @@ export default function SuccessStoriesPage() {
               <span className="text-amber-400">Real Business Owners</span>
             </h1>
             <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
-              Don&apos;t just take our word for it. See how Legacy 83 has helped entrepreneurs 
-              across industries build businesses that thrive today and endure for generations.
+              Don&apos;t just take our word for it. See how the SV+ Platform is helping businesses
+              and communities thrive through safety, service, and empowerment.
             </p>
           </div>
         </div>

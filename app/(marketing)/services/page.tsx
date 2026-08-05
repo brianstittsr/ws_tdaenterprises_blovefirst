@@ -14,9 +14,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Services | Legacy 83 Business",
+  title: "Services | SV+ Platform",
   description:
-    "Explore Legacy 83's business coaching services: Strategic Planning, Leadership Coaching, Operational Excellence, and Legacy Transition. Build a business that outlasts you.",
+    "Explore professional services from TDA Enterprises and BLUV First, including EHS consulting, safety training, youth enrichment, and community outreach.",
 };
 
 const services = [

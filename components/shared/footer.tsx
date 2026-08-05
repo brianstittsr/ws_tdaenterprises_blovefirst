@@ -44,8 +44,8 @@ export function Footer() {
           <div className="col-span-2 md:col-span-4 lg:col-span-1 space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/legacy83Logo.webp"
-                alt="Strategic Value+ Logo"
+                src="/icons/icon-192x192.svg"
+                alt="SV+ Platform Logo"
                 width={40}
                 height={40}
                 className="h-10 w-auto"

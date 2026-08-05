@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -187,14 +186,10 @@ export default function SignUpPage() {
         {/* Logo and Branding */}
         <div className="flex flex-col items-center mb-8">
           <Link href="/" className="flex flex-col items-center gap-3 group">
-            <Image
-              src="/legacy83Logo.webp"
-              alt="Legacy 83 Business Inc"
-              width={200}
-              height={67}
-              className="h-16 w-auto"
-              priority
-            />
+            <div className="h-16 w-16 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground font-bold text-3xl">
+              SV+
+            </div>
+            <span className="text-xl font-bold text-foreground">SV+ Platform</span>
           </Link>
         </div>
 
@@ -215,11 +210,11 @@ export default function SignUpPage() {
         <Card className="shadow-xl border-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm">
           <CardHeader className="space-y-1 pb-4">
             <CardTitle className="text-2xl text-center">
-              {step === 1 ? "Register as Legacy83 Business Client" : "Create Your Account"}
+              {step === 1 ? "Register for the SV+ Platform" : "Create Your Account"}
             </CardTitle>
             <CardDescription className="text-center">
-              {step === 1 
-                ? "Get started with your Legacy83 Business client account" 
+              {step === 1
+                ? "Get started with your TDA Enterprises | BLUV First account"
                 : "Fill in your details to get started"}
             </CardDescription>
           </CardHeader>
@@ -237,16 +232,16 @@ export default function SignUpPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <Building2 className="h-5 w-5 text-[#C8A951]" />
-                      <span className="text-lg font-semibold">Legacy83 Business client</span>
+                      <span className="text-lg font-semibold">TDA Enterprises | BLUV First</span>
                     </div>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Register as a Legacy83 Business client to access our services and connect with our network of consultants and partners.
+                      Register for the SV+ Platform to access EHS services, training resources, and community outreach tools.
                     </p>
                     <ul className="text-xs text-muted-foreground mt-2 space-y-1">
-                      <li>• Access to consulting services</li>
-                      <li>• Business growth programs</li>
-                      <li>• Strategic assessments</li>
-                      <li>• Digital transformation support</li>
+                      <li>• Safety training and OSHA certifications</li>
+                      <li>• Free safety assessments and audits</li>
+                      <li>• Program development and equipment inspections</li>
+                      <li>• Nonprofit outreach and community resources</li>
                     </ul>
                   </div>
                 </div>

@@ -17,9 +17,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Events & Community | Legacy 83 Business",
+  title: "Events & Community | SV+ Platform",
   description:
-    "Join Legacy 83 events, workshops, and community gatherings. Connect with fellow business owners committed to building lasting legacies.",
+    "Join TDA Enterprises and BLUV First events, workshops, and community gatherings. Connect with businesses and communities committed to safety and service.",
 };
 
 const upcomingEvents = [

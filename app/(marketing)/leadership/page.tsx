@@ -7,9 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Linkedin, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Leadership Team",
+  title: "Leadership Team | SV+ Platform",
   description:
-    "Meet the Legacy 83 leadership team - veteran experts driving business growth and transformation.",
+    "Meet the leadership team behind TDA Enterprises and BLUV First - experts driving safety, community impact, and transformation.",
 };
 
 const leadershipTeam = [

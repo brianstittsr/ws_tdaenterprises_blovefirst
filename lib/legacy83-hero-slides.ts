@@ -1,9 +1,9 @@
 import { HeroSlide } from "@/components/marketing/hero-carousel";
 
 /**
- * Legacy 83 Business - Hero Carousel Slides
+ * SV+ Platform - Hero Carousel Slides
  * 
- * These slides are designed to market Icy Williams' Legacy 83 Business
+ * These slides are designed to market Icy Williams' SV+ Platform
  * coaching and consulting services to small business owners.
  */
 
@@ -211,7 +211,7 @@ export const legacy83FAQs = [
     answer: "The Legacy Growth System (G.R.O.W.S.) is a 5-step framework designed to help small business owners grow sustainably, strengthen leadership, and prepare for succession.",
   },
   {
-    question: "Who does Legacy 83 Business work with?",
+    question: "Who does SV+ Platform work with?",
     answer: "We partner with small business owners, founders, and leadership teams who are ready to scale their businesses and create wealth that lasts for generations.",
   },
   {
@@ -219,7 +219,7 @@ export const legacy83FAQs = [
     answer: "Leadership coaching develops self-awareness, accountability, and confidence in business leaders, helping teams perform at higher levels and sustain long-term growth.",
   },
   {
-    question: "How long does it take to see results from working with Legacy 83 Business?",
+    question: "How long does it take to see results from working with SV+ Platform?",
     answer: "Every business is unique, but many of our clients begin to see measurable improvements in clarity, leadership effectiveness, and operational efficiency within the first 90 days of implementing the Legacy Growth System.",
   },
 ];
@@ -228,7 +228,7 @@ export const legacy83FAQs = [
  * Legacy 83 Company Info
  */
 export const legacy83CompanyInfo = {
-  name: "Legacy 83 Business",
+  name: "SV+ Platform",
   tagline: "Empowering business leaders to build wealth, inspire teams, and leave lasting legacies.",
   founder: "Icy Williams",
   address: {

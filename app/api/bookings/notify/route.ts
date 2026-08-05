@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { buildGoogleCalendarLink, buildOutlookCalendarLink, encodeICSForDataUri } from "@/lib/calendar-invite";
 
-const INTERNAL_NOTIFY_EMAIL = "info@legacy83business.com";
-const FROM_EMAIL = process.env.GMAIL_SMTP_USER || "bookings@legacy83business.com";
+const INTERNAL_NOTIFY_EMAIL = process.env.TDA_SMTP_USER || "info@tdaenterprises.com";
+const FROM_EMAIL = process.env.BLUV_SMTP_USER || "blovefoundation@yahoo.com";
 
 interface BookingNotificationRequest {
   bookingId: string;
@@ -60,7 +60,7 @@ function buildICS(params: {
   return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Legacy83 Business//Booking System//EN",
+    "PRODID:-//TDA Enterprises | BLUV First//Booking System//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:REQUEST",
     "BEGIN:VEVENT",
@@ -70,7 +70,7 @@ function buildICS(params: {
     `DTEND:${end}`,
     `SUMMARY:${escapedSummary}`,
     `DESCRIPTION:${escapedDescription}`,
-    `ORGANIZER;CN=Legacy 83 Business:mailto:${organizer}`,
+    `ORGANIZER;CN=TDA Enterprises | BLUV First:mailto:${organizer}`,
     `ATTENDEE;CN=${attendeeName};RSVP=TRUE;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT:mailto:${attendeeEmail}`,
     "STATUS:CONFIRMED",
     "SEQUENCE:0",
@@ -118,7 +118,7 @@ function buildClientHTML(params: {
     <html>
     <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
       <div style="text-align: center; margin-bottom: 30px;">
-        <h1 style="color: #C8A951; margin-bottom: 4px;">Legacy 83 Business</h1>
+        <h1 style="color: #C8A951; margin-bottom: 4px;">TDA Enterprises | BLUV First</h1>
         <p style="color: #666; margin: 0;">Meeting Confirmation</p>
       </div>
 
@@ -158,7 +158,7 @@ function buildClientHTML(params: {
       </p>
 
       <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 12px;">
-        <p>Legacy 83 Business Inc. &bull; <a href="mailto:info@legacy83business.com" style="color: #C8A951;">info@legacy83business.com</a></p>
+        <p>TDA Enterprises / B Love Foundation, Inc. &bull; <a href="mailto:info@tdaenterprises.com" style="color: #C8A951;">info@tdaenterprises.com</a></p>
       </div>
     </body>
     </html>
@@ -197,7 +197,7 @@ function buildInternalHTML(params: {
     <html>
     <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
       <div style="text-align: center; margin-bottom: 30px;">
-        <h1 style="color: #C8A951; margin-bottom: 4px;">Legacy 83 Business</h1>
+        <h1 style="color: #C8A951; margin-bottom: 4px;">TDA Enterprises | BLUV First</h1>
         <p style="color: #666; margin: 0;">New Booking Notification</p>
       </div>
 
@@ -252,7 +252,7 @@ function buildInternalHTML(params: {
       </table>
 
       <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 12px;">
-        <p>Legacy 83 Business Inc. Internal Notification</p>
+        <p>TDA Enterprises / B Love Foundation, Inc. Internal Notification</p>
       </div>
     </body>
     </html>
@@ -279,10 +279,10 @@ export async function POST(request: NextRequest) {
       icsContent,
     } = body;
 
-    const gmailUser = process.env.GMAIL_SMTP_USER;
-    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
-    if (!gmailUser || !gmailAppPassword) {
-      console.error("GMAIL_SMTP_USER or GMAIL_APP_PASSWORD is not set — emails not sent");
+    const bluvUser = process.env.BLUV_SMTP_USER;
+    const bluvPassword = process.env.BLUV_SMTP_PASSWORD;
+    if (!bluvUser || !bluvPassword) {
+      console.error("BLUV_SMTP_USER or BLUV_SMTP_PASSWORD is not set — emails not sent");
       return NextResponse.json(
         { success: false, error: "Email service not configured" },
         { status: 500 }
@@ -290,17 +290,17 @@ export async function POST(request: NextRequest) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: process.env.GMAIL_SMTP_HOST || "smtp.gmail.com",
-      port: Number(process.env.GMAIL_SMTP_PORT) || 587,
+      host: process.env.BLUV_SMTP_HOST || "smtp.gmail.com",
+      port: Number(process.env.BLUV_SMTP_PORT) || 587,
       secure: false,
       auth: {
-        user: gmailUser,
-        pass: gmailAppPassword,
+        user: bluvUser,
+        pass: bluvPassword,
       },
     });
 
     // Build .ics calendar invite content
-    const uid = `booking-${bookingId}@legacy83business.com`;
+    const uid = `booking-${bookingId}@tdaenterprises.com`;
     const calendarSummary = `${meetingType} with ${teamMemberName}`;
     const calendarDescription = [
       `Meeting: ${meetingType}`,
@@ -356,7 +356,7 @@ export async function POST(request: NextRequest) {
     // 1. Confirmation email to the requester (client)
     try {
       await transporter.sendMail({
-        from: `"Legacy 83 Business" <${FROM_EMAIL}>`,
+        from: `"TDA Enterprises | BLUV First" <${FROM_EMAIL}>`,
         to: clientEmail,
         subject: `Meeting Confirmed: ${meetingType} on ${date} at ${time}`,
         html: buildClientHTML({
@@ -376,10 +376,10 @@ export async function POST(request: NextRequest) {
       errors.push("client");
     }
 
-    // 2. Notification email to info@legacy83business.com with calendar invite
+    // 2. Notification email to the internal booking address with calendar invite
     try {
       await transporter.sendMail({
-        from: `"Legacy 83 Bookings" <${FROM_EMAIL}>`,
+        from: `"TDA Enterprises | BLUV First Bookings" <${FROM_EMAIL}>`,
         to: INTERNAL_NOTIFY_EMAIL,
         subject: `New Booking: ${meetingType} with ${clientName} — ${date} at ${time}`,
         html: buildInternalHTML({

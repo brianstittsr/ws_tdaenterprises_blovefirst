@@ -14,7 +14,7 @@ const defaultTemplate: Omit<QuizReportTemplateDoc, 'id' | 'createdAt' | 'updated
     showOverallScore: true,
     showKeyStrengths: true,
     showDevelopmentAreas: true,
-    customIntroText: "Thank you for completing the Legacy Growth IQ Assessment. This comprehensive report analyzes your business's readiness for sustainable growth and legacy building.",
+    customIntroText: "Thank you for completing the SV+ Platform assessment. This comprehensive report analyzes your organization's readiness and provides tailored recommendations.",
   },
   detailedSections: [
     {
@@ -135,26 +135,26 @@ const defaultTemplate: Omit<QuizReportTemplateDoc, 'id' | 'createdAt' | 'updated
   },
   callToAction: {
     enabled: true,
-    title: "Ready to Build Your Legacy?",
-    description: "Schedule a free 30-minute strategy call to discuss your results and create a personalized action plan for your business.",
-    buttonText: "Schedule Your Free Call",
-    buttonUrl: "https://legacy83business.com/schedule-a-call",
+    title: "Ready to Build a Safer, Stronger Future?",
+    description: "Schedule a free 30-minute consultation to discuss your results and create a personalized action plan for your business or community.",
+    buttonText: "Schedule Your Free Consultation",
+    buttonUrl: "https://tdaenterprises.com/business/free-assessment",
   },
   branding: {
-    logoUrl: "/legacy83Logo.webp",
+    logoUrl: "/icons/icon-192x192.svg",
     primaryColor: "#D97706",
     secondaryColor: "#1E293B",
-    companyName: "Legacy 83 Business Inc",
-    contactEmail: "info@legacy83business.com",
-    contactPhone: "(513) 335-1978",
-    website: "https://legacy83business.com",
+    companyName: "TDA Enterprises | BLUV First",
+    contactEmail: "info@tdaenterprises.com",
+    contactPhone: "(615) 673-4323",
+    website: "https://tdaenterprises.com",
   },
   emailSettings: {
-    subject: "Your Legacy Growth IQ Assessment Results",
-    fromName: "Legacy 83 Business",
-    replyTo: "info@legacy83business.com",
-    introText: "Thank you for completing the Legacy Growth IQ Assessment! Attached is your personalized report with insights and recommendations for building a sustainable business legacy.",
-    signatureText: "Best regards,\nThe Legacy 83 Team",
+    subject: "Your SV+ Platform Assessment Results",
+    fromName: "TDA Enterprises | BLUV First",
+    replyTo: "info@tdaenterprises.com",
+    introText: "Thank you for completing the SV+ Platform assessment! Attached is your personalized report with insights and recommendations.",
+    signatureText: "Best regards,\nThe TDA Enterprises & BLUV First Team",
   },
 };
 
@@ -180,7 +180,7 @@ function generateReportHTML(
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Legacy Growth IQ Assessment Report</title>
+  <title>SV+ Platform Assessment Report</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
@@ -350,7 +350,7 @@ function generateReportHTML(
     <!-- Header -->
     <div class="header">
       <img src="${branding.logoUrl}" alt="${branding.companyName}" class="logo" />
-      <h1 class="report-title">Legacy Growth IQ™ Assessment Report</h1>
+      <h1 class="report-title">SV+ Platform Assessment Report</h1>
       <p class="report-subtitle">Prepared for ${submission.respondentName || 'Business Owner'} | ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
     </div>
 
@@ -553,26 +553,26 @@ export async function POST(request: NextRequest) {
     let emailSent = false;
     if (sendEmail && submission.respondentEmail) {
       try {
-        const gmailUser = process.env.GMAIL_SMTP_USER;
-        const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
+        const tdaUser = process.env.TDA_SMTP_USER;
+        const tdaPassword = process.env.TDA_SMTP_PASSWORD;
 
-        if (gmailUser && gmailAppPassword) {
+        if (tdaUser && tdaPassword) {
           const transporter = nodemailer.createTransport({
-            host: process.env.GMAIL_SMTP_HOST || "smtp.gmail.com",
-            port: Number(process.env.GMAIL_SMTP_PORT) || 587,
+            host: process.env.TDA_SMTP_HOST || "smtp.office365.com",
+            port: Number(process.env.TDA_SMTP_PORT) || 587,
             secure: false,
             auth: {
-              user: gmailUser,
-              pass: gmailAppPassword,
+              user: tdaUser,
+              pass: tdaPassword,
             },
           });
 
           const { emailSettings, branding } = template;
-          const subject = emailSettings.subject || "Your Legacy Growth IQ Assessment Results";
-          const fromName = emailSettings.fromName || branding.companyName || "Legacy 83 Business";
-          const replyTo = emailSettings.replyTo || branding.contactEmail || "info@legacy83business.com";
-          const introText = emailSettings.introText || "Thank you for completing the Legacy Growth IQ Assessment! Attached is your personalized report with insights and recommendations for building a sustainable business legacy.";
-          const signatureText = emailSettings.signatureText || "Best regards,\nThe Legacy 83 Team";
+          const subject = emailSettings.subject || "Your SV+ Platform Assessment Results";
+          const fromName = emailSettings.fromName || branding.companyName || "TDA Enterprises | BLUV First";
+          const replyTo = emailSettings.replyTo || branding.contactEmail || "info@tdaenterprises.com";
+          const introText = emailSettings.introText || "Thank you for completing the SV+ Platform assessment! Attached is your personalized report with insights and recommendations.";
+          const signatureText = emailSettings.signatureText || "Best regards,\nThe TDA Enterprises & BLUV First Team";
 
           const introHtml = `<p style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333; margin-bottom: 20px;">${introText.replace(/\n/g, "<br/>")}</p>`;
           const signatureHtml = `
@@ -592,13 +592,13 @@ export async function POST(request: NextRequest) {
           );
 
           const toAddresses = [submission.respondentEmail];
-          const internalEmail = "info@legacy83business.com";
+          const internalEmail = "info@tdaenterprises.com";
           if (internalEmail !== submission.respondentEmail) {
             toAddresses.push(internalEmail);
           }
 
           await transporter.sendMail({
-            from: `"${fromName}" <${gmailUser}>`,
+            from: `"${fromName}" <${tdaUser}>`,
             to: toAddresses.join(", "),
             replyTo,
             subject,
@@ -608,7 +608,7 @@ export async function POST(request: NextRequest) {
           emailSent = true;
           console.log("Quiz report email sent to:", toAddresses.join(", "));
         } else {
-          console.error("Gmail SMTP credentials not configured — quiz report email not sent");
+          console.error("TDA_SMTP_USER or TDA_SMTP_PASSWORD not configured — quiz report email not sent");
         }
       } catch (emailError) {
         console.error("Error sending quiz report email:", emailError);

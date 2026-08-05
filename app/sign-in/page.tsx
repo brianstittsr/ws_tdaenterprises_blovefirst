@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -152,14 +151,10 @@ export default function SignInPage() {
         {/* Logo and Branding */}
         <div className="flex flex-col items-center mb-8">
           <Link href="/" className="flex flex-col items-center gap-3 group">
-            <Image
-              src="/legacy83Logo.webp"
-              alt="Legacy 83 Business Inc"
-              width={200}
-              height={67}
-              className="h-16 w-auto"
-              priority
-            />
+            <div className="h-16 w-16 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground font-bold text-3xl">
+              SV+
+            </div>
+            <span className="text-xl font-bold text-foreground">SV+ Platform</span>
           </Link>
         </div>
 

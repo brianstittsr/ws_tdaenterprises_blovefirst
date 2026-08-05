@@ -1,5 +1,5 @@
 /**
- * Legacy 83 Academy LMS Types
+ * SV+ Academy LMS Types
  * TypeScript definitions for the Learning Management System
  */
 

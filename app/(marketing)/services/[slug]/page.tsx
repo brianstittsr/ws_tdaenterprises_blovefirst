@@ -116,12 +116,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   
   if (!service) {
     return {
-      title: "Service Not Found | Legacy 83 Business",
+      title: "Service Not Found | SV+ Platform",
     };
   }
 
   return {
-    title: `${service.title} | Legacy 83 Business`,
+    title: `${service.title} | SV+ Platform`,
     description: service.description,
   };
 }

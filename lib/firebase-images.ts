@@ -337,13 +337,20 @@ export async function getImageByName(
   return snapshot.docs[0].data() as ImageDoc;
 }
 
+export interface CompressImageOptions {
+  maxWidth?: number;
+  quality?: number;
+  format?: "image/jpeg" | "image/webp";
+}
+
 /**
  * Compress an image before upload (client-side)
  */
 export async function compressImage(
   file: File,
   maxWidth: number = 1200,
-  quality: number = 0.8
+  quality: number = 0.8,
+  format: "image/jpeg" | "image/webp" = "image/jpeg"
 ): Promise<File> {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -374,13 +381,15 @@ export async function compressImage(
             reject(new Error("Could not compress image"));
             return;
           }
-          const compressedFile = new File([blob], file.name, {
-            type: "image/jpeg",
+          const extension = format === "image/webp" ? "webp" : "jpg";
+          const newName = file.name.replace(/\.[^/.]+$/, `.${extension}`);
+          const compressedFile = new File([blob], newName, {
+            type: format,
             lastModified: Date.now(),
           });
           resolve(compressedFile);
         },
-        "image/jpeg",
+        format,
         quality
       );
     };
@@ -393,22 +402,25 @@ export async function compressImage(
  * Site image keys - predefined keys for specific site images
  */
 export const SITE_IMAGE_KEYS = {
-  // About page
+  // TDA Enterprises
+  LOGO_TDA_MAIN: "logo-tda-main",
+  HERO_TDA_MAIN: "hero-tda-main",
+  HERO_TDA_SERVICES: "hero-tda-services",
+  ABOUT_TDA_TEAM: "about-tda-team",
+
+  // BLUV First
+  LOGO_BLUV_MAIN: "logo-bluv-main",
+  HERO_BLUV_MAIN: "hero-bluv-main",
+  ABOUT_BLUV_TEAM: "about-bluv-team",
+
+  // Legacy keys kept for backward compatibility
   ABOUT_ICY_WILLIAMS: "about-icy-williams",
-  
-  // Hero images
   HERO_MAIN: "hero-main",
   HERO_SERVICES: "hero-services",
-  
-  // Team images
   TEAM_ICY: "team-icy",
-  
-  // Logos
   LOGO_MAIN: "logo-main",
   LOGO_WHITE: "logo-white",
   LOGO_DARK: "logo-dark",
-  
-  // Backgrounds
   BG_PATTERN: "bg-pattern",
 } as const;
 
