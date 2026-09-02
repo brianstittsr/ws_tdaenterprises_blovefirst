@@ -21,7 +21,10 @@ export default function BusinessContactPage() {
             <Phone className="h-8 w-8 text-primary mb-4" />
             <h3 className="font-semibold mb-2">Phone</h3>
             <a href="tel:6156734323" className="text-muted-foreground hover:text-foreground">
-              615-673-4323
+              TN: 615-673-4323
+            </a>
+            <a href="tel:9373086401" className="text-muted-foreground hover:text-foreground">
+              OH: 937-308-6401
             </a>
           </div>
           <div className="flex flex-col items-center text-center p-6 rounded-xl border bg-card">

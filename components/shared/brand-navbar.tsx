@@ -27,6 +27,10 @@ import {
   LogIn,
   UserPlus,
   Info,
+  Eye,
+  GraduationCap,
+  Shirt,
+  ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { type BrandId, getBrand } from "@/lib/brands";
@@ -56,6 +60,24 @@ const businessServices = [
     description: "Certified inspections that keep teams safe.",
     icon: HardHat,
   },
+  {
+    title: "Management & Consulting",
+    href: "/business/services/management-consulting",
+    description: "Expert guidance to build stronger safety leadership.",
+    icon: Briefcase,
+  },
+  {
+    title: "Employee Observations",
+    href: "/business/services/employee-observations",
+    description: "On-the-floor observations that catch risk early.",
+    icon: Eye,
+  },
+  {
+    title: "Training & Coaching",
+    href: "/business/services/training-coaching",
+    description: "Hands-on coaching that builds lasting safety habits.",
+    icon: GraduationCap,
+  },
 ];
 
 const foundationPrograms = [
@@ -82,6 +104,18 @@ const foundationPrograms = [
     href: "/foundation/events",
     description: "Community showcases, fundraisers, and programs.",
     icon: Calendar,
+  },
+  {
+    title: "Community Closet",
+    href: "/foundation/programs/community-closet",
+    description: "Free clothing and essentials for those in need.",
+    icon: Shirt,
+  },
+  {
+    title: "OSHA Outreach Training",
+    href: "/foundation/programs/osha-outreach-training",
+    description: "Free OSHA safety certification for the community.",
+    icon: ShieldCheck,
   },
 ];
 

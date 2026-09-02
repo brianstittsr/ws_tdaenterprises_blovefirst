@@ -1,4 +1,5 @@
-import { Users, Award, HandHelping, Heart, Shield } from "lucide-react";
+import Link from "next/link";
+import { Users, Award, HandHelping, Heart, Shield, Shirt, ShieldCheck, ArrowRight } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -6,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "Programs | BLUV First",
@@ -62,6 +64,30 @@ const programs = [
     ],
     icon: Shield,
   },
+  {
+    title: "Community Closet",
+    description:
+      "Free clothing, essentials, and care packages for under-privileged men, women, and children in transition.",
+    items: [
+      "Free clothing for adults and children",
+      "Seasonal coat, shoe, and essentials drives",
+      "Care packages at community outreach events",
+    ],
+    icon: Shirt,
+    href: "/foundation/programs/community-closet",
+  },
+  {
+    title: "OSHA Outreach Training",
+    description:
+      "Free workplace safety certification and occupational empowerment for citizens in transition.",
+    items: [
+      "OSHA 10-Hour and 30-Hour outreach certification",
+      "Workplace safety fundamentals",
+      "Occupational empowerment workshops",
+    ],
+    icon: ShieldCheck,
+    href: "/foundation/programs/osha-outreach-training",
+  },
 ];
 
 export default function FoundationProgramsPage() {
@@ -94,6 +120,14 @@ export default function FoundationProgramsPage() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+                {program.href && (
+                  <Button variant="link" className="px-0 mt-4" asChild>
+                    <Link href={program.href}>
+                      Learn more
+                      <ArrowRight className="ml-1 h-3 w-3" />
+                    </Link>
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}

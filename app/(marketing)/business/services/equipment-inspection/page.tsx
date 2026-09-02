@@ -44,7 +44,7 @@ export default function EquipmentInspectionPage() {
       <ServiceHero
         title="Equipment Inspection"
         tagline="Certified inspections that verify compliance, identify defects, and keep your jobsite safe."
-        image="https://images.pexels.com/photos/4480505/pexels-photo-4480505.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        image="/images/extracted/job-site-evaluations.jpg"
         imageAlt="Warehouse equipment and forklift safety inspection"
       />
 

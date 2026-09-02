@@ -11,6 +11,8 @@ import {
   ClipboardList,
   FolderKanban,
   ArrowRight,
+  Briefcase,
+  Eye,
 } from "lucide-react";
 import {
   Card,
@@ -65,6 +67,27 @@ const services = [
     description:
       "Tailored safety support for manufacturing, construction, warehousing, logistics, and healthcare facilities.",
     icon: Factory,
+  },
+  {
+    title: "Management & Consulting",
+    description:
+      "Safety leadership development, EHS management system design, and ongoing advisory support.",
+    icon: Briefcase,
+    href: "/business/services/management-consulting",
+  },
+  {
+    title: "Employee Observations",
+    description:
+      "On-the-floor observations and in-the-moment coaching that catch at-risk behavior early.",
+    icon: Eye,
+    href: "/business/services/employee-observations",
+  },
+  {
+    title: "Training & Coaching",
+    description:
+      "Hands-on training, practical exams, and proficiency evaluations that build lasting safety habits.",
+    icon: GraduationCap,
+    href: "/business/services/training-coaching",
   },
 ];
 
@@ -142,6 +165,14 @@ export default function BusinessServicesPage() {
         imageAlt="Safety professionals reviewing workplace practices"
       />
 
+      <section className="py-4">
+        <div className="container">
+          <div className="bg-primary text-primary-foreground rounded-2xl py-6 text-center">
+            <p className="text-2xl md:text-3xl font-bold tracking-wide">TEACH ~ DEVELOP ~ ACHIEVE</p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
@@ -162,6 +193,14 @@ export default function BusinessServicesPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base">{service.description}</CardDescription>
+                  {service.href && (
+                    <Button variant="link" className="px-0 mt-2" asChild>
+                      <Link href={service.href}>
+                        Learn more
+                        <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}

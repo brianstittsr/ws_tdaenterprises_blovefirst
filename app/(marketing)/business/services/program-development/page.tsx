@@ -38,7 +38,7 @@ export default function ProgramDevelopmentPage() {
       <ServiceHero
         title="Turnkey EHS Program Development"
         tagline="Practical, OSHA-aligned safety programs built for your operation, workforce, and industry."
-        image="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        image="/images/extracted/program-development.jpg"
         imageAlt="EHS team developing safety program documentation"
       />
 

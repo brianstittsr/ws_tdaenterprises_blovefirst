@@ -27,6 +27,24 @@ export default function FoundationAboutPage() {
           <li>Gain access to resources and supportive services.</li>
         </ul>
 
+        <h2 className="text-2xl font-semibold mb-4">Company Overview</h2>
+        <p className="text-muted-foreground mb-8">
+          To provide personal, professional, and workforce development for under-privileged men,
+          women, and children in transition.
+        </p>
+
+        <h2 className="text-2xl font-semibold mb-4">Company Outreach</h2>
+        <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-8">
+          <li>Occupational Empowerment</li>
+          <li>Environmental Health &amp; Safety</li>
+          <li>Career Coaching &amp; Counseling</li>
+          <li>Personal &amp; Interpersonal Development</li>
+          <li>Health &amp; Wellness Workshops</li>
+          <li>Community Engagement</li>
+          <li>Youth Enrichment</li>
+          <li>Supportive Services</li>
+        </ul>
+
         <h2 className="text-2xl font-semibold mb-4">What We Envision</h2>
         <p className="text-muted-foreground mb-8">
           We believe that our vision for the global community can and will be realized. We want to help

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Heart, Users, HandHelping, Award, HandHeart } from "lucide-react";
+import { Heart, Users, HandHelping, Award, HandHeart, Shirt, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -77,6 +77,20 @@ const programs = [
       "Free safety assessments and environmental, health, and safety training for the community.",
     icon: Heart,
     href: "/foundation/programs/environmental-health-safety",
+  },
+  {
+    title: "Community Closet",
+    description:
+      "Free clothing, essentials, and care packages for under-privileged men, women, and children in transition.",
+    icon: Shirt,
+    href: "/foundation/programs/community-closet",
+  },
+  {
+    title: "OSHA Outreach Training",
+    description:
+      "Free workplace safety certification and occupational empowerment for citizens in transition.",
+    icon: ShieldCheck,
+    href: "/foundation/programs/osha-outreach-training",
   },
 ];
 
