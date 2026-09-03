@@ -7,9 +7,9 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Community Partners | BLUV First",
+  title: "Community Partners | BLove First",
   description:
-    "BLUV First partners with media, corporate, and community organizations across Tennessee, Ohio, Kentucky, Georgia, and Michigan.",
+    "BLove First partners with media, corporate, and community organizations across Tennessee, Ohio, Kentucky, Georgia, and Michigan.",
 };
 
 const partners = [

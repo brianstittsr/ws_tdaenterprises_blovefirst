@@ -8,9 +8,9 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Give Love | BLUV First",
+  title: "Give Love | BLove First",
   description:
-    "Donate, sponsor, or volunteer with BLUV First (B Love Foundation, Inc.). Your contribution supports youth enrichment, occupational empowerment, and supportive services.",
+    "Donate, sponsor, or volunteer with BLove First (B Love Foundation, Inc.). Your contribution supports youth enrichment, occupational empowerment, and supportive services.",
 };
 
 const givingOptions = [

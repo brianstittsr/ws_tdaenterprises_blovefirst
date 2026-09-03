@@ -21,7 +21,7 @@ if (!getApps().length) {
   }
 }
 
-const ADMIN_EMAIL = process.env.TDA_SMTP_USER || "info@tdaenterprises.com";
+const ADMIN_EMAIL = process.env.TDA_SMTP_USER || "tdaentrprz@gmail.com";
 
 export async function POST() {
   try {

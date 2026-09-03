@@ -6,9 +6,9 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "EHS Outreach | BLUV First",
+  title: "EHS Outreach | BLove First",
   description:
-    "BLUV First Environmental Health & Safety outreach provides occupational safety training, safety audits, equipment inspection, hazard assessments, and turnkey program development.",
+    "BLove First Environmental Health & Safety outreach provides occupational safety training, safety audits, equipment inspection, hazard assessments, and turnkey program development.",
 };
 
 const services = [

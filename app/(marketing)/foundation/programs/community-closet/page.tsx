@@ -11,15 +11,15 @@ import { ArrowRight, Shirt, Gift, Users, Heart } from "lucide-react";
 
 const galleryImages = [
   { src: "/images/extracted/community-closet-1.jpg", alt: "Volunteers with clothing donations at the Community Closet" },
-  { src: "/images/extracted/community-closet-2.jpg", alt: "Children receiving care packages from BLUV First" },
+  { src: "/images/extracted/community-closet-2.jpg", alt: "Children receiving care packages from BLove First" },
   { src: "/images/extracted/community-closet-3.jpg", alt: "Community members receiving Community Closet essentials" },
   { src: "/images/extracted/community-closet-4.jpg", alt: "Volunteer delivering a care package curbside" },
 ];
 
 export const metadata = {
-  title: "Community Closet | BLUV First",
+  title: "Community Closet | BLove First",
   description:
-    "BLUV First's Community Closet provides free clothing, essentials, and supportive resources for under-privileged men, women, and children in transition.",
+    "BLove First's Community Closet provides free clothing, essentials, and supportive resources for under-privileged men, women, and children in transition.",
 };
 
 const offerings = [
@@ -42,7 +42,7 @@ export default function CommunityClosetPage() {
       <div className="container max-w-4xl">
         <h1 className="text-4xl font-bold mb-6">Community Closet</h1>
         <p className="text-lg text-muted-foreground mb-12">
-          BLUV First&rsquo;s Community Closet provides personal, professional, and workforce
+          BLove First&rsquo;s Community Closet provides personal, professional, and workforce
           development support to under-privileged men, women, and children in transition — starting
           with something as fundamental as clothing and everyday essentials.
         </p>

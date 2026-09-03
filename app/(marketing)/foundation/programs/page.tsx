@@ -10,9 +10,9 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "Programs | BLUV First",
+  title: "Programs | BLove First",
   description:
-    "BLUV First programs include youth enrichment, occupational empowerment, supportive services, and environmental health & safety outreach.",
+    "BLove First programs include youth enrichment, occupational empowerment, supportive services, and environmental health & safety outreach.",
 };
 
 const programs = [
@@ -97,7 +97,7 @@ export default function FoundationProgramsPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Our Programs</h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            BLUV First focuses on the interpersonal, occupational, and tangible needs of
+            BLove First focuses on the interpersonal, occupational, and tangible needs of
             under-represented citizens — empowering disadvantaged individuals with the tools to manage
             family relations, become employable, and build ethical community leadership.
           </p>

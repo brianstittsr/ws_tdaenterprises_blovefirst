@@ -6,11 +6,11 @@ export function OrganizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "TDA Enterprises / B Love Foundation, Inc.",
-    alternateName: "TDA Enterprises | BLUV First",
+    alternateName: "TDA Enterprises | BLove First",
     url: "https://tdaenterprises.com",
     logo: "https://tdaenterprises.com/icons/icon-192x192.svg",
     description:
-      "TDA Enterprises provides professional environmental, health, and safety services. BLUV First (B Love Foundation, Inc.) offers faith-based community outreach, youth enrichment, and occupational empowerment.",
+      "TDA Enterprises provides professional environmental, health, and safety services. BLove First (B Love Foundation, Inc.) offers faith-based community outreach, youth enrichment, and occupational empowerment.",
     foundingDate: "2020",
     address: {
       "@type": "PostalAddress",
@@ -25,7 +25,7 @@ export function OrganizationJsonLd() {
       },
       {
         "@type": "ContactPoint",
-        email: "info@tdaenterprises.com",
+        email: "tdaentrprz@gmail.com",
         contactType: "customer service",
       },
     ],
@@ -68,7 +68,7 @@ export function LocalBusinessJsonLd() {
     image: "https://tdaenterprises.com/icons/icon-192x192.svg",
     url: "https://tdaenterprises.com",
     telephone: "+1-615-673-4323",
-    email: "info@tdaenterprises.com",
+    email: "tdaentrprz@gmail.com",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
@@ -271,7 +271,7 @@ export function WebsiteJsonLd() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "TDA Enterprises | BLUV First",
+    name: "TDA Enterprises | BLove First",
     alternateName: "TDA Enterprises / B Love Foundation, Inc.",
     url: "https://tdaenterprises.com",
     potentialAction: {

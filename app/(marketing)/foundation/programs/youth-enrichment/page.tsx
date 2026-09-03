@@ -6,9 +6,9 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Youth Enrichment | BLUV First",
+  title: "Youth Enrichment | BLove First",
   description:
-    "BLUV First youth enrichment programs build interpersonal skills, character, athletic enrichment, education, and career readiness through TSAP and related initiatives.",
+    "BLove First youth enrichment programs build interpersonal skills, character, athletic enrichment, education, and career readiness through TSAP and related initiatives.",
 };
 
 const programs = [

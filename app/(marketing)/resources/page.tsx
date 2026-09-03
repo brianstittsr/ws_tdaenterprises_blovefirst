@@ -8,7 +8,7 @@ import { BookOpen, Video, FileText, Download, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Resources | SV+ Platform",
   description:
-    "Free resources, guides, and tools from TDA Enterprises and BLUV First. Download playbooks, read articles, and watch educational content.",
+    "Free resources, guides, and tools from TDA Enterprises and BLove First. Download playbooks, read articles, and watch educational content.",
 };
 
 const resources = [

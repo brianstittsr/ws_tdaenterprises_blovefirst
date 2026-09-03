@@ -17,7 +17,7 @@ export default function MarketingLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const brandClass = pathname.startsWith("/foundation") ? "brand-bluv" : "brand-tda";
+  const brandClass = pathname.startsWith("/foundation") ? "brand-BLove" : "brand-tda";
 
   return (
     <UserProfileProvider>
@@ -37,7 +37,7 @@ export default function MarketingLayout({
               <main id="main-content" className="flex-1" role="main" tabIndex={-1}>
                 {children}
               </main>
-              <BrandFooter brandId={pathname.startsWith("/foundation") ? "bluv" : "tda"} />
+              <BrandFooter brandId={pathname.startsWith("/foundation") ? "BLove" : "tda"} />
               <ContactPopup />
               <CourseCartDrawer />
             </div>

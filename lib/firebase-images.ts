@@ -408,10 +408,10 @@ export const SITE_IMAGE_KEYS = {
   HERO_TDA_SERVICES: "hero-tda-services",
   ABOUT_TDA_TEAM: "about-tda-team",
 
-  // BLUV First
-  LOGO_BLUV_MAIN: "logo-bluv-main",
-  HERO_BLUV_MAIN: "hero-bluv-main",
-  ABOUT_BLUV_TEAM: "about-bluv-team",
+  // BLove First
+  LOGO_BLove_MAIN: "logo-BLove-main",
+  HERO_BLove_MAIN: "hero-BLove-main",
+  ABOUT_BLove_TEAM: "about-BLove-team",
 
   // Legacy keys kept for backward compatibility
   ABOUT_ICY_WILLIAMS: "about-icy-williams",

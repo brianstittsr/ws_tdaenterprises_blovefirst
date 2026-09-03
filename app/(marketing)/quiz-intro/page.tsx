@@ -175,7 +175,7 @@ export default function QuizIntroPage() {
                 <div>
                   <h3 className="text-xl font-semibold mb-1">Optional: Book a Strategy Call</h3>
                   <p className="text-muted-foreground">
-                    If you'd like to discuss your results and explore how TDA Enterprises or BLUV First can help, schedule a free 30-minute consultation.
+                    If you'd like to discuss your results and explore how TDA Enterprises or BLove First can help, schedule a free 30-minute consultation.
                   </p>
                 </div>
               </div>

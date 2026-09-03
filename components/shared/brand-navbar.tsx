@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -123,7 +124,7 @@ export function BrandNavbar() {
   const pathname = usePathname() ?? "";
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const brandId: BrandId = pathname.startsWith("/foundation") ? "bluv" : "tda";
+  const brandId: BrandId = pathname.startsWith("/foundation") ? "BLove" : "tda";
   const brand = getBrand(brandId);
   const isBusiness = brandId === "tda";
 
@@ -150,12 +151,22 @@ export function BrandNavbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
         <Link href={brand.routes.home} className="flex items-center gap-2">
-          <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
-            {brand.name.charAt(0)}
-          </div>
+          {brandId === "BLove" ? (
+            <Image
+              src="/images/blove-logo.jpg"
+              alt="B Love Foundation Logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-lg object-cover"
+            />
+          ) : (
+            <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
+              {brand.name.charAt(0)}
+            </div>
+          )}
           <div className="flex flex-col">
             <span className="text-lg font-bold leading-none">{brand.name}</span>
-            {brandId === "bluv" && (
+            {brandId === "BLove" && (
               <span className="text-xs text-muted-foreground">{brand.legalName}</span>
             )}
           </div>

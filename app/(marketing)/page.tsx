@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Shield, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "TDA Enterprises | BLUV First",
+  title: "TDA Enterprises | BLove First",
   description:
-    "Professional EHS services from TDA Enterprises and faith-based community outreach from BLUV First (B Love Foundation, Inc.).",
+    "Professional EHS services from TDA Enterprises and faith-based community outreach from BLove First (B Love Foundation, Inc.).",
 };
 
 export default function HomePage() {
@@ -47,10 +48,16 @@ export default function HomePage() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
           <div className="relative z-10 flex flex-col h-full">
-            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
-              <Heart className="h-7 w-7" />
+            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 overflow-hidden">
+              <Image
+                src="/images/blove-logo.jpg"
+                alt="B Love Foundation Logo"
+                width={56}
+                height={56}
+                className="h-14 w-14 rounded-xl object-cover"
+              />
             </div>
-            <h2 className="text-2xl font-bold mb-2">BLUV First</h2>
+            <h2 className="text-2xl font-bold mb-2">BLove First</h2>
             <p className="text-muted-foreground mb-6 flex-1">
               B Love Foundation, Inc. Faith-based outreach, youth enrichment, occupational
               empowerment, and supportive services for under-represented citizens.

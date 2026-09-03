@@ -145,14 +145,14 @@ interface ImportedWorkflow {
   importedAt: string;
 }
 
-// Workflow Templates for TDA Enterprises | BLUV First
+// Workflow Templates for TDA Enterprises | BLove First
 const WORKFLOW_TEMPLATES = [
   {
     id: 'supplier_onboarding',
     name: 'Supplier Onboarding',
-    description: 'Welcome new suppliers to the TDA Enterprises | BLUV First network with a comprehensive onboarding sequence',
+    description: 'Welcome new suppliers to the TDA Enterprises | BLove First network with a comprehensive onboarding sequence',
     category: 'onboarding',
-    defaultPrompt: 'Create a supplier onboarding sequence for TDA Enterprises | BLUV First that welcomes new manufacturing suppliers, introduces our services, and guides them through the certification process over 7 days',
+    defaultPrompt: 'Create a supplier onboarding sequence for TDA Enterprises | BLove First that welcomes new manufacturing suppliers, introduces our services, and guides them through the certification process over 7 days',
     suggestedType: 'email',
   },
   {
@@ -160,7 +160,7 @@ const WORKFLOW_TEMPLATES = [
     name: 'Workshop Lead Nurture',
     description: 'Nurture leads interested in Supplier Success Workshops',
     category: 'nurture',
-    defaultPrompt: 'Create a 5-day nurture sequence for manufacturers interested in TDA Enterprises | BLUV First Supplier Success Workshops, highlighting benefits of becoming OEM-ready and CMMC certified',
+    defaultPrompt: 'Create a 5-day nurture sequence for manufacturers interested in TDA Enterprises | BLove First Supplier Success Workshops, highlighting benefits of becoming OEM-ready and CMMC certified',
     suggestedType: 'mixed',
   },
   {
@@ -168,7 +168,7 @@ const WORKFLOW_TEMPLATES = [
     name: 'CMMC Readiness Campaign',
     description: 'Guide defense suppliers through CMMC certification preparation',
     category: 'nurture',
-    defaultPrompt: 'Create an educational sequence about CMMC certification requirements for defense supply chain manufacturers, with calls to action for TDA Enterprises | BLUV First readiness assessments',
+    defaultPrompt: 'Create an educational sequence about CMMC certification requirements for defense supply chain manufacturers, with calls to action for TDA Enterprises | BLove First readiness assessments',
     suggestedType: 'email',
   },
   {
@@ -182,7 +182,7 @@ const WORKFLOW_TEMPLATES = [
   {
     id: 'event_reminder',
     name: 'Event/Webinar Reminder',
-    description: 'Remind registrants about upcoming TDA Enterprises | BLUV First events and webinars',
+    description: 'Remind registrants about upcoming TDA Enterprises | BLove First events and webinars',
     category: 'event',
     defaultPrompt: 'Create an event reminder sequence with confirmations 1 week before, 1 day before, and 1 hour before the event, plus a follow-up after',
     suggestedType: 'email',
@@ -190,9 +190,9 @@ const WORKFLOW_TEMPLATES = [
   {
     id: 'reengagement',
     name: 'Supplier Re-engagement',
-    description: 'Re-engage inactive suppliers in the TDA Enterprises | BLUV First network',
+    description: 'Re-engage inactive suppliers in the TDA Enterprises | BLove First network',
     category: 'reengagement',
-    defaultPrompt: 'Create a re-engagement campaign for suppliers who haven\'t engaged with TDA Enterprises | BLUV First in 90 days, highlighting new OEM opportunities and success stories',
+    defaultPrompt: 'Create a re-engagement campaign for suppliers who haven\'t engaged with TDA Enterprises | BLove First in 90 days, highlighting new OEM opportunities and success stories',
     suggestedType: 'mixed',
   },
 ];
@@ -299,7 +299,7 @@ export default function GoHighLevelPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: "TDA Enterprises | BLUV First GoHighLevel",
+          name: "TDA Enterprises | BLove First GoHighLevel",
           description: "Auto-configured from Settings > Integrations",
           apiToken: ghl.apiKey,
           locationId: ghl.locationId,
@@ -687,7 +687,7 @@ export default function GoHighLevelPage() {
                 </Badge>
               </h1>
               <p className="text-sm text-muted-foreground">
-                Manage CRM integrations and AI-powered marketing automation for TDA Enterprises | BLUV First
+                Manage CRM integrations and AI-powered marketing automation for TDA Enterprises | BLove First
               </p>
             </div>
           </div>
@@ -862,7 +862,7 @@ export default function GoHighLevelPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Sparkles className="h-5 w-5 text-orange-500" />
-                      Workflow Templates for TDA Enterprises | BLUV First
+                      Workflow Templates for TDA Enterprises | BLove First
                     </CardTitle>
                     <CardDescription>
                       Select a template to get started or write your own description
@@ -902,7 +902,7 @@ export default function GoHighLevelPage() {
                     <Textarea
                       value={workflowPrompt}
                       onChange={(e) => setWorkflowPrompt(e.target.value)}
-                      placeholder="e.g., Create a 5-day email sequence for new suppliers that introduces TDA Enterprises | BLUV First services, explains the certification process, and schedules a discovery call..."
+                      placeholder="e.g., Create a 5-day email sequence for new suppliers that introduces TDA Enterprises | BLove First services, explains the certification process, and schedules a discovery call..."
                       rows={4}
                     />
                     <div className="flex gap-4">
@@ -952,21 +952,21 @@ export default function GoHighLevelPage() {
                     <div className="space-y-2 text-sm">
                       <button 
                         className="w-full text-left p-3 rounded-lg border hover:bg-muted transition-colors"
-                        onClick={() => setWorkflowPrompt("Create a welcome sequence for new manufacturing suppliers joining the TDA Enterprises | BLUV First network. Include an introduction to our services, information about OEM opportunities, and a call to schedule a Supplier Success Workshop.")}
+                        onClick={() => setWorkflowPrompt("Create a welcome sequence for new manufacturing suppliers joining the TDA Enterprises | BLove First network. Include an introduction to our services, information about OEM opportunities, and a call to schedule a Supplier Success Workshop.")}
                       >
                         <span className="font-medium">Supplier Welcome Series</span>
-                        <p className="text-muted-foreground mt-1">Welcome new suppliers with TDA Enterprises | BLUV First services overview and workshop invitation</p>
+                        <p className="text-muted-foreground mt-1">Welcome new suppliers with TDA Enterprises | BLove First services overview and workshop invitation</p>
                       </button>
                       <button 
                         className="w-full text-left p-3 rounded-lg border hover:bg-muted transition-colors"
-                        onClick={() => setWorkflowPrompt("Create a CMMC certification awareness campaign for defense supply chain manufacturers. Explain the requirements, timeline, and how TDA Enterprises | BLUV First can help them achieve compliance.")}
+                        onClick={() => setWorkflowPrompt("Create a CMMC certification awareness campaign for defense supply chain manufacturers. Explain the requirements, timeline, and how TDA Enterprises | BLove First can help them achieve compliance.")}
                       >
                         <span className="font-medium">CMMC Awareness Campaign</span>
-                        <p className="text-muted-foreground mt-1">Educate defense suppliers about CMMC requirements and TDA Enterprises | BLUV First certification services</p>
+                        <p className="text-muted-foreground mt-1">Educate defense suppliers about CMMC requirements and TDA Enterprises | BLove First certification services</p>
                       </button>
                       <button 
                         className="w-full text-left p-3 rounded-lg border hover:bg-muted transition-colors"
-                        onClick={() => setWorkflowPrompt("Create a follow-up sequence for suppliers who attended a TDA Enterprises | BLUV First webinar but haven't scheduled a consultation. Include case studies and success stories from similar manufacturers.")}
+                        onClick={() => setWorkflowPrompt("Create a follow-up sequence for suppliers who attended a TDA Enterprises | BLove First webinar but haven't scheduled a consultation. Include case studies and success stories from similar manufacturers.")}
                       >
                         <span className="font-medium">Webinar Follow-up</span>
                         <p className="text-muted-foreground mt-1">Convert webinar attendees with case studies and consultation offers</p>
@@ -1193,7 +1193,7 @@ export default function GoHighLevelPage() {
           <DialogHeader>
             <DialogTitle>Add GoHighLevel Integration</DialogTitle>
             <DialogDescription>
-              Connect a GoHighLevel account to sync supplier data with TDA Enterprises | BLUV First
+              Connect a GoHighLevel account to sync supplier data with TDA Enterprises | BLove First
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4">
@@ -1203,7 +1203,7 @@ export default function GoHighLevelPage() {
                 id="name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="TDA Enterprises | BLUV First Main Account"
+                placeholder="TDA Enterprises | BLove First Main Account"
               />
             </div>
             <div className="space-y-2">

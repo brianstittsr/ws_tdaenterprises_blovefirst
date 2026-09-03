@@ -2,10 +2,10 @@
  * Brand configuration for the dual-site platform.
  *
  * TDA Enterprises = professional EHS business
- * BLUV First = B Love Foundation, Inc. nonprofit
+ * BLove First = B Love Foundation, Inc. nonprofit
  */
 
-export type BrandId = "tda" | "bluv";
+export type BrandId = "tda" | "BLove";
 
 export interface BrandConfig {
   id: BrandId;
@@ -84,7 +84,7 @@ export const tdaBrand: BrandConfig = {
     contact: "/business/contact",
   },
   contact: {
-    email: "info@tdaenterprises.com",
+    email: "tdaentrprz@gmail.com",
     phone: "615-673-4323",
     address: "P.O. Box 291521",
     cityState: "Nashville, TN 37229",
@@ -105,9 +105,9 @@ export const tdaBrand: BrandConfig = {
   },
 };
 
-export const bluvBrand: BrandConfig = {
-  id: "bluv",
-  name: "BLUV First",
+export const BLoveBrand: BrandConfig = {
+  id: "BLove",
+  name: "BLove First",
   legalName: "B Love Foundation, Inc.",
   tagline: "Be love first! Let all that you do be done with love.",
   mission:
@@ -134,20 +134,20 @@ export const bluvBrand: BrandConfig = {
     facebook: "https://facebook.com/blovefirst",
   },
   colors: {
-    primary: "bluv-primary",
-    secondary: "bluv-secondary",
-    accent: "bluv-accent",
-    background: "bluv-background",
-    foreground: "bluv-foreground",
+    primary: "BLove-primary",
+    secondary: "BLove-secondary",
+    accent: "BLove-accent",
+    background: "BLove-background",
+    foreground: "BLove-foreground",
   },
   logos: {
-    main: "logo-bluv-main",
+    main: "logo-BLove-main",
   },
 };
 
 export const brandsById: Record<BrandId, BrandConfig> = {
   tda: tdaBrand,
-  bluv: bluvBrand,
+  BLove: BLoveBrand,
 };
 
 export function getBrand(brandId: BrandId): BrandConfig {

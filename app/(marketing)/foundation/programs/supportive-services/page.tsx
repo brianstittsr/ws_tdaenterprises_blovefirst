@@ -6,9 +6,9 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Supportive Services | BLUV First",
+  title: "Supportive Services | BLove First",
   description:
-    "BLUV First supportive services provide housing assistance, recovery support, employment resources, healthcare access, and hygiene resources for veterans, seniors, and citizens in transition.",
+    "BLove First supportive services provide housing assistance, recovery support, employment resources, healthcare access, and hygiene resources for veterans, seniors, and citizens in transition.",
 };
 
 const services = [
@@ -45,7 +45,7 @@ export default function SupportiveServicesPage() {
       <div className="container max-w-4xl">
         <h1 className="text-4xl font-bold mb-6">Supportive Services</h1>
         <p className="text-lg text-muted-foreground mb-12">
-          BLUV First offers services that support employment, housing, transportation, health &
+          BLove First offers services that support employment, housing, transportation, health &
           wellness, healthcare access, hygiene, and other human resources for community members in
           transition.
         </p>

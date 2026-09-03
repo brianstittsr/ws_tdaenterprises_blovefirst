@@ -5,7 +5,7 @@ import { SuccessStoriesContent } from "@/components/marketing/success-stories-co
 export const metadata: Metadata = {
   title: "Success Stories | SV+ Platform",
   description:
-    "Real results from businesses and communities served by TDA Enterprises and BLUV First.",
+    "Real results from businesses and communities served by TDA Enterprises and BLove First.",
 };
 
 export default function SuccessStoriesPage() {

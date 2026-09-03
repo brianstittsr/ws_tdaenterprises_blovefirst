@@ -204,17 +204,17 @@ const defaultTemplate: Omit<QuizReportTemplateDoc, 'id' | 'createdAt' | 'updated
     logoUrl: "/icons/icon-192x192.svg",
     primaryColor: "#D97706",
     secondaryColor: "#1E293B",
-    companyName: "TDA Enterprises | BLUV First",
-    contactEmail: "info@tdaenterprises.com",
+    companyName: "TDA Enterprises | BLove First",
+    contactEmail: "tdaentrprz@gmail.com",
     contactPhone: "(615) 673-4323",
     website: "https://tdaenterprises.com",
   },
   emailSettings: {
     subject: "Your SV+ Platform Assessment Results",
-    fromName: "TDA Enterprises | BLUV First",
-    replyTo: "info@tdaenterprises.com",
+    fromName: "TDA Enterprises | BLove First",
+    replyTo: "tdaentrprz@gmail.com",
     introText: "Thank you for completing the SV+ Platform assessment! Attached is your personalized report with insights and recommendations.",
-    signatureText: "Best regards,\nThe TDA Enterprises & BLUV First Team",
+    signatureText: "Best regards,\nThe TDA Enterprises & BLove First Team",
   },
 };
 

@@ -397,7 +397,7 @@ export default function QuizResultsPage() {
                 </Button>
 
                 <p className="text-xs text-gray-500 text-center">
-                  By submitting, you agree to receive your results and occasional insights from TDA Enterprises and BLUV First. 
+                  By submitting, you agree to receive your results and occasional insights from TDA Enterprises and BLove First. 
                   We respect your privacy and will never spam you.
                 </p>
               </form>

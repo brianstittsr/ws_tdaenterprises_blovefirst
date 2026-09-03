@@ -17,14 +17,14 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://tdaenterprises.com"),
   title: {
-    default: "TDA Enterprises | BLUV First — Empowering Safety. Transforming Lives.",
+    default: "TDA Enterprises | BLove First — Empowering Safety. Transforming Lives.",
     template: "%s | TDA Enterprises",
   },
   description:
-    "TDA Enterprises provides professional environmental, health, and safety services. BLUV First (B Love Foundation, Inc.) offers faith-based community outreach, youth enrichment, and occupational empowerment.",
+    "TDA Enterprises provides professional environmental, health, and safety services. BLove First (B Love Foundation, Inc.) offers faith-based community outreach, youth enrichment, and occupational empowerment.",
   keywords: [
     "TDA Enterprises",
-    "BLUV First",
+    "BLove First",
     "B Love Foundation",
     "EHS services",
     "OSHA training",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     "occupational empowerment",
     "community outreach",
   ],
-  authors: [{ name: "TDA Enterprises / BLUV First", url: "https://blovefirst.org" }],
-  creator: "TDA Enterprises / BLUV First",
-  publisher: "TDA Enterprises / BLUV First",
+  authors: [{ name: "TDA Enterprises / BLove First", url: "https://blovefirst.org" }],
+  creator: "TDA Enterprises / BLove First",
+  publisher: "TDA Enterprises / BLove First",
   formatDetection: {
     email: false,
     address: false,
@@ -62,17 +62,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://tdaenterprises.com",
-    siteName: "TDA Enterprises | BLUV First",
-    title: "TDA Enterprises | BLUV First — Empowering Safety. Transforming Lives.",
+    siteName: "TDA Enterprises | BLove First",
+    title: "TDA Enterprises | BLove First — Empowering Safety. Transforming Lives.",
     description:
-      "TDA Enterprises provides professional environmental, health, and safety services. BLUV First offers faith-based community outreach, youth enrichment, and occupational empowerment.",
+      "TDA Enterprises provides professional environmental, health, and safety services. BLove First offers faith-based community outreach, youth enrichment, and occupational empowerment.",
     images: [],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TDA Enterprises | BLUV First",
+    title: "TDA Enterprises | BLove First",
     description:
-      "TDA Enterprises provides professional environmental, health, and safety services. BLUV First offers faith-based community outreach.",
+      "TDA Enterprises provides professional environmental, health, and safety services. BLove First offers faith-based community outreach.",
     creator: "@tdaentrprz",
   },
   verification: {

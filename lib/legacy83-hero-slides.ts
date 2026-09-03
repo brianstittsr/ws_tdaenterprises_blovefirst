@@ -239,7 +239,7 @@ export const legacy83CompanyInfo = {
   },
   phone: "(513) 335-1978",
   altPhone: "(513) 980-1152",
-  email: "info@legacy83business.com",
+  email: "tdaentrprz@gmail.com",
   website: "https://legacy83business.com",
   quizUrl: "https://quiz.legacy83business.com",
 };

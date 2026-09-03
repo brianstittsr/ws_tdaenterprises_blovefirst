@@ -1,8 +1,8 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export const metadata = {
-  title: "Contact | BLUV First",
-  description: "Contact BLUV First (B Love Foundation, Inc.) for donations, partnerships, volunteer opportunities, and program information.",
+  title: "Contact | BLove First",
+  description: "Contact BLove First (B Love Foundation, Inc.) for donations, partnerships, volunteer opportunities, and program information.",
 };
 
 export default function FoundationContactPage() {
@@ -10,7 +10,7 @@ export default function FoundationContactPage() {
     <section className="py-16 md:py-24">
       <div className="container max-w-4xl">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Contact BLUV First</h1>
+          <h1 className="text-4xl font-bold mb-4">Contact BLove First</h1>
           <p className="text-lg text-muted-foreground">
             We would love to hear from you. Reach out to learn more about our programs, events,
             volunteer opportunities, and partnership options.

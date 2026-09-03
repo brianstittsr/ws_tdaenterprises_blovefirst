@@ -139,8 +139,8 @@ export default function PrivacyPage() {
               Nashville, TN 37229
               <br />
               Email:{" "}
-              <Link href="mailto:info@tdaenterprises.com" className="text-primary hover:underline">
-                info@tdaenterprises.com
+              <Link href="mailto:tdaentrprz@gmail.com" className="text-primary hover:underline">
+                tdaentrprz@gmail.com
               </Link>
               <br />
               Phone:{" "}

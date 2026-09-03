@@ -31,8 +31,8 @@ export default function BusinessContactPage() {
           <div className="flex flex-col items-center text-center p-6 rounded-xl border bg-card">
             <Mail className="h-8 w-8 text-primary mb-4" />
             <h3 className="font-semibold mb-2">Email</h3>
-            <a href="mailto:info@tdaenterprises.com" className="text-muted-foreground hover:text-foreground">
-              info@tdaenterprises.com
+            <a href="mailto:tdaentrprz@gmail.com" className="text-muted-foreground hover:text-foreground">
+              tdaentrprz@gmail.com
             </a>
           </div>
           <div className="flex flex-col items-center text-center p-6 rounded-xl border bg-card">

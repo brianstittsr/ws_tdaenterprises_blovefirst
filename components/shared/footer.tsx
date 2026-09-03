@@ -122,9 +122,9 @@ export function Footer() {
                 <span>United States</span>
               </li>
               <li>
-                <Link href="mailto:info@legacy83business.com" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
+                <Link href="mailto:tdaentrprz@gmail.com" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
                   <Mail className="h-4 w-4" />
-                  info@legacy83business.com
+                  tdaentrprz@gmail.com
                 </Link>
               </li>
               <li>

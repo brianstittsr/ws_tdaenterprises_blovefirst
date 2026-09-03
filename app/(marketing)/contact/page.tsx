@@ -462,10 +462,10 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium">Email</p>
                       <Link
-                        href="mailto:info@tdaenterprises.com"
+                        href="mailto:tdaentrprz@gmail.com"
                         className="text-muted-foreground hover:text-primary"
                       >
-                        info@tdaenterprises.com
+                        tdaentrprz@gmail.com
                       </Link>
                     </div>
                   </div>

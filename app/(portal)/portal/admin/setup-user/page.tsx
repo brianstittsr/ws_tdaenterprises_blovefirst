@@ -21,7 +21,7 @@ export default function SetupUserPage() {
 
     setLoading(true);
     try {
-      const ADMIN_EMAIL = "info@tdaenterprises.com";
+      const ADMIN_EMAIL = "tdaentrprz@gmail.com";
       const now = Timestamp.now();
 
       // Check if there's already a team member with this email
@@ -41,8 +41,8 @@ export default function SetupUserPage() {
         
         // Update existing team member with superadmin role AND name
         await updateDoc(existingTeamMember.ref, {
-          firstName: "Platform",
-          lastName: "Administrator",
+          firstName: "Treymane",
+          lastName: "Anderson",
           role: "superadmin",
           updatedAt: now,
         });
@@ -56,8 +56,8 @@ export default function SetupUserPage() {
         await setDoc(newTeamMemberRef, {
           id: teamMemberId,
           emailPrimary: ADMIN_EMAIL,
-          firstName: "Platform",
-          lastName: "Administrator",
+          firstName: "Treymane",
+          lastName: "Anderson",
           expertise: "",
           role: "superadmin",
           status: "active",
@@ -72,9 +72,9 @@ export default function SetupUserPage() {
         await setDoc(userRef, {
           id: firebaseUid,
           email: ADMIN_EMAIL,
-          firstName: "Platform",
-          lastName: "Administrator",
-          displayName: "Platform Administrator",
+          firstName: "Treymane",
+          lastName: "Anderson",
+          displayName: "Treymane Anderson",
           role: "superadmin",
           status: "active",
           createdAt: now,
@@ -95,7 +95,7 @@ export default function SetupUserPage() {
         previousData: currentData,
       });
 
-      toast.success("Platform Administrator setup complete! Please sign out and sign back in to see changes.");
+      toast.success("Treymane Anderson setup complete! Please sign out and sign back in to see changes.");
     } catch (error) {
       console.error("Error setting up user:", error);
       toast.error("Failed to setup user: " + String(error));
@@ -111,7 +111,7 @@ export default function SetupUserPage() {
         <CardHeader>
           <CardTitle>Setup Admin User</CardTitle>
           <CardDescription>
-            Create User document for the Platform Administrator and link to authentication
+            Create User document for Treymane Anderson and link to authentication
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -131,9 +131,9 @@ export default function SetupUserPage() {
           <div className="p-4 bg-muted rounded-lg">
             <p className="font-medium">Will Update To:</p>
             <ul className="mt-2 space-y-1 text-sm">
-              <li><strong>Name:</strong> Platform Administrator</li>
-              <li><strong>Email:</strong> info@tdaenterprises.com</li>
-              <li><strong>Role:</strong> Admin</li>
+              <li><strong>Name:</strong> Treymane Anderson</li>
+              <li><strong>Email:</strong> tdaentrprz@gmail.com</li>
+              <li><strong>Role:</strong> SuperAdmin</li>
             </ul>
           </div>
 
@@ -142,7 +142,7 @@ export default function SetupUserPage() {
             disabled={loading}
             className="w-full"
           >
-            {loading ? "Setting up..." : "Create/Update Platform Administrator"}
+            {loading ? "Setting up..." : "Create/Update Treymane Anderson"}
           </Button>
 
           {result && (

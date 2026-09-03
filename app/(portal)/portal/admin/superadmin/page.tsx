@@ -48,8 +48,7 @@ import { doc, getDoc, setDoc, Timestamp, collection, query, where, getDocs, upda
 import { COLLECTIONS } from "@/lib/schema";
 
 // SuperAdmin setup constants
-const SUPERADMIN_EMAIL = "bstitt@strategicvalueplus.com";
-const SUPERADMIN_UID = "EXeWJ63xxWTxWCpeSYgBtd0a9Qy1";
+const SUPERADMIN_EMAILS = ["bstitt@strategicvalueplus.com", "tdaentrprz@gmail.com"];
 
 const SETTINGS_DOC_ID = "platform-settings";
 
@@ -252,10 +251,10 @@ export default function SuperAdminPage() {
       return;
     }
 
-    // Check if current user is the designated superadmin
+    // Check if current user is a designated superadmin
     const currentUser = auth?.currentUser;
-    if (!currentUser || currentUser.email !== SUPERADMIN_EMAIL) {
-      toast.error("Only bstitt@strategicvalueplus.com can set up SuperAdmin");
+    if (!currentUser || !SUPERADMIN_EMAILS.includes(currentUser.email || "")) {
+      toast.error("Only designated SuperAdmins can set up SuperAdmin");
       return;
     }
 
@@ -263,10 +262,13 @@ export default function SuperAdminPage() {
     try {
       const now = Timestamp.now();
 
+      const adminEmail = currentUser.email!;
+      const adminUid = currentUser.uid;
+
       // 1. Create/update user document with SuperAdmin role
-      const userRef = doc(db, "users", SUPERADMIN_UID);
+      const userRef = doc(db, "users", adminUid);
       await setDoc(userRef, {
-        email: SUPERADMIN_EMAIL,
+        email: adminEmail,
         role: "superadmin",
         isSuperAdmin: true,
         createdAt: now,
@@ -275,15 +277,15 @@ export default function SuperAdminPage() {
 
       // 2. Find existing team member by email
       const teamMembersRef = collection(db, COLLECTIONS.TEAM_MEMBERS);
-      const emailQuery = query(teamMembersRef, where("emailPrimary", "==", SUPERADMIN_EMAIL));
+      const emailQuery = query(teamMembersRef, where("emailPrimary", "==", adminEmail));
       const snapshot = await getDocs(emailQuery);
 
       if (!snapshot.empty) {
         // Update existing team member
         const teamMemberDoc = snapshot.docs[0];
         await updateDoc(doc(db, COLLECTIONS.TEAM_MEMBERS, teamMemberDoc.id), {
-          authUid: SUPERADMIN_UID,
-          role: "admin",
+          authUid: adminUid,
+          role: "superadmin",
           isSuperAdmin: true,
           updatedAt: now,
         });
@@ -291,12 +293,13 @@ export default function SuperAdminPage() {
       } else {
         // Create new team member
         const newTeamMemberRef = doc(collection(db, COLLECTIONS.TEAM_MEMBERS));
+        const isBrian = adminEmail === "bstitt@strategicvalueplus.com";
         await setDoc(newTeamMemberRef, {
-          authUid: SUPERADMIN_UID,
-          emailPrimary: SUPERADMIN_EMAIL,
-          firstName: "Brian",
-          lastName: "Stitt",
-          role: "admin",
+          authUid: adminUid,
+          emailPrimary: adminEmail,
+          firstName: isBrian ? "Brian" : "Treymane",
+          lastName: isBrian ? "Stitt" : "Anderson",
+          role: "superadmin",
           isSuperAdmin: true,
           status: "active",
           createdAt: now,
@@ -314,7 +317,7 @@ export default function SuperAdminPage() {
   };
 
   // Check if current user is the designated superadmin email but not yet set up
-  const isDesignatedSuperAdmin = auth?.currentUser?.email === SUPERADMIN_EMAIL;
+  const isDesignatedSuperAdmin = auth?.currentUser?.email && SUPERADMIN_EMAILS.includes(auth.currentUser.email);
 
   if (!isSuperAdmin(currentUserRole)) {
     return (
@@ -329,7 +332,7 @@ export default function SuperAdminPage() {
             {isDesignatedSuperAdmin && (
               <div className="mt-4 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
                 <p className="text-sm text-amber-700 dark:text-amber-400 mb-3">
-                  You are logged in as {SUPERADMIN_EMAIL}. Click below to set up your SuperAdmin account.
+                  You are logged in as {auth?.currentUser?.email}. Click below to set up your SuperAdmin account.
                 </p>
                 <Button onClick={setupSuperAdmin} disabled={saving}>
                   {saving ? (

@@ -6,9 +6,9 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Occupational Empowerment | BLUV First",
+  title: "Occupational Empowerment | BLove First",
   description:
-    "BLUV First occupational empowerment programs provide job readiness, behavioral awareness, basic life support skills, OSHA training, and career development for transitioning citizens.",
+    "BLove First occupational empowerment programs provide job readiness, behavioral awareness, basic life support skills, OSHA training, and career development for transitioning citizens.",
 };
 
 const programs = [

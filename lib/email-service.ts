@@ -2,8 +2,8 @@
  * SMTP Email Service
  *
  * Provides email sending capabilities via SMTP for:
- * - info@tdaenterprises.com (TDA Enterprises)
- * - blovefoundation@yahoo.com (BLUV First / B Love Foundation, Inc.)
+ * - tdaentrprz@gmail.com (TDA Enterprises)
+ * - blovefoundation@yahoo.com (BLove First / B Love Foundation, Inc.)
  *
  * Uses nodemailer for SMTP transport
  */
@@ -53,31 +53,31 @@ export const EMAIL_ACCOUNTS: Record<string, Omit<EmailAccount, "password">> = {
   tda: {
     id: "tda",
     name: "TDA Enterprises",
-    email: "info@tdaenterprises.com",
+    email: "tdaentrprz@gmail.com",
     smtpHost: process.env.TDA_SMTP_HOST || "smtp.office365.com",
     smtpPort: parseInt(process.env.TDA_SMTP_PORT || "587"),
     secure: process.env.TDA_SMTP_SECURE === "true",
-    user: process.env.TDA_SMTP_USER || "info@tdaenterprises.com",
+    user: process.env.TDA_SMTP_USER || "tdaentrprz@gmail.com",
   },
-  bluv: {
-    id: "bluv",
-    name: "BLUV First",
+  BLove: {
+    id: "BLove",
+    name: "BLove First",
     email: "blovefoundation@yahoo.com",
-    smtpHost: process.env.BLUV_SMTP_HOST || "smtp.gmail.com",
-    smtpPort: parseInt(process.env.BLUV_SMTP_PORT || "587"),
-    secure: process.env.BLUV_SMTP_SECURE === "true",
-    user: process.env.BLUV_SMTP_USER || "blovefoundation@yahoo.com",
+    smtpHost: process.env.BLove_SMTP_HOST || "smtp.gmail.com",
+    smtpPort: parseInt(process.env.BLove_SMTP_PORT || "587"),
+    secure: process.env.BLove_SMTP_SECURE === "true",
+    user: process.env.BLove_SMTP_USER || "blovefoundation@yahoo.com",
   },
 };
 
 /**
  * Create a nodemailer transporter for a specific account
  */
-function createTransporter(accountId: "tda" | "bluv"): nodemailer.Transporter {
+function createTransporter(accountId: "tda" | "BLove"): nodemailer.Transporter {
   const account = EMAIL_ACCOUNTS[accountId];
   const password = accountId === "tda"
     ? process.env.TDA_SMTP_PASSWORD
-    : process.env.BLUV_SMTP_PASSWORD;
+    : process.env.BLove_SMTP_PASSWORD;
 
   if (!password) {
     throw new Error(`SMTP password not configured for ${accountId}`);
@@ -101,7 +101,7 @@ function createTransporter(accountId: "tda" | "bluv"): nodemailer.Transporter {
  * Send an email using a specific account
  */
 export async function sendEmail(
-  accountId: "tda" | "bluv",
+  accountId: "tda" | "BLove",
   message: EmailMessage
 ): Promise<SendEmailResult> {
   try {
@@ -158,16 +158,16 @@ export async function sendFromTDA(message: EmailMessage): Promise<SendEmailResul
 }
 
 /**
- * Send email from BLUV First account
+ * Send email from BLove First account
  */
-export async function sendFromBLUV(message: EmailMessage): Promise<SendEmailResult> {
-  return sendEmail("bluv", message);
+export async function sendFromBLove(message: EmailMessage): Promise<SendEmailResult> {
+  return sendEmail("BLove", message);
 }
 
 /**
  * Verify SMTP connection for an account
  */
-export async function verifyConnection(accountId: "tda" | "bluv"): Promise<boolean> {
+export async function verifyConnection(accountId: "tda" | "BLove"): Promise<boolean> {
   try {
     const transporter = createTransporter(accountId);
     await transporter.verify();
@@ -182,7 +182,7 @@ export async function verifyConnection(accountId: "tda" | "bluv"): Promise<boole
  * Send a templated notification email
  */
 export async function sendNotificationEmail(
-  accountId: "tda" | "bluv",
+  accountId: "tda" | "BLove",
   to: string | string[],
   subject: string,
   content: string,
@@ -208,7 +208,7 @@ export async function sendNotificationEmail(
               <!-- Header -->
               <tr>
                 <td style="padding: 30px 40px; background-color: #1e293b; border-radius: 8px 8px 0 0;">
-                  <h1 style="margin: 0; color: #f59e0b; font-size: 24px;">TDA Enterprises | BLUV First</h1>
+                  <h1 style="margin: 0; color: #f59e0b; font-size: 24px;">TDA Enterprises | BLove First</h1>
                 </td>
               </tr>
               <!-- Content -->
@@ -231,7 +231,7 @@ export async function sendNotificationEmail(
               <tr>
                 <td style="padding: 20px 40px; background-color: #f8fafc; border-radius: 0 0 8px 8px; border-top: 1px solid #e2e8f0;">
                   <p style="margin: 0; color: #94a3b8; font-size: 12px;">
-                    ${options?.footerText || "This email was sent from TDA Enterprises | BLUV First. Please do not reply directly to this email."}
+                    ${options?.footerText || "This email was sent from TDA Enterprises | BLove First. Please do not reply directly to this email."}
                   </p>
                   <p style="margin: 10px 0 0; color: #94a3b8; font-size: 12px;">
                     © ${new Date().getFullYear()} TDA Enterprises / B Love Foundation, Inc. All rights reserved.
@@ -258,7 +258,7 @@ export async function sendNotificationEmail(
  * Send a meeting invitation email
  */
 export async function sendMeetingInvitation(
-  accountId: "tda" | "bluv",
+  accountId: "tda" | "BLove",
   to: string | string[],
   meetingDetails: {
     title: string;

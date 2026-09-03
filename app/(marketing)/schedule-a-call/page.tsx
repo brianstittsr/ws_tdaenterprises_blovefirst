@@ -43,7 +43,7 @@ const expectations = [
   "Discuss your current business challenges and goals",
   "Review your Legacy Growth IQ™ results (if you've taken the quiz)",
   "Explore potential strategies for growth and succession",
-  "Determine if TDA Enterprises or BLUV First is the right fit for you",
+  "Determine if TDA Enterprises or BLove First is the right fit for you",
   "Answer any questions you have about our approach",
 ];
 
@@ -102,7 +102,7 @@ export default function ScheduleCallPage() {
             
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Schedule a complimentary 30-minute strategy call with our team to discuss
-              your goals and explore how TDA Enterprises or BLUV First can help.
+              your goals and explore how TDA Enterprises or BLove First can help.
             </p>
 
             <div className="flex items-center justify-center gap-6 text-gray-400 mb-10">
@@ -173,7 +173,7 @@ export default function ScheduleCallPage() {
                       className="w-full"
                       asChild
                     >
-                      <a href="mailto:info@tdaenterprises.com?subject=Strategy Call Request">
+                      <a href="mailto:tdaentrprz@gmail.com?subject=Strategy Call Request">
                         <MessageCircle className="mr-2 h-5 w-5" />
                         Email to Schedule
                       </a>
@@ -315,8 +315,8 @@ export default function ScheduleCallPage() {
                 <CardContent className="p-6 text-center">
                   <MessageCircle className="h-8 w-8 text-amber-500 mx-auto mb-3" />
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <a href="mailto:info@tdaenterprises.com" className="text-amber-600 hover:underline text-sm">
-                    info@tdaenterprises.com
+                  <a href="mailto:tdaentrprz@gmail.com" className="text-amber-600 hover:underline text-sm">
+                    tdaentrprz@gmail.com
                   </a>
                 </CardContent>
               </Card>

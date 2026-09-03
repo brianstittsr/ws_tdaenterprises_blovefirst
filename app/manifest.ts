@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "TDA Enterprises | BLUV First",
-    short_name: "TDA | BLUV",
+    name: "TDA Enterprises | BLove First",
+    short_name: "TDA | BLove",
     description:
-      "TDA Enterprises provides professional EHS services. BLUV First (B Love Foundation, Inc.) offers faith-based community outreach and empowerment programs.",
+      "TDA Enterprises provides professional EHS services. BLove First (B Love Foundation, Inc.) offers faith-based community outreach and empowerment programs.",
     start_url: "/",
     display: "standalone",
     background_color: "#f8fafc",

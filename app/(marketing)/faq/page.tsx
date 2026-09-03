@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "FAQ | SV+ Platform",
   description:
-    "Frequently asked questions about the SV+ Platform, TDA Enterprises, BLUV First, services, programs, and how we help businesses and communities grow safely.",
+    "Frequently asked questions about the SV+ Platform, TDA Enterprises, BLove First, services, programs, and how we help businesses and communities grow safely.",
 };
 
 const faqCategories = [
@@ -235,10 +235,10 @@ export default function FAQPage() {
                   We'll respond within 24 hours
                 </p>
                 <a
-                  href="mailto:info@legacy83business.com"
+                  href="mailto:tdaentrprz@gmail.com"
                   className="text-amber-600 font-medium hover:underline"
                 >
-                  info@legacy83business.com
+                  tdaentrprz@gmail.com
                 </a>
               </div>
             </div>

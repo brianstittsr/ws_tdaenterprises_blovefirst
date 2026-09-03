@@ -351,7 +351,7 @@ export default function BookingPage() {
       ].filter(Boolean).join("\n");
 
       const icsContent = buildICSContent({
-        uid: `booking-${bookingRef.id}@tdaenterprises.com`,
+        uid: `booking-${bookingRef.id}@tdaentrprz.gmail.com`,
         summary: calendarSummary,
         description: calendarDescription,
         organizerEmail: availability.teamMemberEmail,
@@ -815,7 +815,7 @@ export default function BookingPage() {
               </div>
               <h2 className="text-2xl font-bold mb-2">Booking Confirmed!</h2>
               <p className="text-muted-foreground mb-6">
-                Your meeting has been scheduled. A confirmation email with a calendar invite has been sent to <strong>{bookingDetails.email}</strong> and our team at <strong>info@tdaenterprises.com</strong>.
+                Your meeting has been scheduled. A confirmation email with a calendar invite has been sent to <strong>{bookingDetails.email}</strong> and our team at <strong>tdaentrprz@gmail.com</strong>.
               </p>
               
               <div className="bg-muted rounded-lg p-4 max-w-sm mx-auto text-left space-y-2">

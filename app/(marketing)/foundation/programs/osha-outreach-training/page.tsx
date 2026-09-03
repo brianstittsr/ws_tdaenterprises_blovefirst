@@ -16,9 +16,9 @@ const galleryImages = [
 ];
 
 export const metadata = {
-  title: "OSHA Outreach Training | BLUV First",
+  title: "OSHA Outreach Training | BLove First",
   description:
-    "BLUV First's OSHA Outreach Training brings free workplace safety certification and occupational empowerment to under-represented citizens in transition.",
+    "BLove First's OSHA Outreach Training brings free workplace safety certification and occupational empowerment to under-represented citizens in transition.",
 };
 
 const trainingOfferings = [
@@ -41,7 +41,7 @@ export default function OshaOutreachTrainingPage() {
       <div className="container max-w-4xl">
         <h1 className="text-4xl font-bold mb-6">OSHA Outreach Training</h1>
         <p className="text-lg text-muted-foreground mb-12">
-          Through our OSHA Outreach Training program, BLUV First delivers free, certified workplace
+          Through our OSHA Outreach Training program, BLove First delivers free, certified workplace
           safety education to under-represented citizens in transition — helping participants build
           occupational empowerment and become employable, safety-conscious members of the workforce.
         </p>

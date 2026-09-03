@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-const INTERNAL_NOTIFY_EMAIL = process.env.TDA_SMTP_USER || "info@tdaenterprises.com";
-const CC_EMAIL = process.env.BLUV_SMTP_USER || "blovefoundation@yahoo.com";
-const FROM_EMAIL = process.env.TDA_SMTP_USER || "info@tdaenterprises.com";
+const INTERNAL_NOTIFY_EMAIL = process.env.TDA_SMTP_USER || "tdaentrprz@gmail.com";
+const CC_EMAIL = process.env.BLove_SMTP_USER || "blovefoundation@yahoo.com";
+const FROM_EMAIL = process.env.TDA_SMTP_USER || "tdaentrprz@gmail.com";
 
 interface BugTrackerNotificationRequest {
   id: string;
@@ -203,7 +203,7 @@ export async function POST(request: NextRequest) {
     const subject = `Bug Tracker: ${typeLabel} Resolved - ${title}`;
 
     await transporter.sendMail({
-      from: `"TDA Enterprises | BLUV First" <${tdaUser}>`,
+      from: `"TDA Enterprises | BLove First" <${tdaUser}>`,
       to: INTERNAL_NOTIFY_EMAIL,
       cc: CC_EMAIL,
       subject,

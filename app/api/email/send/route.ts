@@ -23,9 +23,9 @@ export async function POST(request: NextRequest) {
     } = body;
 
     // Validate required fields
-    if (!accountId || !["tda", "bluv"].includes(accountId)) {
+    if (!accountId || !["tda", "BLove"].includes(accountId)) {
       return NextResponse.json(
-        { error: "Invalid account ID. Must be 'tda' or 'bluv'" },
+        { error: "Invalid account ID. Must be 'tda' or 'BLove'" },
         { status: 400 }
       );
     }

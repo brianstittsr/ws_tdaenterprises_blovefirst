@@ -19,7 +19,7 @@ async function updateIcyWilliams() {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
   
-  const ICY_EMAIL = "info@legacy83business.com";
+  const ICY_EMAIL = "tdaentrprz@gmail.com";
   const now = Timestamp.now();
 
   console.log("Looking for team member with email:", ICY_EMAIL);

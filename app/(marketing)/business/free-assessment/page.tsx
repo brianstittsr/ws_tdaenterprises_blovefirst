@@ -36,7 +36,7 @@ export default function FreeAssessmentPage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form className="space-y-6" action="mailto:info@tdaenterprises.com" method="post" encType="text/plain">
+            <form className="space-y-6" action="mailto:tdaentrprz@gmail.com" method="post" encType="text/plain">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name *</Label>

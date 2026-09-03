@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { type BrandId, getBrand } from "@/lib/brands";
@@ -55,12 +56,22 @@ export function BrandFooter({ brandId }: BrandFooterProps) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-4 space-y-4">
             <Link href={brand.routes.home} className="flex items-center gap-2">
-              <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
-                {brand.name.charAt(0)}
-              </div>
+              {brandId === "BLove" ? (
+                <Image
+                  src="/images/blove-logo.jpg"
+                  alt="B Love Foundation Logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 rounded-lg object-cover"
+                />
+              ) : (
+                <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  {brand.name.charAt(0)}
+                </div>
+              )}
               <div className="flex flex-col">
                 <span className="text-lg font-bold leading-none">{brand.name}</span>
-                {brandId === "bluv" && (
+                {brandId === "BLove" && (
                   <span className="text-xs text-gray-400">{brand.legalName}</span>
                 )}
               </div>

@@ -8,9 +8,9 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Events | BLUV First",
+  title: "Events | BLove First",
   description:
-    "Upcoming and past events hosted by BLUV First (B Love Foundation, Inc.) — benefit showcases, community closets, and holiday gatherings.",
+    "Upcoming and past events hosted by BLove First (B Love Foundation, Inc.) — benefit showcases, community closets, and holiday gatherings.",
 };
 
 const upcomingEvents = [

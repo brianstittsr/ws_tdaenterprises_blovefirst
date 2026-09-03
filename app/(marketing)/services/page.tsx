@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Services | SV+ Platform",
   description:
-    "Explore professional services from TDA Enterprises and BLUV First, including EHS consulting, safety training, youth enrichment, and community outreach.",
+    "Explore professional services from TDA Enterprises and BLove First, including EHS consulting, safety training, youth enrichment, and community outreach.",
 };
 
 const services = [

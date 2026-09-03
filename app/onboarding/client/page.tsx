@@ -305,7 +305,7 @@ export default function ClientOnboardingPage() {
             </div>
             <h1 className="text-3xl font-bold mb-2">Client Registration</h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Complete your profile to access TDA Enterprises and BLUV First services and connect with our team.
+              Complete your profile to access TDA Enterprises and BLove First services and connect with our team.
             </p>
           </div>
 
@@ -820,7 +820,7 @@ export default function ClientOnboardingPage() {
                       id="primaryGoals"
                       value={formData.primaryGoals}
                       onChange={(e) => updateFormData("primaryGoals", e.target.value)}
-                      placeholder="What are your main objectives for working with TDA Enterprises or BLUV First?"
+                      placeholder="What are your main objectives for working with TDA Enterprises or BLove First?"
                       rows={3}
                     />
                   </div>
@@ -896,7 +896,7 @@ export default function ClientOnboardingPage() {
                         <Link href="/privacy" className="text-primary hover:underline">Privacy Policy</Link>
                       </Label>
                       <p className="text-sm text-muted-foreground mt-1">
-                        By submitting this form, you consent to TDA Enterprises and BLUV First contacting you about our services.
+                        By submitting this form, you consent to TDA Enterprises and BLove First contacting you about our services.
                       </p>
                     </div>
                   </div>

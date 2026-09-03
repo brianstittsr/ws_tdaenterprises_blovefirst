@@ -17,7 +17,7 @@ const heroSlides = [
     alt: "Community volunteers working together",
     title: "Be Love... In Everything, Be Nothing But Love",
     description:
-      "BLUV First (B Love Foundation, Inc.) is a faith-based nonprofit providing youth enrichment, occupational empowerment, and supportive services to transitioning youth and adults.",
+      "BLove First (B Love Foundation, Inc.) is a faith-based nonprofit providing youth enrichment, occupational empowerment, and supportive services to transitioning youth and adults.",
     primaryCta: { label: "Give Love", href: "/foundation/give-love" },
     secondaryCta: { label: "Explore Programs", href: "/foundation/programs" },
   },
@@ -44,9 +44,9 @@ const heroSlides = [
 ];
 
 export const metadata = {
-  title: "BLUV First | B Love Foundation, Inc.",
+  title: "BLove First | B Love Foundation, Inc.",
   description:
-    "BLUV First (B Love Foundation, Inc.) is a faith-based nonprofit providing youth enrichment, occupational empowerment, and supportive services to under-represented citizens in transition.",
+    "BLove First (B Love Foundation, Inc.) is a faith-based nonprofit providing youth enrichment, occupational empowerment, and supportive services to under-represented citizens in transition.",
 };
 
 const programs = [
@@ -144,7 +144,7 @@ export default function FoundationHomePage() {
           <p className="text-lg text-muted-foreground mb-8">
             Partnerships with the private, public, and philanthropic community are vital to the
             success of our outreach. Through fundraising, youth programs, outreach consultation,
-            and entertainment endeavors, BLUV First aspires to change the world one act of love at a
+            and entertainment endeavors, BLove First aspires to change the world one act of love at a
             time.
           </p>
           <Button size="lg" asChild>

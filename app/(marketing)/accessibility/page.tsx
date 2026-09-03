@@ -287,7 +287,7 @@ export default function AccessibilityPage() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild>
-                <Link href="mailto:info@tdaenterprises.com">
+                <Link href="mailto:tdaentrprz@gmail.com">
                   <Mail className="mr-2 h-4 w-4" />
                   Email Us
                 </Link>
