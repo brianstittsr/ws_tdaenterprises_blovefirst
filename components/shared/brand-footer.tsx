@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Mail, MapPin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { ClientPhoneLink } from "@/components/shared/client-phone-link";
 import { type BrandId, getBrand } from "@/lib/brands";
 
 const businessLinks = {
@@ -140,10 +141,10 @@ export function BrandFooter({ brandId }: BrandFooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href={`tel:${brand.contact.phone.replace(/\D/g, "")}`} className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
-                  <Phone className="h-4 w-4" />
-                  {brand.contact.phone}
-                </Link>
+                <ClientPhoneLink
+                  phone={brand.contact.phone}
+                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+                />
               </li>
             </ul>
           </div>
