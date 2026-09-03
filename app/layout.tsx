@@ -39,6 +39,11 @@ export const metadata: Metadata = {
   authors: [{ name: "TDA Enterprises / BLove First", url: "https://blovefirst.org" }],
   creator: "TDA Enterprises / BLove First",
   publisher: "TDA Enterprises / BLove First",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   formatDetection: {
     email: false,
     address: false,
