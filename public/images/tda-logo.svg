@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <rect width="160" height="160" fill="#FACC15" rx="24"/>
+  <text
+    x="50%"
+    y="52%"
+    dominant-baseline="central"
+    text-anchor="middle"
+    font-family="Arial Black, Arial, sans-serif"
+    font-weight="900"
+    font-size="52"
+    fill="#0F172A"
+    letter-spacing="-2"
+  >TDA</text>
+  <rect x="20" y="118" width="120" height="4" fill="#0F172A" rx="2"/>
+  <text
+    x="50%"
+    y="140"
+    dominant-baseline="central"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-weight="700"
+    font-size="14"
+    fill="#0F172A"
+    letter-spacing="1"
+  >ENTERPRISES</text>
+</svg>

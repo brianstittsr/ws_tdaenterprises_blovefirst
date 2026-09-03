@@ -160,9 +160,13 @@ export function BrandNavbar() {
               className="h-10 w-10 rounded-lg object-cover"
             />
           ) : (
-            <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
-              {brand.name.charAt(0)}
-            </div>
+            <Image
+              src="/images/tda-logo.svg"
+              alt="TDA Enterprises Logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-lg object-cover"
+            />
           )}
           <div className="flex flex-col">
             <span className="text-lg font-bold leading-none">{brand.name}</span>
