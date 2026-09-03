@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Accessibility Statement",
   description:
-    "Strategic Value+ is committed to ensuring digital accessibility for people with disabilities. Learn about our accessibility features and WCAG compliance.",
+    "TDA Enterprises is committed to ensuring digital accessibility for people with disabilities. Learn about our accessibility features and Section 508 and WCAG compliance.",
 };
 
 const accessibilityFeatures = [
@@ -103,9 +103,11 @@ export default function AccessibilityPage() {
               Accessibility Statement
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Strategic Value+ is committed to ensuring digital accessibility for people 
-              with disabilities. We continually improve the user experience for everyone 
-              and apply the relevant accessibility standards.
+              TDA Enterprises is committed to ensuring digital accessibility for people
+              with disabilities. We continually improve the user experience for everyone
+              and apply the relevant accessibility standards, including Section 508 of the
+              Rehabilitation Act and the Web Content Accessibility Guidelines (WCAG) 2.1
+              and 2.2.
             </p>
           </div>
         </div>
@@ -117,10 +119,10 @@ export default function AccessibilityPage() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">Our Commitment</h2>
             <p className="text-muted-foreground mb-4">
-              We believe that the internet should be accessible to everyone, regardless of 
-              ability. Strategic Value+ strives to conform to the Web Content Accessibility 
-              Guidelines (WCAG) 2.1 and 2.2 at Level AA, and we are working toward Level AAA 
-              compliance where feasible.
+              We believe that the internet should be accessible to everyone, regardless of
+              ability. TDA Enterprises strives to conform to Section 508 of the Rehabilitation
+              Act and the Web Content Accessibility Guidelines (WCAG) 2.1 and 2.2 at Level AA,
+              and we are working toward Level AAA compliance where feasible.
             </p>
             <p className="text-muted-foreground">
               We use the UserWay accessibility widget to provide additional accessibility 
@@ -147,6 +149,60 @@ export default function AccessibilityPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 508 Compliance */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Section 508 Compliance</h2>
+            <p className="text-muted-foreground mb-4">
+              TDA Enterprises is committed to complying with Section 508 of the Rehabilitation Act
+              (29 U.S.C. &sect; 794d), which requires federal agencies and contractors to make their
+              electronic and information technology accessible to people with disabilities. While
+              TDA Enterprises is not a federal agency, we voluntarily adopt Section 508 standards
+              to ensure our website is accessible to all users, including those using assistive
+              technologies.
+            </p>
+            <p className="text-muted-foreground mb-4">
+              Our Section 508 compliance measures include:
+            </p>
+            <ul className="space-y-2 text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                <span>Semantic HTML structure with proper heading hierarchy</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                <span>ARIA labels and roles for interactive elements</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                <span>Skip-to-content link for keyboard navigation bypass</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                <span>Text alternatives for all non-text content</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                <span>Color contrast ratios meeting WCAG AA standards (4.5:1)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                <span>Forms with proper labels, error identification, and instructions</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                <span>Keyboard-accessible navigation and interactive components</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                <span>Support for screen readers including JAWS, NVDA, and VoiceOver</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -231,13 +287,13 @@ export default function AccessibilityPage() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild>
-                <Link href="mailto:info@legacy83business.com">
+                <Link href="mailto:info@tdaenterprises.com">
                   <Mail className="mr-2 h-4 w-4" />
                   Email Us
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="/contact">
+                <Link href="/business/contact">
                   <Phone className="mr-2 h-4 w-4" />
                   Contact Form
                 </Link>
@@ -254,7 +310,7 @@ export default function AccessibilityPage() {
       <section className="py-8 border-t">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-muted-foreground">
-            This accessibility statement was last updated on December 7, 2024.
+            This accessibility statement was last updated on September 2025.
           </p>
         </div>
       </section>

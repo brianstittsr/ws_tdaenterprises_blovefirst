@@ -37,36 +37,42 @@ const services = [
     description:
       "OSHA 10-Hour and 30-Hour courses for construction and general industry, plus First Aid/CPR/AED, Bloodborne Pathogens, and Aerial Work Platform training.",
     icon: Award,
+    href: "/business/services/osha-training",
   },
   {
     title: "Safety Audits & Compliance",
     description:
       "Comprehensive workplace audits that identify hazards, evaluate compliance gaps, and provide prioritized action plans.",
     icon: ClipboardCheck,
+    href: "/business/services/safety-audits",
   },
   {
     title: "Equipment Inspection",
     description:
       "Certified inspections for aerial work platforms, scaffolding, fall protection, hoists, carts, and other jobsite equipment.",
     icon: HardHat,
+    href: "/business/services/equipment-inspection",
   },
   {
     title: "Turnkey Program Development",
     description:
       "Custom EHS programs aligned with OSHA requirements and your operational needs — from written plans to training rollout.",
     icon: Shield,
+    href: "/business/services/program-development",
   },
   {
     title: "Hazard Assessment",
     description:
       "Systematic identification of workplace hazards with practical controls and ongoing monitoring recommendations.",
     icon: TriangleAlert,
+    href: "/business/services/hazard-assessment",
   },
   {
     title: "Industry-Specific Solutions",
     description:
       "Tailored safety support for manufacturing, construction, warehousing, logistics, and healthcare facilities.",
     icon: Factory,
+    href: "/business/services/industry-specific-solutions",
   },
   {
     title: "Management & Consulting",

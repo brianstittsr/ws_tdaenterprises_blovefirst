@@ -6,6 +6,7 @@ import {
   Award,
   TrendingUp,
   Phone,
+  ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -61,29 +62,33 @@ const services = [
     title: "OSHA Training & Certification",
     description: "OSHA 10-Hour, 30-Hour, First Aid/CPR/AED, and specialized safety certifications.",
     icon: Award,
+    href: "/business/services/osha-training",
   },
   {
     title: "Safety Audits & Compliance",
     description: "Comprehensive workplace audits that identify hazards and close compliance gaps.",
     icon: ClipboardCheck,
+    href: "/business/services/safety-audits",
   },
   {
     title: "Equipment Inspection",
     description: "Certified inspections for aerial work platforms, scaffolding, fall protection, and more.",
     icon: HardHat,
+    href: "/business/services/equipment-inspection",
   },
   {
     title: "Program Development",
     description: "Turnkey EHS programs tailored to your industry, workforce, and regulatory requirements.",
     icon: Shield,
+    href: "/business/services/program-development",
   },
 ];
 
 const industries = [
-  "Manufacturing",
-  "Construction",
-  "Warehousing & Logistics",
-  "Healthcare Facilities",
+  { title: "Manufacturing", href: "/business/industries/manufacturing" },
+  { title: "Construction", href: "/business/industries/construction" },
+  { title: "Warehousing & Logistics", href: "/business/industries/warehousing-logistics" },
+  { title: "Healthcare Facilities", href: "/business/industries/healthcare" },
 ];
 
 export default function BusinessHomePage() {
@@ -104,17 +109,23 @@ export default function BusinessHomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service) => (
-              <Card key={service.title} className="h-full">
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">{service.description}</CardDescription>
-                </CardContent>
-              </Card>
+              <Link key={service.title} href={service.href} className="block">
+                <Card className="h-full transition-shadow hover:shadow-lg">
+                  <CardHeader>
+                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                      <service.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base mb-3">{service.description}</CardDescription>
+                    <span className="text-sm font-medium text-primary flex items-center gap-1">
+                      Learn more
+                      <ArrowRight className="h-3 w-3" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
@@ -132,11 +143,17 @@ export default function BusinessHomePage() {
               </p>
               <ul className="space-y-4">
                 {industries.map((industry) => (
-                  <li key={industry} className="flex items-center gap-3">
-                    <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                      <TrendingUp className="h-4 w-4 text-primary" />
-                    </div>
-                    <span className="font-medium">{industry}</span>
+                  <li key={industry.title}>
+                    <Link
+                      href={industry.href}
+                      className="flex items-center gap-3 group hover:text-primary transition-colors"
+                    >
+                      <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <TrendingUp className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="font-medium">{industry.title}</span>
+                      <ArrowRight className="h-3 w-3 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -150,9 +167,17 @@ export default function BusinessHomePage() {
                 <li>New customer discounts on training packages</li>
                 <li>Programs aligned with OSHA and industry best practices</li>
               </ul>
-              <Button className="mt-6" asChild>
-                <Link href="/business/free-assessment">Schedule a Free Assessment</Link>
-              </Button>
+              <div className="flex flex-wrap gap-3 mt-6">
+                <Button asChild>
+                  <Link href="/business/free-assessment">Schedule a Free Assessment</Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link href="/business/industries">
+                    View All Industries
+                    <ArrowRight className="ml-1 h-3 w-3" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

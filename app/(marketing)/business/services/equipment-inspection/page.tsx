@@ -44,8 +44,8 @@ export default function EquipmentInspectionPage() {
       <ServiceHero
         title="Equipment Inspection"
         tagline="Certified inspections that verify compliance, identify defects, and keep your jobsite safe."
-        image="/images/extracted/job-site-evaluations.jpg"
-        imageAlt="Warehouse equipment and forklift safety inspection"
+        image="https://images.pexels.com/photos/9242919/pexels-photo-9242919.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        imageAlt="Steel machine equipment beside safety glasses on a metal surface"
       />
 
       <section className="py-16 md:py-24">

@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { ContactForm } from "@/components/marketing/contact-form";
 
 export const metadata = {
   title: "Contact | TDA Enterprises",
@@ -44,11 +45,11 @@ export default function BusinessContactPage() {
         </div>
 
         <div className="rounded-2xl border bg-card p-8">
-          <h2 className="text-2xl font-semibold mb-4">Request More Information</h2>
-          <p className="text-muted-foreground">
-            Use the portal or email us directly. Our team typically responds within 24-48 business
-            hours.
+          <h2 className="text-2xl font-semibold mb-2">Request More Information</h2>
+          <p className="text-muted-foreground mb-6">
+            Fill out the form below and our team will respond within 24-48 business hours.
           </p>
+          <ContactForm />
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -5,7 +7,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Award, Clock, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Award, Clock, Users, ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "Training Programs | TDA Enterprises",
@@ -20,6 +23,10 @@ const courses = [
     audience: "Entry-level construction workers",
     description:
       "Foundation-level safety training covering common construction hazards, worker rights, and employer responsibilities.",
+    image:
+      "https://images.pexels.com/photos/37635943/pexels-photo-37635943.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    imageAlt: "Construction workers on site wearing safety gear",
+    href: "/business/training/osha-10-construction",
   },
   {
     title: "OSHA 30-Hour Construction",
@@ -27,6 +34,10 @@ const courses = [
     audience: "Supervisors and managers",
     description:
       "Comprehensive construction safety outreach training with in-depth coverage of OSHA standards and hazard mitigation.",
+    image:
+      "https://images.pexels.com/photos/8961027/pexels-photo-8961027.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    imageAlt: "Two construction workers reviewing plans on site with hard hats",
+    href: "/business/training/osha-30-construction",
   },
   {
     title: "OSHA 10-Hour General Industry",
@@ -34,6 +45,10 @@ const courses = [
     audience: "General industry workers",
     description:
       "Safety essentials for manufacturing, warehousing, healthcare, and other general industry settings.",
+    image:
+      "https://images.pexels.com/photos/8973132/pexels-photo-8973132.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    imageAlt: "Worker wearing safety gear operating machinery in a manufacturing factory",
+    href: "/business/training/osha-10-general-industry",
   },
   {
     title: "First Aid / CPR / AED",
@@ -41,6 +56,10 @@ const courses = [
     audience: "All employees",
     description:
       "Life-saving skills training tailored to workplace emergencies, including CPR and automated external defibrillator use.",
+    image:
+      "https://images.pexels.com/photos/37277086/pexels-photo-37277086.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    imageAlt: "CPR training session with a dummy in a classroom environment",
+    href: "/business/training/first-aid-cpr-aed",
   },
   {
     title: "Aerial Work Platform",
@@ -48,6 +67,10 @@ const courses = [
     audience: "Equipment operators",
     description:
       "Safe operation, inspection, and hazard awareness for scissor lifts, boom lifts, and related equipment.",
+    image:
+      "https://images.pexels.com/photos/16105409/pexels-photo-16105409.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    imageAlt: "Blue aerial lift and forklift trucks at a construction site",
+    href: "/business/training/aerial-work-platform",
   },
   {
     title: "Bloodborne Pathogens",
@@ -55,6 +78,10 @@ const courses = [
     audience: "Workers with exposure risk",
     description:
       "OSHA-compliant training on exposure control, PPE, and response procedures for bloodborne pathogens.",
+    image:
+      "https://images.pexels.com/photos/8460400/pexels-photo-8460400.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    imageAlt: "Healthcare worker in full PPE preparing for work",
+    href: "/business/training/bloodborne-pathogens",
   },
 ];
 
@@ -71,7 +98,16 @@ export default function BusinessTrainingPage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course) => (
-            <Card key={course.title} className="h-full flex flex-col">
+            <Card key={course.title} className="h-full flex flex-col overflow-hidden p-0">
+              <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+                <Image
+                  src={course.image}
+                  alt={course.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
               <CardHeader>
                 <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <Award className="h-6 w-6 text-primary" />
@@ -82,7 +118,7 @@ export default function BusinessTrainingPage() {
                 <CardDescription className="text-base flex-1 mb-4">
                   {course.description}
                 </CardDescription>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                   <span className="flex items-center gap-1">
                     <Clock className="h-4 w-4" />
                     {course.duration}
@@ -92,6 +128,12 @@ export default function BusinessTrainingPage() {
                     {course.audience}
                   </span>
                 </div>
+                <Button variant="link" className="px-0" asChild>
+                  <Link href={course.href}>
+                    Learn more
+                    <ArrowRight className="ml-1 h-3 w-3" />
+                  </Link>
+                </Button>
               </CardContent>
             </Card>
           ))}

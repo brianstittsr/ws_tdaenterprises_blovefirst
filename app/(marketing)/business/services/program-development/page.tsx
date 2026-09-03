@@ -38,8 +38,8 @@ export default function ProgramDevelopmentPage() {
       <ServiceHero
         title="Turnkey EHS Program Development"
         tagline="Practical, OSHA-aligned safety programs built for your operation, workforce, and industry."
-        image="/images/extracted/program-development.jpg"
-        imageAlt="EHS team developing safety program documentation"
+        image="https://images.pexels.com/photos/36423823/pexels-photo-36423823.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        imageAlt="Industrial worker wearing safety gear in a factory"
       />
 
       <section className="py-16 md:py-24">
@@ -70,8 +70,8 @@ export default function ProgramDevelopmentPage() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild>
-              <Link href="/business/free-assessment">
-                Request a Free Assessment
+              <Link href="/business/contact">
+                Contact Us
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

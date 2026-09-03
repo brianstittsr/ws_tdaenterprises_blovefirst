@@ -37,8 +37,8 @@ export default function EmployeeObservationsPage() {
       <ServiceHero
         title="Employee Observations"
         tagline="Real-time, on-the-floor observations that catch at-risk behavior before it becomes an incident."
-        image="/images/extracted/employee-observations.jpg"
-        imageAlt="Safety professional observing employee at work"
+        image="https://images.pexels.com/photos/37090943/pexels-photo-37090943.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        imageAlt="Industrial workers in safety gear walking through a plant"
       />
 
       <section className="py-16 md:py-24">
@@ -69,8 +69,8 @@ export default function EmployeeObservationsPage() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild>
-              <Link href="/business/free-assessment">
-                Request a Free Assessment
+              <Link href="/business/contact">
+                Contact Us
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

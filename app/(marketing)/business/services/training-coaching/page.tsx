@@ -37,8 +37,8 @@ export default function TrainingCoachingPage() {
       <ServiceHero
         title="Training & Coaching"
         tagline="Teach ~ Develop ~ Achieve: practical exams, proficiency evaluations, and hands-on coaching that builds lasting safety habits."
-        image="/images/extracted/training-coaching.jpg"
-        imageAlt="Employees in a hands-on safety training and coaching session"
+        image="https://images.pexels.com/photos/36423823/pexels-photo-36423823.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        imageAlt="Industrial worker wearing safety gear in a factory setting"
       />
 
       <section className="py-16 md:py-24">

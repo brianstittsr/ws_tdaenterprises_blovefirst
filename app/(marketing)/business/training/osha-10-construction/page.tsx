@@ -1,0 +1,81 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ServiceHero } from "@/components/marketing/service-hero";
+import { ArrowRight, Clock, Users, Award, BookOpen } from "lucide-react";
+
+export const metadata = {
+  title: "OSHA 10-Hour Construction | TDA Enterprises",
+  description:
+    "OSHA 10-Hour Construction training for entry-level workers covering common hazards, worker rights, and employer responsibilities.",
+};
+
+const topics = [
+  "Introduction to OSHA and worker rights",
+  "Fall protection and prevention",
+  "Personal protective equipment (PPE)",
+  "Health hazards in construction",
+  "Electrical safety",
+  "Struck-by and caught-in/between hazards",
+  "Scaffolding safety awareness",
+  "Excavation and trenching awareness",
+  "Materials handling and storage",
+  "Hand and power tool safety",
+];
+
+const details = [
+  { icon: Clock, label: "Duration", value: "10 hours (1-2 days)" },
+  { icon: Users, label: "Audience", value: "Entry-level construction workers" },
+  { icon: Award, label: "Certification", value: "OSHA 10-Hour completion card" },
+  { icon: BookOpen, label: "Format", value: "Classroom or on-site" },
+];
+
+export default function OSHA10ConstructionPage() {
+  return (
+    <>
+      <ServiceHero
+        title="OSHA 10-Hour Construction"
+        tagline="Foundation-level safety training covering common construction hazards, worker rights, and employer responsibilities."
+        image="https://images.pexels.com/photos/37635943/pexels-photo-37635943.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        imageAlt="Construction workers on site wearing safety gear"
+      />
+
+      <section className="py-16 md:py-24">
+        <div className="container max-w-4xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {details.map((detail) => (
+              <div key={detail.label} className="rounded-xl border bg-card p-4 text-center">
+                <detail.icon className="h-6 w-6 text-primary mx-auto mb-2" />
+                <p className="text-xs text-muted-foreground mb-1">{detail.label}</p>
+                <p className="text-sm font-semibold">{detail.value}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 className="text-2xl font-semibold mb-4">Course Topics</h2>
+          <p className="text-muted-foreground mb-6">
+            The OSHA 10-Hour Construction course provides essential safety awareness for
+            entry-level workers. Topics cover the most common hazards found on construction sites
+            and fulfill OSHA outreach training requirements.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-12">
+            {topics.map((topic) => (
+              <li key={topic}>{topic}</li>
+            ))}
+          </ul>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button asChild>
+              <Link href="/business/contact">
+                Schedule This Course
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link href="/business/training">View All Training Programs</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

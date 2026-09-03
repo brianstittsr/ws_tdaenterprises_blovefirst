@@ -2020,6 +2020,23 @@ export interface BackupStorageProviderDoc {
   updatedAt: Timestamp;
 }
 
+/** Contact Form Submission document in Firestore */
+export interface ContactSubmissionDoc {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone?: string;
+  company?: string;
+  serviceInterest?: string;
+  message: string;
+  source: "contact-page" | "service-page" | "other";
+  status: "new" | "contacted" | "resolved";
+  notes?: string;
+  createdAt: Timestamp;
+  updatedAt: Timestamp;
+}
+
 // ============================================================================
 // Collection Names
 // ============================================================================
@@ -2120,6 +2137,8 @@ export const COLLECTIONS = {
   HERO_SLIDES: "heroSlides",
   // Success Stories (Testimonials)
   SUCCESS_STORIES: "successStories",
+  // Contact Form Submissions
+  CONTACT_SUBMISSIONS: "contactSubmissions",
 } as const;
 
 // ============================================================================
@@ -2183,6 +2202,9 @@ export const bugTrackerItemsCollection = () => getCollection<BugTrackerItemDoc>(
 
 // Success Stories collection reference
 export const successStoriesCollection = () => getCollection<SuccessStoryDoc>(COLLECTIONS.SUCCESS_STORIES);
+
+// Contact Submissions collection reference
+export const contactSubmissionsCollection = () => getCollection<ContactSubmissionDoc>(COLLECTIONS.CONTACT_SUBMISSIONS);
 
 // ============================================================================
 // Subcollection Helpers

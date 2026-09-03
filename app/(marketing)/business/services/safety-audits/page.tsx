@@ -83,8 +83,8 @@ export default function SafetyAuditsPage() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild>
-              <Link href="/business/free-assessment">
-                Request a Free Assessment
+              <Link href="/business/contact">
+                Contact Us
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

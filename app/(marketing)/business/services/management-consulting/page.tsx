@@ -47,8 +47,8 @@ export default function ManagementConsultingPage() {
       <ServiceHero
         title="Management & Consulting"
         tagline="Teach ~ Develop ~ Achieve: professional experience and world-class approach toward cultivating occupational health and safety programs."
-        image="/images/extracted/management-consulting.jpg"
-        imageAlt="Safety management team consulting session"
+        image="https://images.pexels.com/photos/8973132/pexels-photo-8973132.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        imageAlt="Worker wearing safety gear operating machinery in a manufacturing factory"
       />
 
       <section className="py-16 md:py-24">
