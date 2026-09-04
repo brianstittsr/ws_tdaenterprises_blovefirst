@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -151,10 +152,15 @@ export default function SignInPage() {
         {/* Logo and Branding */}
         <div className="flex flex-col items-center mb-8">
           <Link href="/" className="flex flex-col items-center gap-3 group">
-            <div className="h-16 w-16 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground font-bold text-3xl">
-              SV+
-            </div>
-            <span className="text-xl font-bold text-foreground">SV+ Platform</span>
+            <Image
+              src="/images/TDA_Enterprise_vector_logo.svg"
+              alt="TDA Enterprise Logo"
+              width={120}
+              height={48}
+              className="h-16 w-auto"
+              priority
+            />
+            <span className="text-xl font-bold text-foreground">TDA Platform</span>
           </Link>
         </div>
 
@@ -255,34 +261,6 @@ export default function SignInPage() {
             </form>
           </CardContent>
           <CardFooter className="flex flex-col gap-4 pt-0">
-            <div className="relative w-full">
-              <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t" />
-              </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-white dark:bg-slate-900 px-2 text-muted-foreground">
-                  Or continue with
-                </span>
-              </div>
-            </div>
-            
-            <Button 
-              variant="outline" 
-              className="w-full h-11"
-              onClick={() => {
-                // Microsoft SSO would go here
-                router.push("/api/auth/microsoft");
-              }}
-            >
-              <svg className="mr-2 h-4 w-4" viewBox="0 0 21 21" fill="none">
-                <path d="M10 0H0V10H10V0Z" fill="#F25022"/>
-                <path d="M21 0H11V10H21V0Z" fill="#7FBA00"/>
-                <path d="M10 11H0V21H10V11Z" fill="#00A4EF"/>
-                <path d="M21 11H11V21H21V11Z" fill="#FFB900"/>
-              </svg>
-              Sign in with Microsoft
-            </Button>
-
             <p className="text-center text-sm text-muted-foreground">
               Don&apos;t have an account?{" "}
               <Link href="/sign-up" className="text-primary hover:underline font-medium">
