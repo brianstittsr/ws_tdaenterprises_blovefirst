@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" width="240" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80" width="160" height="80">
   <!-- TDA text -->
-  <text x="0" y="55" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#1a1a1a" letter-spacing="-2">TDA</text>
+  <text x="0" y="32" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" fill="#1a1a1a" letter-spacing="-1">TDA</text>
   
   <!-- Cross -->
   <g fill="#1a1a1a">
     <!-- Vertical bar -->
-    <rect x="118" y="8" width="9" height="112" />
+    <rect x="78" y="5" width="6" height="70" />
     <!-- Horizontal bar -->
-    <rect x="95" y="45" width="92" height="9" />
+    <rect x="63" y="28" width="60" height="6" />
   </g>
   
   <!-- Enterprise text -->
-  <text x="150" y="95" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="300" fill="#1a1a1a" letter-spacing="-1">Enterprise</text>
+  <text x="95" y="60" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="300" fill="#1a1a1a" letter-spacing="-0.5">Enterprise</text>
 </svg>
