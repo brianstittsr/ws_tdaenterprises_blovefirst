@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Shield, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
@@ -28,8 +28,14 @@ export default function HomePage() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
           <div className="relative z-10 flex flex-col h-full">
-            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
-              <Shield className="h-7 w-7" />
+            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 overflow-hidden">
+              <Image
+                src="/images/TDA_Enterprise_vector_logo.svg"
+                alt="TDA Enterprise Logo"
+                width={56}
+                height={56}
+                className="h-14 w-14 rounded-xl object-contain"
+              />
             </div>
             <h2 className="text-2xl font-bold mb-2">TDA Enterprise</h2>
             <p className="text-muted-foreground mb-6 flex-1">
