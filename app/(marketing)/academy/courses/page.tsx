@@ -18,11 +18,10 @@ import {
   Search,
   Clock,
   BookOpen,
-  Target,
-  TrendingUp,
-  Settings,
-  Users,
-  ArrowRightLeft,
+  HardHat,
+  Factory,
+  Heart,
+  Wrench,
   Loader2,
 } from "lucide-react";
 import { getCourses, CourseDoc } from "@/lib/firebase-lms";
@@ -31,134 +30,106 @@ import { getCourses, CourseDoc } from "@/lib/firebase-lms";
 const fallbackCourses = [
   {
     id: "1",
-    title: "The G.R.O.W.S. Framework Masterclass",
-    description: "Master the complete Legacy 83 methodology for building a business that thrives beyond you.",
-    category: "Goals & Vision",
-    categorySlug: "goals-vision",
-    duration: "8 hours",
-    lessons: 24,
-    level: "Intermediate",
-    slug: "grows-framework-masterclass",
+    title: "OSHA 10-Hour Construction",
+    description: "Foundation-level safety training covering common construction hazards, worker rights, and employer responsibilities.",
+    category: "OSHA Construction",
+    categorySlug: "osha-construction",
+    duration: "10 hours",
+    lessons: 12,
+    level: "Beginner",
+    slug: "osha-10-construction",
     isFeatured: true,
     enrollmentCount: 156,
+    thumbnailUrl: "https://images.pexels.com/photos/37635943/pexels-photo-37635943.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
   },
   {
     id: "2",
-    title: "Succession Planning Essentials",
-    description: "Create a comprehensive succession plan that protects your legacy and maximizes business value.",
-    category: "Succession & Legacy",
-    categorySlug: "succession-legacy",
-    duration: "4 hours",
-    lessons: 12,
+    title: "OSHA 30-Hour Construction",
+    description: "Comprehensive construction safety outreach training with in-depth coverage of OSHA standards and hazard mitigation.",
+    category: "OSHA Construction",
+    categorySlug: "osha-construction",
+    duration: "30 hours",
+    lessons: 21,
     level: "Advanced",
-    slug: "succession-planning-essentials",
+    slug: "osha-30-construction",
+    isFeatured: true,
     enrollmentCount: 89,
+    thumbnailUrl: "https://images.pexels.com/photos/8961027/pexels-photo-8961027.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
   },
   {
     id: "3",
-    title: "Leadership That Lasts",
-    description: "Develop leadership skills that empower your team and create lasting organizational culture.",
-    category: "Workforce & Leadership",
-    categorySlug: "workforce-leadership",
-    duration: "6 hours",
-    lessons: 18,
-    level: "Intermediate",
-    slug: "leadership-that-lasts",
+    title: "OSHA 10-Hour General Industry",
+    description: "Safety essentials for manufacturing, warehousing, healthcare, and other general industry settings.",
+    category: "OSHA General Industry",
+    categorySlug: "osha-general-industry",
+    duration: "10 hours",
+    lessons: 11,
+    level: "Beginner",
+    slug: "osha-10-general-industry",
     enrollmentCount: 124,
+    thumbnailUrl: "https://images.pexels.com/photos/8973132/pexels-photo-8973132.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
   },
   {
     id: "4",
-    title: "Operational Excellence Blueprint",
-    description: "Build systems and processes that run without you—the key to true business freedom.",
-    category: "Operations",
-    categorySlug: "operations",
-    duration: "5 hours",
-    lessons: 15,
-    level: "Beginner",
-    slug: "operational-excellence-blueprint",
-    enrollmentCount: 98,
+    title: "OSHA 30-Hour General Industry",
+    description: "Advanced safety training for general industry supervisors and managers covering OSHA standards in depth.",
+    category: "OSHA General Industry",
+    categorySlug: "osha-general-industry",
+    duration: "30 hours",
+    lessons: 22,
+    level: "Advanced",
+    slug: "osha-30-general-industry",
+    enrollmentCount: 76,
+    thumbnailUrl: "https://images.pexels.com/photos/36398150/pexels-photo-36398150.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
   },
   {
     id: "5",
-    title: "Revenue Growth Accelerator",
-    description: "Proven strategies to increase revenue, improve margins, and scale your business sustainably.",
-    category: "Revenue & Growth",
-    categorySlug: "revenue-growth",
-    duration: "6 hours",
-    lessons: 20,
-    level: "Intermediate",
-    slug: "revenue-growth-accelerator",
-    enrollmentCount: 112,
+    title: "First Aid / CPR / AED",
+    description: "Life-saving skills training tailored to workplace emergencies, including CPR and automated external defibrillator use.",
+    category: "Safety Certification",
+    categorySlug: "safety-certification",
+    duration: "4 hours",
+    lessons: 8,
+    level: "Beginner",
+    slug: "first-aid-cpr-aed",
+    isFeatured: true,
+    enrollmentCount: 203,
+    thumbnailUrl: "https://images.pexels.com/photos/37277086/pexels-photo-37277086.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
   },
   {
     id: "6",
-    title: "Building Your Leadership Team",
-    description: "Hire, develop, and retain A-players who can run the business without your constant involvement.",
-    category: "Workforce & Leadership",
-    categorySlug: "workforce-leadership",
-    duration: "4 hours",
-    lessons: 14,
-    level: "Intermediate",
-    slug: "building-leadership-team",
-    enrollmentCount: 76,
+    title: "Bloodborne Pathogens",
+    description: "OSHA-compliant training on exposure control, PPE, and response procedures for bloodborne pathogens.",
+    category: "Safety Certification",
+    categorySlug: "safety-certification",
+    duration: "2 hours",
+    lessons: 6,
+    level: "Beginner",
+    slug: "bloodborne-pathogens",
+    enrollmentCount: 145,
+    thumbnailUrl: "https://images.pexels.com/photos/8460400/pexels-photo-8460400.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
   },
   {
     id: "7",
-    title: "Vision to Execution",
-    description: "Transform your 10-year vision into quarterly rocks and weekly priorities that drive results.",
-    category: "Goals & Vision",
-    categorySlug: "goals-vision",
-    duration: "3 hours",
-    lessons: 10,
-    level: "Beginner",
-    slug: "vision-to-execution",
-    enrollmentCount: 145,
-  },
-  {
-    id: "8",
-    title: "Exit Strategy Masterclass",
-    description: "Prepare your business for sale with strategies that maximize value and ensure a smooth transition.",
-    category: "Succession & Legacy",
-    categorySlug: "succession-legacy",
-    duration: "5 hours",
-    lessons: 16,
-    level: "Advanced",
-    slug: "exit-strategy-masterclass",
-    enrollmentCount: 67,
-  },
-  {
-    id: "9",
-    title: "Process Documentation Workshop",
-    description: "Document your key processes so your business can run consistently without you.",
-    category: "Operations",
-    categorySlug: "operations",
-    duration: "2 hours",
-    lessons: 8,
-    level: "Beginner",
-    slug: "process-documentation-workshop",
-    enrollmentCount: 203,
-  },
-  {
-    id: "10",
-    title: "Sales Leadership Fundamentals",
-    description: "Build and lead a high-performing sales team that consistently hits targets.",
-    category: "Revenue & Growth",
-    categorySlug: "revenue-growth",
-    duration: "4 hours",
-    lessons: 12,
+    title: "Aerial Work Platform",
+    description: "Safe operation, inspection, and hazard awareness for scissor lifts, boom lifts, and related equipment.",
+    category: "Equipment Safety",
+    categorySlug: "equipment-safety",
+    duration: "6 hours",
+    lessons: 9,
     level: "Intermediate",
-    slug: "sales-leadership-fundamentals",
+    slug: "aerial-work-platform",
     enrollmentCount: 91,
+    thumbnailUrl: "https://images.pexels.com/photos/16105409/pexels-photo-16105409.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
   },
 ];
 
 const categories = [
   { name: "All Categories", slug: "all", icon: BookOpen },
-  { name: "Goals & Vision", slug: "goals-vision", icon: Target },
-  { name: "Revenue & Growth", slug: "revenue-growth", icon: TrendingUp },
-  { name: "Operations", slug: "operations", icon: Settings },
-  { name: "Workforce & Leadership", slug: "workforce-leadership", icon: Users },
-  { name: "Succession & Legacy", slug: "succession-legacy", icon: ArrowRightLeft },
+  { name: "OSHA Construction", slug: "osha-construction", icon: HardHat },
+  { name: "OSHA General Industry", slug: "osha-general-industry", icon: Factory },
+  { name: "Safety Certification", slug: "safety-certification", icon: Heart },
+  { name: "Equipment Safety", slug: "equipment-safety", icon: Wrench },
 ];
 
 const levels = ["All Levels", "Beginner", "Intermediate", "Advanced"];
@@ -241,7 +212,7 @@ export default function CoursesPage() {
         <div className="mb-12">
           <h1 className="text-4xl font-bold mb-4">Course Library</h1>
           <p className="text-muted-foreground text-lg">
-            Explore our comprehensive library of business coaching courses designed to help you build a lasting legacy.
+            Explore our comprehensive library of EHS training courses designed to keep your team certified, compliant, and safe.
           </p>
         </div>
 
@@ -299,7 +270,15 @@ export default function CoursesPage() {
           {filteredCourses.map((course) => (
             <Card key={course.id} className="group overflow-hidden hover:shadow-lg transition-shadow">
               <div className="aspect-video bg-slate-200 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-slate-900/40" />
+                {course.thumbnailUrl ? (
+                  <img
+                    src={course.thumbnailUrl}
+                    alt={course.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-slate-900/40" />
+                )}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Play className="h-6 w-6 text-amber-600 ml-1" />
@@ -333,8 +312,7 @@ export default function CoursesPage() {
                     {course.lessons} lessons
                   </div>
                   <div className="flex items-center gap-1">
-                    <Users className="h-4 w-4" />
-                    {course.enrollmentCount}
+                    <span className="text-xs">{course.enrollmentCount} enrolled</span>
                   </div>
                 </div>
                 <Button className="w-full bg-amber-500 hover:bg-amber-600 text-slate-900" asChild>

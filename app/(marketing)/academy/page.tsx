@@ -22,6 +22,10 @@ import {
   Clock,
   Star,
   Loader2,
+  HardHat,
+  Factory,
+  Heart,
+  Wrench,
 } from "lucide-react";
 import {
   getCourses,
@@ -36,139 +40,168 @@ import {
 // Fallback data for when Firebase is not available
 const fallbackCourses = [
   {
-    title: "The G.R.O.W.S. Framework Masterclass",
-    description: "Master the complete Legacy 83 methodology for building a business that thrives beyond you.",
-    category: "Goals & Vision",
-    duration: "8 hours",
-    lessons: 24,
-    level: "Intermediate",
-    image: "/academy/grows-masterclass.jpg",
-    slug: "grows-framework-masterclass",
+    title: "OSHA 10-Hour Construction",
+    description: "Foundation-level safety training covering common construction hazards, worker rights, and employer responsibilities.",
+    category: "OSHA Construction",
+    duration: "10 hours",
+    lessons: 12,
+    level: "Beginner",
+    image: "https://images.pexels.com/photos/37635943/pexels-photo-37635943.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    slug: "osha-10-construction",
     isFeatured: true,
   },
   {
-    title: "Succession Planning Essentials",
-    description: "Create a comprehensive succession plan that protects your legacy and maximizes business value.",
-    category: "Succession & Legacy",
-    duration: "4 hours",
-    lessons: 12,
+    title: "OSHA 30-Hour Construction",
+    description: "Comprehensive construction safety outreach training with in-depth coverage of OSHA standards and hazard mitigation.",
+    category: "OSHA Construction",
+    duration: "30 hours",
+    lessons: 21,
     level: "Advanced",
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
-    slug: "succession-planning-essentials",
+    image: "https://images.pexels.com/photos/8961027/pexels-photo-8961027.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    slug: "osha-30-construction",
+    isFeatured: true,
   },
   {
-    title: "Leadership That Lasts",
-    description: "Develop leadership skills that empower your team and create lasting organizational culture.",
-    category: "Workforce & Leadership",
-    duration: "6 hours",
-    lessons: 18,
-    level: "Intermediate",
-    image: "/academy/leadership-lasts.jpg",
-    slug: "leadership-that-lasts",
-  },
-  {
-    title: "Operational Excellence Blueprint",
-    description: "Build systems and processes that run without you—the key to true business freedom.",
-    category: "Operations",
-    duration: "5 hours",
-    lessons: 15,
+    title: "OSHA 10-Hour General Industry",
+    description: "Safety essentials for manufacturing, warehousing, healthcare, and other general industry settings.",
+    category: "OSHA General Industry",
+    duration: "10 hours",
+    lessons: 11,
     level: "Beginner",
-    image: "/academy/operational-excellence.jpg",
-    slug: "operational-excellence-blueprint",
+    image: "https://images.pexels.com/photos/8973132/pexels-photo-8973132.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    slug: "osha-10-general-industry",
+  },
+  {
+    title: "OSHA 30-Hour General Industry",
+    description: "Advanced safety training for general industry supervisors and managers covering OSHA standards in depth.",
+    category: "OSHA General Industry",
+    duration: "30 hours",
+    lessons: 22,
+    level: "Advanced",
+    image: "https://images.pexels.com/photos/36398150/pexels-photo-36398150.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    slug: "osha-30-general-industry",
+  },
+  {
+    title: "First Aid / CPR / AED",
+    description: "Life-saving skills training tailored to workplace emergencies, including CPR and automated external defibrillator use.",
+    category: "Safety Certification",
+    duration: "4 hours",
+    lessons: 8,
+    level: "Beginner",
+    image: "https://images.pexels.com/photos/37277086/pexels-photo-37277086.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    slug: "first-aid-cpr-aed",
+    isFeatured: true,
+  },
+  {
+    title: "Bloodborne Pathogens",
+    description: "OSHA-compliant training on exposure control, PPE, and response procedures for bloodborne pathogens.",
+    category: "Safety Certification",
+    duration: "2 hours",
+    lessons: 6,
+    level: "Beginner",
+    image: "https://images.pexels.com/photos/8460400/pexels-photo-8460400.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    slug: "bloodborne-pathogens",
+  },
+  {
+    title: "Aerial Work Platform",
+    description: "Safe operation, inspection, and hazard awareness for scissor lifts, boom lifts, and related equipment.",
+    category: "Equipment Safety",
+    duration: "6 hours",
+    lessons: 9,
+    level: "Intermediate",
+    image: "https://images.pexels.com/photos/16105409/pexels-photo-16105409.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    slug: "aerial-work-platform",
   },
 ];
 
 const fallbackCategories = [
-  { id: "goals-vision", name: "Goals & Vision", slug: "goals-vision", icon: Target, color: "bg-amber-500", courseCount: 8 },
-  { id: "revenue-growth", name: "Revenue & Growth", slug: "revenue-growth", icon: TrendingUp, color: "bg-green-500", courseCount: 6 },
-  { id: "operations", name: "Operations", slug: "operations", icon: Settings, color: "bg-blue-500", courseCount: 7 },
-  { id: "workforce-leadership", name: "Workforce & Leadership", slug: "workforce-leadership", icon: Users, color: "bg-purple-500", courseCount: 9 },
-  { id: "succession-legacy", name: "Succession & Legacy", slug: "succession-legacy", icon: ArrowRightLeft, color: "bg-orange-500", courseCount: 5 },
+  { id: "osha-construction", name: "OSHA Construction", slug: "osha-construction", icon: HardHat, color: "bg-amber-500", courseCount: 2 },
+  { id: "osha-general-industry", name: "OSHA General Industry", slug: "osha-general-industry", icon: Factory, color: "bg-blue-500", courseCount: 2 },
+  { id: "safety-certification", name: "Safety Certification", slug: "safety-certification", icon: Heart, color: "bg-red-500", courseCount: 2 },
+  { id: "equipment-safety", name: "Equipment Safety", slug: "equipment-safety", icon: Wrench, color: "bg-green-500", courseCount: 1 },
 ];
 
 const fallbackWorkshops = [
   {
-    title: "Building Your 90-Day Action Plan",
-    date: "January 15, 2025",
-    time: "2:00 PM EST",
-    type: "Live Workshop",
-    spots: 12,
+    title: "OSHA 10-Hour Construction Open Enrollment",
+    date: "Ongoing - Self-Paced",
+    time: "Available 24/7",
+    type: "Online Course",
+    spots: 25,
   },
   {
-    title: "Exit Strategy Deep Dive",
-    date: "January 22, 2025",
-    time: "1:00 PM EST",
-    type: "Live Workshop",
-    spots: 8,
-  },
-  {
-    title: "Team Accountability Systems",
-    date: "January 29, 2025",
-    time: "3:00 PM EST",
+    title: "First Aid / CPR / AED Certification Session",
+    date: "Bi-weekly",
+    time: "8:00 AM CST",
     type: "Live Workshop",
     spots: 15,
+  },
+  {
+    title: "Aerial Work Platform Hands-On Training",
+    date: "Monthly",
+    time: "9:00 AM CST",
+    type: "Live Workshop",
+    spots: 10,
   },
 ];
 
 // Category icon mapping
 const CATEGORY_ICONS: Record<string, React.ElementType> = {
-  "goals-vision": Target,
-  "revenue-growth": TrendingUp,
-  "operations": Settings,
-  "workforce-leadership": Users,
-  "succession-legacy": ArrowRightLeft,
+  "osha-construction": HardHat,
+  "osha-general-industry": Factory,
+  "safety-certification": Heart,
+  "equipment-safety": Wrench,
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  "goals-vision": "bg-amber-500",
-  "revenue-growth": "bg-green-500",
-  "operations": "bg-blue-500",
-  "workforce-leadership": "bg-purple-500",
-  "succession-legacy": "bg-orange-500",
+  "osha-construction": "bg-amber-500",
+  "osha-general-industry": "bg-blue-500",
+  "safety-certification": "bg-red-500",
+  "equipment-safety": "bg-green-500",
 };
 
 const subscriptionTiers = [
   {
-    name: "Legacy Starter",
+    name: "Individual Learner",
     price: 49,
     period: "month",
-    description: "Essential resources for business owners beginning their legacy journey",
+    description: "Essential safety training access for individual professionals",
     features: [
-      "Access to Legacy Journal articles",
-      "Monthly newsletter",
-      "Community forum access",
+      "Access to all OSHA courses",
+      "Course completion certificates",
+      "Downloadable reference materials",
       "1 free workshop per quarter",
     ],
     cta: "Start Free Trial",
     popular: false,
   },
   {
-    name: "Legacy Builder",
+    name: "Team Builder",
     price: 149,
     period: "month",
-    description: "Comprehensive tools and training for growing business leaders",
+    description: "Comprehensive training for teams and supervisors",
     features: [
-      "All Starter features",
+      "All Individual features",
       "Full course library access",
-      "Weekly group coaching calls",
+      "Team progress dashboards",
       "Pre/Post assessments",
-      "Certificate programs",
+      "OSHA certification programs",
       "Priority workshop registration",
     ],
     cta: "Start Free Trial",
     popular: true,
   },
   {
-    name: "Legacy Master",
+    name: "Enterprise Safety",
     price: 349,
     period: "month",
-    description: "Premium access with personalized coaching and exclusive resources",
+    description: "Premium access with custom training and dedicated support",
     features: [
-      "All Builder features",
-      "Monthly 1-on-1 coaching session",
+      "All Team Builder features",
       "Custom learning paths",
-      "Executive peer group access",
-      "Annual strategy retreat invitation",
+      "Dedicated safety instructor",
+      "On-site training sessions",
+      "Compliance audit support",
       "White-glove onboarding",
     ],
     cta: "Contact Us",
@@ -181,7 +214,7 @@ export default function AcademyPage() {
   const [courses, setCourses] = useState<CourseDoc[]>([]);
   const [workshops, setWorkshops] = useState<WorkshopDoc[]>([]);
   const [categories, setCategories] = useState<CategoryDoc[]>([]);
-  const [stats, setStats] = useState({ totalCourses: 35, totalLessons: 200, totalWorkshops: 50, totalEnrollments: 500, totalCertificates: 0 });
+  const [stats, setStats] = useState({ totalCourses: 7, totalLessons: 89, totalWorkshops: 3, totalEnrollments: 500, totalCertificates: 0 });
   const [useFallback, setUseFallback] = useState(false);
 
   useEffect(() => {
@@ -222,15 +255,15 @@ export default function AcademyPage() {
         <div className="container relative">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-amber-500/20 text-amber-400 border-amber-500/30">
-              Legacy 83 Academy
+              TDA Enterprise Academy
             </Badge>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6">
-              Build Your Legacy Through{" "}
-              <span className="text-amber-400">Continuous Learning</span>
+              Safety Training That{" "}
+              <span className="text-amber-400">Saves Lives</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Access world-class business coaching courses, live workshops, and assessments 
-              designed to help you build a business that thrives beyond you.
+              Access professional EHS certification courses, OSHA training, and safety workshops 
+              designed to keep your team compliant, certified, and safe on the job.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" className="text-lg bg-amber-500 hover:bg-amber-600 text-slate-900" asChild>
@@ -249,15 +282,15 @@ export default function AcademyPage() {
             {/* Stats */}
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
               <div>
-                <div className="text-3xl font-bold text-amber-400">{stats.totalCourses || 35}+</div>
+                <div className="text-3xl font-bold text-amber-400">{stats.totalCourses || 7}</div>
                 <div className="text-gray-400">Courses</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-amber-400">{stats.totalLessons || 200}+</div>
-                <div className="text-gray-400">Video Lessons</div>
+                <div className="text-3xl font-bold text-amber-400">{stats.totalLessons || 89}+</div>
+                <div className="text-gray-400">Lessons</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-amber-400">{stats.totalWorkshops || 50}+</div>
+                <div className="text-3xl font-bold text-amber-400">{stats.totalWorkshops || 3}+</div>
                 <div className="text-gray-400">Workshops</div>
               </div>
               <div>
@@ -275,7 +308,7 @@ export default function AcademyPage() {
           <div className="flex justify-between items-end mb-12">
             <div>
               <h2 className="text-3xl font-bold mb-2">Featured Courses</h2>
-              <p className="text-muted-foreground">Start your legacy journey with our most popular programs</p>
+              <p className="text-muted-foreground">Start your safety training with our most popular programs</p>
             </div>
             <Button variant="ghost" className="text-amber-600" asChild>
               <Link href="/academy/courses">
@@ -400,7 +433,7 @@ export default function AcademyPage() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-2">Browse by Category</h2>
-            <p className="text-muted-foreground">Explore courses aligned with the G.R.O.W.S. framework</p>
+            <p className="text-muted-foreground">Explore courses by training type and certification</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -451,7 +484,7 @@ export default function AcademyPage() {
           <div className="flex justify-between items-end mb-12">
             <div>
               <h2 className="text-3xl font-bold mb-2">Upcoming Workshops</h2>
-              <p className="text-muted-foreground">Live, interactive sessions with Icy Williams</p>
+              <p className="text-muted-foreground">Live, interactive training sessions with TDA Enterprise instructors</p>
             </div>
             <Button variant="ghost" className="text-amber-600" asChild>
               <Link href="/academy/workshops">
@@ -540,10 +573,10 @@ export default function AcademyPage() {
             <Badge className="mb-6 bg-amber-500/20 text-amber-400 border-amber-500/30">
               Pre & Post Assessments
             </Badge>
-            <h2 className="text-3xl font-bold mb-4">Measure Your Growth</h2>
+            <h2 className="text-3xl font-bold mb-4">Measure Your Knowledge</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Take diagnostic assessments before and after each program to track your progress, 
-              identify growth areas, and demonstrate ROI on your learning investment.
+              Take pre and post-course assessments to track your progress, 
+              identify knowledge gaps, and demonstrate compliance for OSHA recordkeeping.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -571,8 +604,8 @@ export default function AcademyPage() {
             </div>
 
             <Button size="lg" className="mt-10 bg-amber-500 hover:bg-amber-600 text-slate-900" asChild>
-              <Link href="/quiz-intro">
-                Take the Legacy Growth IQ™ Quiz
+              <Link href="/business/free-assessment">
+                Request Free Safety Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -584,8 +617,8 @@ export default function AcademyPage() {
       <section id="pricing" className="py-20">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-2">Choose Your Learning Path</h2>
-            <p className="text-muted-foreground">Flexible plans designed for every stage of your legacy journey</p>
+            <h2 className="text-3xl font-bold mb-2">Choose Your Training Plan</h2>
+            <p className="text-muted-foreground">Flexible plans designed for individuals and teams at every stage</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -637,10 +670,10 @@ export default function AcademyPage() {
       <section className="py-20 bg-amber-50">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Building Your Legacy?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Get Certified?</h2>
             <p className="text-muted-foreground mb-8">
-              Join hundreds of business owners who are transforming their companies through 
-              the Legacy 83 Academy. Start your free trial today.
+              Join hundreds of professionals who are advancing their careers through 
+              the TDA Enterprise Academy. Start your training today.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-900" asChild>
@@ -650,8 +683,8 @@ export default function AcademyPage() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/schedule-a-call">
-                  Talk to an Advisor
+                <Link href="/business/contact">
+                  Talk to an Instructor
                 </Link>
               </Button>
             </div>

@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Award, Clock, Users, ArrowRight } from "lucide-react";
+import { Award, Clock, Users, ArrowRight, GraduationCap } from "lucide-react";
 
 export const metadata = {
   title: "Training Programs | TDA Enterprise",
@@ -137,6 +137,24 @@ export default function BusinessTrainingPage() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Academy LMS CTA */}
+        <div className="mt-12 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 p-8 text-center">
+          <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
+            <GraduationCap className="h-7 w-7" />
+          </div>
+          <h2 className="text-2xl font-bold mb-2">Access Online Training Through Our Academy</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+            All of our certification courses are available online through the TDA Enterprise Academy.
+            Enroll, learn at your own pace, and earn your certificates through our learning management system.
+          </p>
+          <Button size="lg" asChild>
+            <Link href="/academy/courses">
+              Browse Academy Courses
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
