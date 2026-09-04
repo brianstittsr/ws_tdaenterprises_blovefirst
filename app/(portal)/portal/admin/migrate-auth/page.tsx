@@ -320,3 +320,4 @@ export default function MigrateAuthPage() {
     </div>
   );
 }
+

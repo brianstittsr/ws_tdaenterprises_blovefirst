@@ -45,3 +45,4 @@ export const adminAuth: Auth | null = adminApp ? getAuth(adminApp) : null;
 export const adminStorage = adminApp ? getStorage(adminApp) : null;
 
 export default adminApp;
+

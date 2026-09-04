@@ -10,7 +10,7 @@ import {
 import { ArrowRight, HeartPulse, Shield, Syringe, Repeat, FileText, AlertTriangle } from "lucide-react";
 
 export const metadata = {
-  title: "Healthcare Facilities Safety | TDA Enterprises",
+  title: "Healthcare Facilities Safety | TDA Enterprise",
   description:
     "EHS services for healthcare: bloodborne pathogens, ergonomics, emergency action plans, and safety compliance for clinics and hospitals.",
 };
@@ -53,7 +53,7 @@ export default function HealthcarePage() {
             <h2 className="text-3xl font-bold mb-4">Safety Challenges in Healthcare</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Healthcare workers face unique hazards from infectious materials, patient handling,
-              and workplace violence. TDA Enterprises helps clinics, hospitals, and long-term
+              and workplace violence. TDA Enterprise helps clinics, hospitals, and long-term
               care facilities maintain compliance while protecting their workforce.
             </p>
           </div>
@@ -97,3 +97,4 @@ export default function HealthcarePage() {
     </>
   );
 }
+

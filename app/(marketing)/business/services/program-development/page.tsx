@@ -10,9 +10,9 @@ import {
 import { ArrowRight, ClipboardList, FileText, GraduationCap, RefreshCw } from "lucide-react";
 
 export const metadata = {
-  title: "EHS Program Development | TDA Enterprises",
+  title: "EHS Program Development | TDA Enterprise",
   description:
-    "Turnkey environmental, health, and safety program development from TDA Enterprises.",
+    "Turnkey environmental, health, and safety program development from TDA Enterprise.",
 };
 
 const programs = [
@@ -84,3 +84,4 @@ export default function ProgramDevelopmentPage() {
     </>
   );
 }
+

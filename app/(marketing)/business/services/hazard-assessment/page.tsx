@@ -10,9 +10,9 @@ import {
 import { ArrowRight, Search, AlertTriangle, ShieldCheck, TrendingDown } from "lucide-react";
 
 export const metadata = {
-  title: "Hazard Assessment | TDA Enterprises",
+  title: "Hazard Assessment | TDA Enterprise",
   description:
-    "Systematic workplace hazard identification with practical controls and ongoing monitoring from TDA Enterprises.",
+    "Systematic workplace hazard identification with practical controls and ongoing monitoring from TDA Enterprise.",
 };
 
 const assessmentTypes = [
@@ -54,7 +54,7 @@ export default function HazardAssessmentPage() {
         <div className="container max-w-4xl">
           <h2 className="text-2xl font-semibold mb-4">Types of Assessments</h2>
           <p className="text-muted-foreground mb-6">
-            TDA Enterprises conducts a wide range of hazard assessments tailored to your
+            TDA Enterprise conducts a wide range of hazard assessments tailored to your
             industry, operations, and regulatory requirements. Each assessment produces
             documented findings with prioritized recommendations.
           </p>
@@ -116,3 +116,4 @@ export default function HazardAssessmentPage() {
     </>
   );
 }
+

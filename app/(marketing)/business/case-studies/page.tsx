@@ -6,9 +6,9 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Case Studies | TDA Enterprises",
+  title: "Case Studies | TDA Enterprise",
   description:
-    "See how TDA Enterprises helps businesses reduce risk, improve compliance, and protect their workforce.",
+    "See how TDA Enterprise helps businesses reduce risk, improve compliance, and protect their workforce.",
 };
 
 const caseStudies = [
@@ -36,7 +36,7 @@ export default function CaseStudiesPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Case Studies</h1>
           <p className="text-lg text-muted-foreground">
-            Real results from businesses that partnered with TDA Enterprises to improve safety and
+            Real results from businesses that partnered with TDA Enterprise to improve safety and
             compliance.
           </p>
         </div>
@@ -69,3 +69,4 @@ export default function CaseStudiesPage() {
     </section>
   );
 }
+

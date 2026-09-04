@@ -139,3 +139,4 @@ function formatTimestamp(seconds: number): string {
 // Route segment config for Next.js App Router
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+

@@ -239,3 +239,4 @@ export function createMercuryService(): MercuryService | null {
 
   return new MercuryService({ apiToken });
 }
+

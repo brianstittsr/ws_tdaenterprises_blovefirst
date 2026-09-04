@@ -10,7 +10,7 @@ import {
 import { ArrowRight, Shield, TriangleAlert, Building2, Zap, FileText, HardHat } from "lucide-react";
 
 export const metadata = {
-  title: "Construction Safety | TDA Enterprises",
+  title: "Construction Safety | TDA Enterprise",
   description:
     "EHS services for construction: fall protection, scaffolding inspections, OSHA 10/30 training, and jobsite hazard assessments.",
 };
@@ -52,7 +52,7 @@ export default function ConstructionPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Safety Challenges in Construction</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Construction sites are dynamic, high-hazard environments. TDA Enterprises helps
+              Construction sites are dynamic, high-hazard environments. TDA Enterprise helps
               contractors manage OSHA's "Fatal Four" — falls, struck-by, caught-in/between, and
               electrocution — plus comprehensive jobsite safety compliance.
             </p>
@@ -97,3 +97,4 @@ export default function ConstructionPage() {
     </>
   );
 }
+

@@ -66,7 +66,7 @@ const MARY_CONFIG = {
   avatar: "👩‍💼",
   color: "#8b5cf6",
   description: "Your AI-powered strategic planning facilitator who guides structured brainstorming sessions and generates actionable insights.",
-  systemPrompt: `You are Mary, the TDA Enterprises | BLove First Analyst - an expert AI facilitator specializing in strategic business planning. Your role is to:
+  systemPrompt: `You are Mary, the TDA Enterprise | BLove First Analyst - an expert AI facilitator specializing in strategic business planning. Your role is to:
 
 1. FACILITATE structured brainstorming sessions by asking probing questions
 2. GATHER comprehensive information through guided discovery
@@ -1074,3 +1074,4 @@ Generate a structured report with:
     </div>
   );
 }
+

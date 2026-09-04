@@ -214,7 +214,7 @@ export default function SignUpPage() {
             </CardTitle>
             <CardDescription className="text-center">
               {step === 1
-                ? "Get started with your TDA Enterprises | BLove First account"
+                ? "Get started with your TDA Enterprise | BLove First account"
                 : "Fill in your details to get started"}
             </CardDescription>
           </CardHeader>
@@ -232,7 +232,7 @@ export default function SignUpPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <Building2 className="h-5 w-5 text-[#C8A951]" />
-                      <span className="text-lg font-semibold">TDA Enterprises | BLove First</span>
+                      <span className="text-lg font-semibold">TDA Enterprise | BLove First</span>
                     </div>
                     <p className="text-sm text-muted-foreground mt-1">
                       Register for the SV+ Platform to access EHS services, training resources, and community outreach tools.
@@ -442,3 +442,4 @@ export default function SignUpPage() {
     </div>
   );
 }
+

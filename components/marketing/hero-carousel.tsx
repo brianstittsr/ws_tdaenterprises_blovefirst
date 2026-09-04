@@ -264,3 +264,4 @@ export function HeroCarousel({ slides = defaultSlides, autoPlayInterval = 6000 }
     </section>
   );
 }
+

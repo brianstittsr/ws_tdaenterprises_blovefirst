@@ -10,9 +10,9 @@ import {
 import { ArrowRight, Search, ClipboardCheck, FileText, RefreshCw } from "lucide-react";
 
 export const metadata = {
-  title: "Safety Audits & Compliance | TDA Enterprises",
+  title: "Safety Audits & Compliance | TDA Enterprise",
   description:
-    "Comprehensive workplace safety audits and compliance assessments from TDA Enterprises.",
+    "Comprehensive workplace safety audits and compliance assessments from TDA Enterprise.",
 };
 
 const evaluationAreas = [
@@ -97,3 +97,4 @@ export default function SafetyAuditsPage() {
     </>
   );
 }
+

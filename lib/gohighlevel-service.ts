@@ -561,3 +561,4 @@ export function getDefaultGHLService(): GoHighLevelService | null {
   defaultService = new GoHighLevelService({ apiToken, locationId });
   return defaultService;
 }
+

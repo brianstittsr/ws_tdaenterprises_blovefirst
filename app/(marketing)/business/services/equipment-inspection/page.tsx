@@ -10,9 +10,9 @@ import {
 import { ArrowRight, ClipboardCheck, Wrench, Shield, FileCheck } from "lucide-react";
 
 export const metadata = {
-  title: "Equipment Inspection | TDA Enterprises",
+  title: "Equipment Inspection | TDA Enterprise",
   description:
-    "Certified equipment inspections for aerial work platforms, scaffolding, fall protection, and more from TDA Enterprises.",
+    "Certified equipment inspections for aerial work platforms, scaffolding, fall protection, and more from TDA Enterprise.",
 };
 
 const inspectionServices = [
@@ -97,3 +97,4 @@ export default function EquipmentInspectionPage() {
     </>
   );
 }
+

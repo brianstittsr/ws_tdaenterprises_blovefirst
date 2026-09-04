@@ -2333,7 +2333,7 @@ Click "Apply Design to Page" to implement these design patterns on your selected
                         <CardContent className="space-y-4">
                           <div className="space-y-2">
                             <Label>Page Title</Label>
-                            <Input placeholder="e.g., SV+ Platform | TDA Enterprises & BLove First" />
+                            <Input placeholder="e.g., SV+ Platform | TDA Enterprise & BLove First" />
                             <p className="text-xs text-muted-foreground">60 characters recommended</p>
                           </div>
                           <div className="space-y-2">
@@ -2905,3 +2905,4 @@ Click "Apply Design to Page" to implement these design patterns on your selected
     </div>
   );
 }
+

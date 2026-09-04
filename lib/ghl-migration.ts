@@ -893,3 +893,4 @@ export const ALL_GHL_CONTENT_TYPES: GhlContentType[] = [
   'tasks',
   'appointments',
 ];
+

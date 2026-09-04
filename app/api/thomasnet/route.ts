@@ -727,3 +727,4 @@ export async function GET() {
     totalSuppliers: MOCK_SUPPLIERS.length,
   });
 }
+

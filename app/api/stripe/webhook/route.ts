@@ -325,3 +325,4 @@ async function handleCourseCheckoutCompleted(session: Stripe.Checkout.Session) {
 
   console.log(`Course purchase completed for user ${userId}, courses: ${courseIds.join(", ")}`);
 }
+

@@ -418,3 +418,4 @@ function ImageThumbnail({ image, selected, onSelect }: ImageThumbnailProps) {
     </button>
   );
 }
+

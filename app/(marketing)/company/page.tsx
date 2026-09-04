@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: "Core Team | SV+ Platform",
   description:
-    "Meet the SV+ Platform team - experts behind TDA Enterprises and BLove First with complementary expertise in EHS consulting, community programs, and technology.",
+    "Meet the SV+ Platform team - experts behind TDA Enterprise and BLove First with complementary expertise in EHS consulting, community programs, and technology.",
 };
 
 const expertiseAreas = [
@@ -225,3 +225,4 @@ export default function CompanyPage() {
     </>
   );
 }
+

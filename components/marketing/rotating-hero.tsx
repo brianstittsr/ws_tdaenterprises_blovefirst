@@ -152,3 +152,4 @@ export function RotatingHero({
     </section>
   );
 }
+

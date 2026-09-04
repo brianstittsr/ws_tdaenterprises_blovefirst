@@ -10,9 +10,9 @@ import {
 import { ArrowRight, Users, Target, TrendingUp, ClipboardList } from "lucide-react";
 
 export const metadata = {
-  title: "Management & Consulting | TDA Enterprises",
+  title: "Management & Consulting | TDA Enterprise",
   description:
-    "Professional EHS management and consulting services from TDA Enterprises — building safety leadership and program excellence.",
+    "Professional EHS management and consulting services from TDA Enterprise — building safety leadership and program excellence.",
 };
 
 const consultingAreas = [
@@ -105,3 +105,4 @@ export default function ManagementConsultingPage() {
     </>
   );
 }
+

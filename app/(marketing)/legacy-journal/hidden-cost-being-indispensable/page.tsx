@@ -185,3 +185,4 @@ function TrendingDown({ className }: { className?: string }) {
     </svg>
   );
 }
+

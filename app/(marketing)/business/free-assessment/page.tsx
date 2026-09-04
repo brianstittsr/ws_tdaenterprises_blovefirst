@@ -11,9 +11,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 export const metadata = {
-  title: "Free Safety Assessment | TDA Enterprises",
+  title: "Free Safety Assessment | TDA Enterprise",
   description:
-    "Request a free safety assessment from TDA Enterprises. Identify hazards, close compliance gaps, and protect your workforce.",
+    "Request a free safety assessment from TDA Enterprise. Identify hazards, close compliance gaps, and protect your workforce.",
 };
 
 export default function FreeAssessmentPage() {
@@ -75,3 +75,4 @@ export default function FreeAssessmentPage() {
     </section>
   );
 }
+

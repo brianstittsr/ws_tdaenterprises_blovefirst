@@ -278,3 +278,4 @@ function CourseCard({ enrollment }: { enrollment: EnrolledCourse }) {
     </Card>
   );
 }
+

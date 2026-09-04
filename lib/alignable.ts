@@ -286,3 +286,4 @@ export const CONNECTION_TEMPLATES = {
   local: "Hi {name}, I'm always looking to connect with local business owners here in {location}. Let's network!",
   referral: "Hi {name}, {mutual_connection} suggested we connect. I'd love to learn more about your business!",
 };
+

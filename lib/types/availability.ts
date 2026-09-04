@@ -201,3 +201,4 @@ export function getAvailableSlots(
   
   return availableSlots;
 }
+

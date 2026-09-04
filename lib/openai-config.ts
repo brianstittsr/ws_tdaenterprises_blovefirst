@@ -344,3 +344,4 @@ export function clearSettingsCache(): void {
   cachedSettings = null;
   cacheTimestamp = 0;
 }
+

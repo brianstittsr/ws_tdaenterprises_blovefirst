@@ -141,3 +141,4 @@ export async function POST(request: NextRequest) {
 export async function GET() {
   return NextResponse.json({ success: true, message: "DocuSeal webhook endpoint active" });
 }
+

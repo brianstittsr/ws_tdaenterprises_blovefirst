@@ -4,7 +4,7 @@ import { ServiceHero } from "@/components/marketing/service-hero";
 import { ArrowRight, Clock, Users, Award, BookOpen } from "lucide-react";
 
 export const metadata = {
-  title: "Bloodborne Pathogens Training | TDA Enterprises",
+  title: "Bloodborne Pathogens Training | TDA Enterprise",
   description:
     "OSHA-compliant bloodborne pathogens training on exposure control, PPE, and response procedures.",
 };
@@ -81,3 +81,4 @@ export default function BloodbornePathogensPage() {
     </>
   );
 }
+

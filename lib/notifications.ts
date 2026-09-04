@@ -240,3 +240,4 @@ export function getBrowserNotificationStatus(): "granted" | "denied" | "default"
   }
   return Notification.permission;
 }
+

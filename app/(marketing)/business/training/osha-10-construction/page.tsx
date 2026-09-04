@@ -4,7 +4,7 @@ import { ServiceHero } from "@/components/marketing/service-hero";
 import { ArrowRight, Clock, Users, Award, BookOpen } from "lucide-react";
 
 export const metadata = {
-  title: "OSHA 10-Hour Construction | TDA Enterprises",
+  title: "OSHA 10-Hour Construction | TDA Enterprise",
   description:
     "OSHA 10-Hour Construction training for entry-level workers covering common hazards, worker rights, and employer responsibilities.",
 };
@@ -79,3 +79,4 @@ export default function OSHA10ConstructionPage() {
     </>
   );
 }
+

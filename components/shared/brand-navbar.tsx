@@ -162,7 +162,7 @@ export function BrandNavbar() {
           ) : (
             <Image
               src="/images/tda-logo.svg"
-              alt="TDA Enterprises Logo"
+              alt="TDA Enterprise Logo"
               width={80}
               height={40}
               className="h-10 w-auto"
@@ -288,3 +288,4 @@ export function BrandNavbar() {
     </header>
   );
 }
+

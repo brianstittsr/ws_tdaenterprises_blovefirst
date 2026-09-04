@@ -313,3 +313,4 @@ export async function logNoteAdded(entityType: EntityType, entityId: string, ent
     userId,
   });
 }
+

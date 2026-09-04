@@ -4,9 +4,9 @@ import { Shield, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "TDA Enterprises | BLove First",
+  title: "TDA Enterprise | BLove First",
   description:
-    "Professional EHS services from TDA Enterprises and faith-based community outreach from BLove First (B Love Foundation, Inc.).",
+    "Professional EHS services from TDA Enterprise and faith-based community outreach from BLove First (B Love Foundation, Inc.).",
 };
 
 export default function HomePage() {
@@ -31,7 +31,7 @@ export default function HomePage() {
             <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
               <Shield className="h-7 w-7" />
             </div>
-            <h2 className="text-2xl font-bold mb-2">TDA Enterprises</h2>
+            <h2 className="text-2xl font-bold mb-2">TDA Enterprise</h2>
             <p className="text-muted-foreground mb-6 flex-1">
               Professional environmental, health, and safety services for businesses. OSHA training,
               safety audits, program development, and equipment inspections.
@@ -71,3 +71,4 @@ export default function HomePage() {
     </div>
   );
 }
+

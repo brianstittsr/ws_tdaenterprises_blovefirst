@@ -427,3 +427,4 @@ export function getSubscriptionTierBadgeColor(slug: string): string {
   };
   return colors[slug] || 'bg-gray-100 text-gray-700';
 }
+

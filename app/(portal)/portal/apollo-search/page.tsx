@@ -2453,3 +2453,4 @@ export default function ApolloSearchPage() {
     </div>
   );
 }
+

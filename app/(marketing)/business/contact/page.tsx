@@ -2,8 +2,8 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { ContactForm } from "@/components/marketing/contact-form";
 
 export const metadata = {
-  title: "Contact | TDA Enterprises",
-  description: "Contact TDA Enterprises for professional EHS services, training, and free safety assessments.",
+  title: "Contact | TDA Enterprise",
+  description: "Contact TDA Enterprise for professional EHS services, training, and free safety assessments.",
 };
 
 export default function BusinessContactPage() {
@@ -11,7 +11,7 @@ export default function BusinessContactPage() {
     <section className="py-16 md:py-24">
       <div className="container max-w-4xl">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Contact TDA Enterprises</h1>
+          <h1 className="text-4xl font-bold mb-4">Contact TDA Enterprise</h1>
           <p className="text-lg text-muted-foreground">
             Reach out to discuss your safety needs, request a quote, or schedule a free assessment.
           </p>
@@ -55,3 +55,4 @@ export default function BusinessContactPage() {
     </section>
   );
 }
+

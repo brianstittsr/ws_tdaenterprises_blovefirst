@@ -601,3 +601,4 @@ export function ProposalViewer({ proposal, open, onOpenChange, onSave, onDelete 
     </Dialog>
   );
 }
+

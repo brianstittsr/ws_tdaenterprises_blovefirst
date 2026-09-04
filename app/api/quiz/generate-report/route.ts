@@ -144,17 +144,17 @@ const defaultTemplate: Omit<QuizReportTemplateDoc, 'id' | 'createdAt' | 'updated
     logoUrl: "/icons/icon-192x192.svg",
     primaryColor: "#D97706",
     secondaryColor: "#1E293B",
-    companyName: "TDA Enterprises | BLove First",
+    companyName: "TDA Enterprise | BLove First",
     contactEmail: "tdaentrprz@gmail.com",
     contactPhone: "(615) 673-4323",
     website: "https://tdaenterprises.com",
   },
   emailSettings: {
     subject: "Your SV+ Platform Assessment Results",
-    fromName: "TDA Enterprises | BLove First",
+    fromName: "TDA Enterprise | BLove First",
     replyTo: "tdaentrprz@gmail.com",
     introText: "Thank you for completing the SV+ Platform assessment! Attached is your personalized report with insights and recommendations.",
-    signatureText: "Best regards,\nThe TDA Enterprises & BLove First Team",
+    signatureText: "Best regards,\nThe TDA Enterprise & BLove First Team",
   },
 };
 
@@ -569,10 +569,10 @@ export async function POST(request: NextRequest) {
 
           const { emailSettings, branding } = template;
           const subject = emailSettings.subject || "Your SV+ Platform Assessment Results";
-          const fromName = emailSettings.fromName || branding.companyName || "TDA Enterprises | BLove First";
+          const fromName = emailSettings.fromName || branding.companyName || "TDA Enterprise | BLove First";
           const replyTo = emailSettings.replyTo || branding.contactEmail || "tdaentrprz@gmail.com";
           const introText = emailSettings.introText || "Thank you for completing the SV+ Platform assessment! Attached is your personalized report with insights and recommendations.";
-          const signatureText = emailSettings.signatureText || "Best regards,\nThe TDA Enterprises & BLove First Team";
+          const signatureText = emailSettings.signatureText || "Best regards,\nThe TDA Enterprise & BLove First Team";
 
           const introHtml = `<p style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333; margin-bottom: 20px;">${introText.replace(/\n/g, "<br/>")}</p>`;
           const signatureHtml = `
@@ -642,3 +642,4 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+

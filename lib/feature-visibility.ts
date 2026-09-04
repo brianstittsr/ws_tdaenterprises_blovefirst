@@ -387,3 +387,4 @@ export function getVisibleL83Tools(
     (key) => isL83ToolVisible(key, role, settings)
   );
 }
+

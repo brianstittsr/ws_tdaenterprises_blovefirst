@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Terms of Service | TDA Enterprises",
-  description: "Terms of Service for TDA Enterprises platform and EHS services.",
+  title: "Terms of Service | TDA Enterprise",
+  description: "Terms of Service for TDA Enterprise platform and EHS services.",
 };
 
 export default function TermsPage() {
@@ -25,7 +25,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-3">1. Acceptance of Terms</h2>
             <p className="text-muted-foreground">
-              By accessing or using the TDA Enterprises website and services, you agree to be bound
+              By accessing or using the TDA Enterprise website and services, you agree to be bound
               by these Terms of Service. If you do not agree to these terms, please do not use our
               website or services.
             </p>
@@ -34,7 +34,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-3">2. Description of Services</h2>
             <p className="text-muted-foreground">
-              TDA Enterprises provides professional environmental, health, and safety (EHS) services
+              TDA Enterprise provides professional environmental, health, and safety (EHS) services
               including OSHA training and certification, safety audits and compliance assessments,
               equipment inspections, program development, hazard assessments, management consulting,
               and employee training and coaching. We serve manufacturing, construction, warehousing
@@ -69,11 +69,11 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-3">5. Professional Services Disclaimer</h2>
             <p className="text-muted-foreground">
-              The information and materials provided by TDA Enterprises are for general informational
+              The information and materials provided by TDA Enterprise are for general informational
               and educational purposes. While we strive to provide accurate and current safety guidance,
               our services do not constitute legal advice. OSHA regulations and industry standards may
               change. Clients are responsible for verifying compliance with all applicable federal,
-              state, and local regulations. TDA Enterprises is not liable for any regulatory citations
+              state, and local regulations. TDA Enterprise is not liable for any regulatory citations
               or penalties that may result from a client&apos;s implementation (or failure to implement)
               of our recommendations.
             </p>
@@ -83,7 +83,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold mb-3">6. Intellectual Property</h2>
             <p className="text-muted-foreground">
               All content, training materials, features, and functionality of this website are owned by
-              TDA Enterprises and are protected by intellectual property laws. You may not copy, modify,
+              TDA Enterprise and are protected by intellectual property laws. You may not copy, modify,
               distribute, or reproduce our content without prior written permission. Training materials
               provided to clients are licensed for internal use only and may not be redistributed.
             </p>
@@ -104,7 +104,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-3">8. Limitation of Liability</h2>
             <p className="text-muted-foreground">
-              TDA Enterprises shall not be liable for any indirect, incidental, special, consequential,
+              TDA Enterprise shall not be liable for any indirect, incidental, special, consequential,
               or punitive damages resulting from your use of or inability to use our website or services.
               Our total liability for any claim arising from these terms shall not exceed the amount you
               have paid us for services in the twelve (12) months preceding the claim.
@@ -114,7 +114,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-3">9. Third-Party Links</h2>
             <p className="text-muted-foreground">
-              Our website may contain links to third-party websites or services. TDA Enterprises is not
+              Our website may contain links to third-party websites or services. TDA Enterprise is not
               responsible for the content, privacy policies, or practices of any third-party websites.
               You access these links at your own risk.
             </p>
@@ -144,7 +144,7 @@ export default function TermsPage() {
               If you have any questions about these Terms of Service, please contact us at:
             </p>
             <address className="not-italic text-muted-foreground">
-              <strong>TDA Enterprises</strong>
+              <strong>TDA Enterprise</strong>
               <br />
               P.O. Box 291521
               <br />
@@ -166,3 +166,4 @@ export default function TermsPage() {
     </section>
   );
 }
+

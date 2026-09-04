@@ -158,3 +158,4 @@ export function RoleSwitcherCompact() {
     </div>
   );
 }
+

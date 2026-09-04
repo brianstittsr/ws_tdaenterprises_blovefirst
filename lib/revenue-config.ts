@@ -696,3 +696,4 @@ export function subscribeToCart(
 
 // Import increment from firebase/firestore
 import { increment } from "firebase/firestore";
+

@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Events & Community | SV+ Platform",
   description:
-    "Join TDA Enterprises and BLove First events, workshops, and community gatherings. Connect with businesses and communities committed to safety and service.",
+    "Join TDA Enterprise and BLove First events, workshops, and community gatherings. Connect with businesses and communities committed to safety and service.",
 };
 
 const upcomingEvents = [
@@ -338,3 +338,4 @@ export default function EventsPage() {
     </>
   );
 }
+

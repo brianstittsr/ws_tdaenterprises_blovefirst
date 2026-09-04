@@ -188,3 +188,4 @@ async function fetchHeroImages() {
 }
 
 fetchHeroImages().catch(console.error);
+

@@ -150,3 +150,4 @@ This preparation will help us have a more productive conversation once the AI is
 
   return responses[Math.floor(Math.random() * responses.length)];
 }
+

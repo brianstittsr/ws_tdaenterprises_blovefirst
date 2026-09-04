@@ -150,3 +150,4 @@ export function ContractWizard({ onComplete, onCancel, initialData }: ContractWi
     </div>
   );
 }
+

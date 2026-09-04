@@ -202,7 +202,7 @@ export default function ContactSubmissionsPage() {
         <div>
           <h1 className="text-3xl font-bold">Contact Submissions</h1>
           <p className="text-muted-foreground">
-            Manage contact form submissions from the TDA Enterprises website
+            Manage contact form submissions from the TDA Enterprise website
           </p>
         </div>
         <div className="flex items-center gap-4">
@@ -438,3 +438,4 @@ export default function ContactSubmissionsPage() {
     </div>
   );
 }
+

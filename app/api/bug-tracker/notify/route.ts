@@ -203,7 +203,7 @@ export async function POST(request: NextRequest) {
     const subject = `Bug Tracker: ${typeLabel} Resolved - ${title}`;
 
     await transporter.sendMail({
-      from: `"TDA Enterprises | BLove First" <${tdaUser}>`,
+      from: `"TDA Enterprise | BLove First" <${tdaUser}>`,
       to: INTERNAL_NOTIFY_EMAIL,
       cc: CC_EMAIL,
       subject,
@@ -222,3 +222,4 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+

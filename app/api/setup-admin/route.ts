@@ -124,3 +124,4 @@ export async function GET() {
     endpoint: "/api/setup-admin",
   });
 }
+

@@ -453,3 +453,4 @@ export function getCalendarLinks(event: CalendarEvent): {
     ics: `data:text/calendar;charset=utf-8,${encodeURIComponent(generateICSContent(event))}`,
   };
 }
+

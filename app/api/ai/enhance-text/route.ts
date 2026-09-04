@@ -303,3 +303,4 @@ ${text || "No initial notes provided."}
 ---
 *To enable AI-powered text enhancement, please configure your OpenAI API key or Ollama in Settings → LLM Configuration.*`;
 }
+

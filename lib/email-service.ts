@@ -2,7 +2,7 @@
  * SMTP Email Service
  *
  * Provides email sending capabilities via SMTP for:
- * - tdaentrprz@gmail.com (TDA Enterprises)
+ * - tdaentrprz@gmail.com (TDA Enterprise)
  * - blovefoundation@yahoo.com (BLove First / B Love Foundation, Inc.)
  *
  * Uses nodemailer for SMTP transport
@@ -52,7 +52,7 @@ export interface SendEmailResult {
 export const EMAIL_ACCOUNTS: Record<string, Omit<EmailAccount, "password">> = {
   tda: {
     id: "tda",
-    name: "TDA Enterprises",
+    name: "TDA Enterprise",
     email: "tdaentrprz@gmail.com",
     smtpHost: process.env.TDA_SMTP_HOST || "smtp.office365.com",
     smtpPort: parseInt(process.env.TDA_SMTP_PORT || "587"),
@@ -151,7 +151,7 @@ export async function sendEmail(
 }
 
 /**
- * Send email from TDA Enterprises account
+ * Send email from TDA Enterprise account
  */
 export async function sendFromTDA(message: EmailMessage): Promise<SendEmailResult> {
   return sendEmail("tda", message);
@@ -208,7 +208,7 @@ export async function sendNotificationEmail(
               <!-- Header -->
               <tr>
                 <td style="padding: 30px 40px; background-color: #1e293b; border-radius: 8px 8px 0 0;">
-                  <h1 style="margin: 0; color: #f59e0b; font-size: 24px;">TDA Enterprises | BLove First</h1>
+                  <h1 style="margin: 0; color: #f59e0b; font-size: 24px;">TDA Enterprise | BLove First</h1>
                 </td>
               </tr>
               <!-- Content -->
@@ -231,10 +231,10 @@ export async function sendNotificationEmail(
               <tr>
                 <td style="padding: 20px 40px; background-color: #f8fafc; border-radius: 0 0 8px 8px; border-top: 1px solid #e2e8f0;">
                   <p style="margin: 0; color: #94a3b8; font-size: 12px;">
-                    ${options?.footerText || "This email was sent from TDA Enterprises | BLove First. Please do not reply directly to this email."}
+                    ${options?.footerText || "This email was sent from TDA Enterprise | BLove First. Please do not reply directly to this email."}
                   </p>
                   <p style="margin: 10px 0 0; color: #94a3b8; font-size: 12px;">
-                    © ${new Date().getFullYear()} TDA Enterprises / B Love Foundation, Inc. All rights reserved.
+                    © ${new Date().getFullYear()} TDA Enterprise / B Love Foundation, Inc. All rights reserved.
                   </p>
                 </td>
               </tr>
@@ -314,3 +314,4 @@ export async function sendMeetingInvitation(
     buttonUrl: meetingDetails.meetingUrl,
   });
 }
+

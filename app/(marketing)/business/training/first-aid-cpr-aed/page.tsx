@@ -4,9 +4,9 @@ import { ServiceHero } from "@/components/marketing/service-hero";
 import { ArrowRight, Clock, Users, Award, BookOpen } from "lucide-react";
 
 export const metadata = {
-  title: "First Aid / CPR / AED Training | TDA Enterprises",
+  title: "First Aid / CPR / AED Training | TDA Enterprise",
   description:
-    "Life-saving first aid, CPR, and AED training tailored to workplace emergencies from TDA Enterprises.",
+    "Life-saving first aid, CPR, and AED training tailored to workplace emergencies from TDA Enterprise.",
 };
 
 const topics = [
@@ -81,3 +81,4 @@ export default function FirstAidCpraedPage() {
     </>
   );
 }
+

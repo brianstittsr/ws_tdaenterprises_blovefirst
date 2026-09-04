@@ -10,9 +10,9 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "Industries Served | TDA Enterprises",
+  title: "Industries Served | TDA Enterprise",
   description:
-    "TDA Enterprises serves manufacturing, construction, warehousing & logistics, and healthcare facilities with professional EHS services.",
+    "TDA Enterprise serves manufacturing, construction, warehousing & logistics, and healthcare facilities with professional EHS services.",
 };
 
 const industries = [
@@ -103,3 +103,4 @@ export default function IndustriesPage() {
     </section>
   );
 }
+

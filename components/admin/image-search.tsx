@@ -216,3 +216,4 @@ export function ImageSearch({ onSelect, selectedImageUrl }: ImageSearchProps) {
     </div>
   );
 }
+

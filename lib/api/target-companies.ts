@@ -423,3 +423,4 @@ export function exportToCSV(companies: TargetCompany[]): string {
 
   return csvContent;
 }
+

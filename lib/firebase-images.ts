@@ -402,7 +402,7 @@ export async function compressImage(
  * Site image keys - predefined keys for specific site images
  */
 export const SITE_IMAGE_KEYS = {
-  // TDA Enterprises
+  // TDA Enterprise
   LOGO_TDA_MAIN: "logo-tda-main",
   HERO_TDA_MAIN: "hero-tda-main",
   HERO_TDA_SERVICES: "hero-tda-services",
@@ -436,3 +436,4 @@ export async function getSiteImage(key: SiteImageKey): Promise<string | null> {
   }
   return base64ToDataUrl(image.base64Data, image.mimeType);
 }
+

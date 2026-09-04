@@ -10,9 +10,9 @@ import {
 import { CheckCircle, ArrowRight, Shield, Users, Calendar } from "lucide-react";
 
 export const metadata = {
-  title: "OSHA Training & Certification | TDA Enterprises",
+  title: "OSHA Training & Certification | TDA Enterprise",
   description:
-    "OSHA 10/30-Hour, First Aid/CPR/AED, Bloodborne Pathogens, and Aerial Work Platform training from TDA Enterprises.",
+    "OSHA 10/30-Hour, First Aid/CPR/AED, Bloodborne Pathogens, and Aerial Work Platform training from TDA Enterprise.",
 };
 
 const courses = [
@@ -97,3 +97,4 @@ export default function OSHATrainingPage() {
     </>
   );
 }
+

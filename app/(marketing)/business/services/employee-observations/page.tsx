@@ -10,9 +10,9 @@ import {
 import { ArrowRight, Eye, AlertTriangle, MessageSquare, FileCheck } from "lucide-react";
 
 export const metadata = {
-  title: "Employee Observations | TDA Enterprises",
+  title: "Employee Observations | TDA Enterprise",
   description:
-    "On-the-floor employee safety observations from TDA Enterprises — catching at-risk behaviors before they become incidents.",
+    "On-the-floor employee safety observations from TDA Enterprise — catching at-risk behaviors before they become incidents.",
 };
 
 const observationAreas = [
@@ -83,3 +83,4 @@ export default function EmployeeObservationsPage() {
     </>
   );
 }
+

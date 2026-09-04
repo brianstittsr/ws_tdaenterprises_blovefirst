@@ -262,3 +262,4 @@ export function calculateResults(answers: Record<number, number>) {
 }
 
 export type QuizResults = ReturnType<typeof calculateResults>;
+

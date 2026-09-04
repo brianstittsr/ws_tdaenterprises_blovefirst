@@ -80,3 +80,4 @@ export const mockGainsProfiles: GainsProfileDoc[] = [
     createdAt: daysAgo(245), updatedAt: daysAgo(15),
   },
 ];
+

@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Accessibility Statement",
   description:
-    "TDA Enterprises is committed to ensuring digital accessibility for people with disabilities. Learn about our accessibility features and Section 508 and WCAG compliance.",
+    "TDA Enterprise is committed to ensuring digital accessibility for people with disabilities. Learn about our accessibility features and Section 508 and WCAG compliance.",
 };
 
 const accessibilityFeatures = [
@@ -103,7 +103,7 @@ export default function AccessibilityPage() {
               Accessibility Statement
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              TDA Enterprises is committed to ensuring digital accessibility for people
+              TDA Enterprise is committed to ensuring digital accessibility for people
               with disabilities. We continually improve the user experience for everyone
               and apply the relevant accessibility standards, including Section 508 of the
               Rehabilitation Act and the Web Content Accessibility Guidelines (WCAG) 2.1
@@ -120,7 +120,7 @@ export default function AccessibilityPage() {
             <h2 className="text-2xl font-bold mb-6">Our Commitment</h2>
             <p className="text-muted-foreground mb-4">
               We believe that the internet should be accessible to everyone, regardless of
-              ability. TDA Enterprises strives to conform to Section 508 of the Rehabilitation
+              ability. TDA Enterprise strives to conform to Section 508 of the Rehabilitation
               Act and the Web Content Accessibility Guidelines (WCAG) 2.1 and 2.2 at Level AA,
               and we are working toward Level AAA compliance where feasible.
             </p>
@@ -159,10 +159,10 @@ export default function AccessibilityPage() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">Section 508 Compliance</h2>
             <p className="text-muted-foreground mb-4">
-              TDA Enterprises is committed to complying with Section 508 of the Rehabilitation Act
+              TDA Enterprise is committed to complying with Section 508 of the Rehabilitation Act
               (29 U.S.C. &sect; 794d), which requires federal agencies and contractors to make their
               electronic and information technology accessible to people with disabilities. While
-              TDA Enterprises is not a federal agency, we voluntarily adopt Section 508 standards
+              TDA Enterprise is not a federal agency, we voluntarily adopt Section 508 standards
               to ensure our website is accessible to all users, including those using assistive
               technologies.
             </p>
@@ -317,3 +317,4 @@ export default function AccessibilityPage() {
     </>
   );
 }
+

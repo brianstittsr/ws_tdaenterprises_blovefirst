@@ -498,3 +498,4 @@ export function MiniDashboard({ className, refreshInterval = 60000 }: MiniDashbo
     </div>
   );
 }
+

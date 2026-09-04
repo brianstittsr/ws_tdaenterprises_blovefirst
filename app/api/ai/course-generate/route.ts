@@ -107,3 +107,4 @@ async function callOllama(
   const data = await response.json();
   return data.message?.content || "No response generated";
 }
+

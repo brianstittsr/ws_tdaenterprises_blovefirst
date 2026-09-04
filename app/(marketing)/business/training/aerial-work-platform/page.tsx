@@ -4,7 +4,7 @@ import { ServiceHero } from "@/components/marketing/service-hero";
 import { ArrowRight, Clock, Users, Award, BookOpen } from "lucide-react";
 
 export const metadata = {
-  title: "Aerial Work Platform Training | TDA Enterprises",
+  title: "Aerial Work Platform Training | TDA Enterprise",
   description:
     "Safe operation, inspection, and hazard awareness training for scissor lifts, boom lifts, and aerial work platforms.",
 };
@@ -81,3 +81,4 @@ export default function AerialWorkPlatformPage() {
     </>
   );
 }
+

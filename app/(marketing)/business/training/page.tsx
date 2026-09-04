@@ -11,9 +11,9 @@ import { Button } from "@/components/ui/button";
 import { Award, Clock, Users, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Training Programs | TDA Enterprises",
+  title: "Training Programs | TDA Enterprise",
   description:
-    "OSHA 10/30-Hour, First Aid/CPR/AED, Aerial Work Platform, Bloodborne Pathogens, and custom safety training from TDA Enterprises.",
+    "OSHA 10/30-Hour, First Aid/CPR/AED, Aerial Work Platform, Bloodborne Pathogens, and custom safety training from TDA Enterprise.",
 };
 
 const courses = [
@@ -142,3 +142,4 @@ export default function BusinessTrainingPage() {
     </section>
   );
 }
+

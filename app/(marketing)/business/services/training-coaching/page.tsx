@@ -10,9 +10,9 @@ import {
 import { ArrowRight, GraduationCap, Users, Repeat, Award } from "lucide-react";
 
 export const metadata = {
-  title: "Training & Coaching | TDA Enterprises",
+  title: "Training & Coaching | TDA Enterprise",
   description:
-    "Hands-on safety training and coaching from TDA Enterprises — building safety habits that last through practical exams and proficiency evaluations.",
+    "Hands-on safety training and coaching from TDA Enterprise — building safety habits that last through practical exams and proficiency evaluations.",
 };
 
 const trainingFormats = [
@@ -83,3 +83,4 @@ export default function TrainingCoachingPage() {
     </>
   );
 }
+

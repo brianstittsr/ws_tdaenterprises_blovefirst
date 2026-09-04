@@ -346,3 +346,4 @@ async function saveEventsToCache(events: Array<{
     console.error("Error saving GHL events to cache:", error);
   }
 }
+

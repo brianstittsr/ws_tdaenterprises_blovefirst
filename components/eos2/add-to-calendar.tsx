@@ -174,3 +174,4 @@ export function QuarterlyPlanningCalendar({
   const event = createQuarterlyPlanningEvent(quarter, date, attendees);
   return <AddToCalendar event={event} variant={variant} size={size} />;
 }
+

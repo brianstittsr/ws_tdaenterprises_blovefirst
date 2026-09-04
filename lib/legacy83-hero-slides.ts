@@ -243,3 +243,4 @@ export const legacy83CompanyInfo = {
   website: "https://legacy83business.com",
   quizUrl: "https://quiz.legacy83business.com",
 };
+

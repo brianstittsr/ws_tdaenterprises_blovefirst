@@ -490,3 +490,4 @@ export const FIELD_TYPES = [
   { value: 'consent', label: 'Consent Checkbox', category: 'special' },
   { value: 'hidden', label: 'Hidden Field', category: 'special' },
 ];
+

@@ -1,16 +1,16 @@
 export const metadata = {
-  title: "About TDA Enterprises",
+  title: "About TDA Enterprise",
   description:
-    "Learn about TDA Enterprises — a professional EHS services company committed to reducing risk, ensuring compliance, and protecting workforces.",
+    "Learn about TDA Enterprise — a professional EHS services company committed to reducing risk, ensuring compliance, and protecting workforces.",
 };
 
 export default function BusinessAboutPage() {
   return (
     <section className="py-16 md:py-24">
       <div className="container max-w-4xl">
-        <h1 className="text-4xl font-bold mb-6">About TDA Enterprises</h1>
+        <h1 className="text-4xl font-bold mb-6">About TDA Enterprise</h1>
         <p className="text-lg text-muted-foreground mb-8">
-          TDA Enterprises provides professional environmental, health, and safety services designed to
+          TDA Enterprise provides professional environmental, health, and safety services designed to
           help businesses protect their people, reduce risk, and maintain compliance. From OSHA
           training and safety audits to turnkey program development, our team works alongside
           organizations to build practical, sustainable safety cultures.
@@ -63,3 +63,4 @@ export default function BusinessAboutPage() {
     </section>
   );
 }
+

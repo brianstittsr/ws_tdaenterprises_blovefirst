@@ -1,7 +1,7 @@
 /**
  * Brand configuration for the dual-site platform.
  *
- * TDA Enterprises = professional EHS business
+ * TDA Enterprise = professional EHS business
  * BLove First = B Love Foundation, Inc. nonprofit
  */
 
@@ -67,8 +67,8 @@ export interface BrandConfig {
 
 export const tdaBrand: BrandConfig = {
   id: "tda",
-  name: "TDA Enterprises",
-  legalName: "TDA Enterprises",
+  name: "TDA Enterprise",
+  legalName: "TDA Enterprise",
   tagline: "Professional Environmental, Health & Safety Solutions",
   mission:
     "Delivering professional EHS services that reduce risk, ensure compliance, and protect your workforce.",
@@ -153,3 +153,4 @@ export const brandsById: Record<BrandId, BrandConfig> = {
 export function getBrand(brandId: BrandId): BrandConfig {
   return brandsById[brandId];
 }
+

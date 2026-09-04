@@ -517,3 +517,4 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
   const doc = snapshot.docs[0];
   return { id: doc.id, ...doc.data() } as BlogPost;
 }
+

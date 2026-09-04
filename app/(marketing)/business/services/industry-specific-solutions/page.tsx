@@ -10,9 +10,9 @@ import {
 import { ArrowRight, Factory, HardHat, Warehouse, Truck, HeartPulse } from "lucide-react";
 
 export const metadata = {
-  title: "Industry-Specific Solutions | TDA Enterprises",
+  title: "Industry-Specific Solutions | TDA Enterprise",
   description:
-    "Tailored EHS safety support for manufacturing, construction, warehousing, logistics, and healthcare facilities from TDA Enterprises.",
+    "Tailored EHS safety support for manufacturing, construction, warehousing, logistics, and healthcare facilities from TDA Enterprise.",
 };
 
 const industries = [
@@ -63,7 +63,7 @@ export default function IndustrySpecificSolutionsPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Safety Built for Your Industry</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Every industry faces unique hazards and regulatory requirements. TDA Enterprises
+              Every industry faces unique hazards and regulatory requirements. TDA Enterprise
               delivers customized EHS solutions that address the specific risks of your operations
               — not generic checklists.
             </p>
@@ -113,3 +113,4 @@ export default function IndustrySpecificSolutionsPage() {
     </>
   );
 }
+

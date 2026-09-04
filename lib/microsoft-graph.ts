@@ -712,3 +712,4 @@ export const TRACTION_MS_SCOPES = [
   "Files.ReadWrite.All",
   "OnlineMeetings.ReadWrite",
 ];
+

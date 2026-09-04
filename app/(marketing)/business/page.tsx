@@ -25,7 +25,7 @@ const heroSlides = [
     alt: "Construction workers focused on safety",
     title: "Protect Your People. Protect Your Business.",
     description:
-      "TDA Enterprises delivers expert environmental, health, and safety services that reduce risk, maintain compliance, and build a stronger safety culture.",
+      "TDA Enterprise delivers expert environmental, health, and safety services that reduce risk, maintain compliance, and build a stronger safety culture.",
     primaryCta: { label: "Request Free Safety Assessment", href: "/business/free-assessment" },
     secondaryCta: { label: "Explore EHS Services", href: "/business/services" },
   },
@@ -52,9 +52,9 @@ const heroSlides = [
 ];
 
 export const metadata = {
-  title: "TDA Enterprises | Professional EHS Services",
+  title: "TDA Enterprise | Professional EHS Services",
   description:
-    "TDA Enterprises delivers OSHA training, safety audits, program development, and equipment inspections to reduce risk and keep your workforce safe.",
+    "TDA Enterprise delivers OSHA training, safety audits, program development, and equipment inspections to reduce risk and keep your workforce safe.",
 };
 
 const services = [
@@ -159,7 +159,7 @@ export default function BusinessHomePage() {
               </ul>
             </div>
             <div className="bg-card border rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Why TDA Enterprises?</h3>
+              <h3 className="text-2xl font-bold mb-4">Why TDA Enterprise?</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li>Experienced, credentialed safety professionals</li>
                 <li>Bilingual training and documentation support</li>
@@ -189,7 +189,7 @@ export default function BusinessHomePage() {
           <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to strengthen your safety program?</h2>
             <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
-              Get a free safety assessment and discover how TDA Enterprises can reduce your risk,
+              Get a free safety assessment and discover how TDA Enterprise can reduce your risk,
               improve compliance, and protect your workforce.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -209,3 +209,4 @@ export default function BusinessHomePage() {
     </>
   );
 }
+

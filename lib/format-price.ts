@@ -8,3 +8,4 @@ export function formatPrice(priceInCents: number): string {
     currency: "USD",
   }).format(priceInCents / 100);
 }
+

@@ -10,7 +10,7 @@ import {
 import { ArrowRight, Truck, Package, Repeat, Shield, Warehouse, ClipboardCheck } from "lucide-react";
 
 export const metadata = {
-  title: "Warehousing & Logistics Safety | TDA Enterprises",
+  title: "Warehousing & Logistics Safety | TDA Enterprise",
   description:
     "EHS services for warehousing and logistics: forklift safety, material handling, ergonomics, and warehouse hazard assessments.",
 };
@@ -53,7 +53,7 @@ export default function WarehousingLogisticsPage() {
             <h2 className="text-3xl font-bold mb-4">Safety Challenges in Warehousing & Logistics</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Distribution centers and warehouses face significant risks from forklift operations,
-              material handling, and repetitive tasks. TDA Enterprises helps you build a safety
+              material handling, and repetitive tasks. TDA Enterprise helps you build a safety
               culture that protects workers while maintaining throughput.
             </p>
           </div>
@@ -97,3 +97,4 @@ export default function WarehousingLogisticsPage() {
     </>
   );
 }
+

@@ -259,3 +259,4 @@ export function getOutreachStatusColor(status: OutreachStatus): string {
   };
   return colors[status] || 'gray';
 }
+

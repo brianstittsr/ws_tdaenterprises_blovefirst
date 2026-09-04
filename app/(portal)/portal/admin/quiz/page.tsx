@@ -870,3 +870,4 @@ export default function QuizAdminPage() {
     </div>
   );
 }
+

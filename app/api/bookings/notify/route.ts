@@ -60,7 +60,7 @@ function buildICS(params: {
   return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//TDA Enterprises | BLove First//Booking System//EN",
+    "PRODID:-//TDA Enterprise | BLove First//Booking System//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:REQUEST",
     "BEGIN:VEVENT",
@@ -70,7 +70,7 @@ function buildICS(params: {
     `DTEND:${end}`,
     `SUMMARY:${escapedSummary}`,
     `DESCRIPTION:${escapedDescription}`,
-    `ORGANIZER;CN=TDA Enterprises | BLove First:mailto:${organizer}`,
+    `ORGANIZER;CN=TDA Enterprise | BLove First:mailto:${organizer}`,
     `ATTENDEE;CN=${attendeeName};RSVP=TRUE;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT:mailto:${attendeeEmail}`,
     "STATUS:CONFIRMED",
     "SEQUENCE:0",
@@ -118,7 +118,7 @@ function buildClientHTML(params: {
     <html>
     <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
       <div style="text-align: center; margin-bottom: 30px;">
-        <h1 style="color: #C8A951; margin-bottom: 4px;">TDA Enterprises | BLove First</h1>
+        <h1 style="color: #C8A951; margin-bottom: 4px;">TDA Enterprise | BLove First</h1>
         <p style="color: #666; margin: 0;">Meeting Confirmation</p>
       </div>
 
@@ -158,7 +158,7 @@ function buildClientHTML(params: {
       </p>
 
       <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 12px;">
-        <p>TDA Enterprises / B Love Foundation, Inc. &bull; <a href="mailto:tdaentrprz@gmail.com" style="color: #C8A951;">tdaentrprz@gmail.com</a></p>
+        <p>TDA Enterprise / B Love Foundation, Inc. &bull; <a href="mailto:tdaentrprz@gmail.com" style="color: #C8A951;">tdaentrprz@gmail.com</a></p>
       </div>
     </body>
     </html>
@@ -197,7 +197,7 @@ function buildInternalHTML(params: {
     <html>
     <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
       <div style="text-align: center; margin-bottom: 30px;">
-        <h1 style="color: #C8A951; margin-bottom: 4px;">TDA Enterprises | BLove First</h1>
+        <h1 style="color: #C8A951; margin-bottom: 4px;">TDA Enterprise | BLove First</h1>
         <p style="color: #666; margin: 0;">New Booking Notification</p>
       </div>
 
@@ -252,7 +252,7 @@ function buildInternalHTML(params: {
       </table>
 
       <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 12px;">
-        <p>TDA Enterprises / B Love Foundation, Inc. Internal Notification</p>
+        <p>TDA Enterprise / B Love Foundation, Inc. Internal Notification</p>
       </div>
     </body>
     </html>
@@ -356,7 +356,7 @@ export async function POST(request: NextRequest) {
     // 1. Confirmation email to the requester (client)
     try {
       await transporter.sendMail({
-        from: `"TDA Enterprises | BLove First" <${FROM_EMAIL}>`,
+        from: `"TDA Enterprise | BLove First" <${FROM_EMAIL}>`,
         to: clientEmail,
         subject: `Meeting Confirmed: ${meetingType} on ${date} at ${time}`,
         html: buildClientHTML({
@@ -379,7 +379,7 @@ export async function POST(request: NextRequest) {
     // 2. Notification email to the internal booking address with calendar invite
     try {
       await transporter.sendMail({
-        from: `"TDA Enterprises | BLove First Bookings" <${FROM_EMAIL}>`,
+        from: `"TDA Enterprise | BLove First Bookings" <${FROM_EMAIL}>`,
         to: INTERNAL_NOTIFY_EMAIL,
         subject: `New Booking: ${meetingType} with ${clientName} — ${date} at ${time}`,
         html: buildInternalHTML({
@@ -424,3 +424,4 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+

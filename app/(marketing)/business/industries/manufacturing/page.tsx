@@ -10,7 +10,7 @@ import {
 import { ArrowRight, Shield, Wrench, FlaskConical, Zap, Repeat, HardHat } from "lucide-react";
 
 export const metadata = {
-  title: "Manufacturing Safety | TDA Enterprises",
+  title: "Manufacturing Safety | TDA Enterprise",
   description:
     "EHS services for manufacturing: machine guarding, lockout/tagout, hazcom, and comprehensive safety program development.",
 };
@@ -53,7 +53,7 @@ export default function ManufacturingPage() {
             <h2 className="text-3xl font-bold mb-4">Safety Challenges in Manufacturing</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Manufacturing facilities face unique hazards from machinery, chemicals, and
-              high-throughput production. TDA Enterprises helps you address these risks with
+              high-throughput production. TDA Enterprise helps you address these risks with
               practical, compliant safety solutions.
             </p>
           </div>
@@ -97,3 +97,4 @@ export default function ManufacturingPage() {
     </>
   );
 }
+

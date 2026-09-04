@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "FAQ | SV+ Platform",
   description:
-    "Frequently asked questions about the SV+ Platform, TDA Enterprises, BLove First, services, programs, and how we help businesses and communities grow safely.",
+    "Frequently asked questions about the SV+ Platform, TDA Enterprise, BLove First, services, programs, and how we help businesses and communities grow safely.",
 };
 
 const faqCategories = [
@@ -283,3 +283,4 @@ export default function FAQPage() {
     </>
   );
 }
+

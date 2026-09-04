@@ -1506,3 +1506,4 @@ export async function getPurchaseStats(): Promise<{
     refundedPurchases: purchases.filter(p => p.paymentStatus === "refunded").length,
   };
 }
+

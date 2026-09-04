@@ -551,3 +551,4 @@ export function ImageManagerPicker({ onSelect, selectedImageId, category = "hero
     </div>
   );
 }
+

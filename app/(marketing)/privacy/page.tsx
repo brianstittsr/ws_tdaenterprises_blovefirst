@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy | TDA Enterprises",
-  description: "Privacy Policy for TDA Enterprises platform and EHS services.",
+  title: "Privacy Policy | TDA Enterprise",
+  description: "Privacy Policy for TDA Enterprise platform and EHS services.",
 };
 
 export default function PrivacyPage() {
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-3">1. Introduction</h2>
             <p className="text-muted-foreground">
-              TDA Enterprises (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) respects your privacy
+              TDA Enterprise (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) respects your privacy
               and is committed to protecting your personal data. This privacy policy explains how we
               collect, use, and safeguard your information when you use our website and services.
             </p>
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
               rights, please contact us at:
             </p>
             <address className="not-italic text-muted-foreground">
-              <strong>TDA Enterprises</strong>
+              <strong>TDA Enterprise</strong>
               <br />
               P.O. Box 291521
               <br />
@@ -163,3 +163,4 @@ export default function PrivacyPage() {
     </section>
   );
 }
+

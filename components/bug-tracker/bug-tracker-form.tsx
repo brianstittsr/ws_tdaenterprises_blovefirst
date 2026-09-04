@@ -395,3 +395,4 @@ export function BugTrackerForm({ onSuccess, compact = false, defaultType = "bug"
     </Card>
   );
 }
+

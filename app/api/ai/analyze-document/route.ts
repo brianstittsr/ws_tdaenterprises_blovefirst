@@ -325,3 +325,4 @@ function generateMockAnalysis(text: string, documentType?: string | null) {
     specialRequirements: "Standard reporting requirements apply. Quarterly reports due within 30 days of quarter end.",
   };
 }
+

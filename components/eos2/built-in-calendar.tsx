@@ -898,3 +898,4 @@ export function UpcomingEvents({
     </Card>
   );
 }
+

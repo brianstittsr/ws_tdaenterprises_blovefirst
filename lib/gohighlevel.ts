@@ -416,3 +416,4 @@ export async function getGHLClientFromSettings(): Promise<GoHighLevelClient | nu
 
   return new GoHighLevelClient({ apiKey, locationId });
 }
+

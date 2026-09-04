@@ -125,3 +125,4 @@ export function encodeICSForDataUri(icsContent: string): string {
   const base64 = Buffer.from(icsContent).toString("base64");
   return `data:text/calendar;base64,${base64}`;
 }
+

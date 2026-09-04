@@ -26,9 +26,9 @@ import Link from "next/link";
 import { ServiceHero } from "@/components/marketing/service-hero";
 
 export const metadata = {
-  title: "EHS Services | TDA Enterprises",
+  title: "EHS Services | TDA Enterprise",
   description:
-    "OSHA training, safety audits, equipment inspections, hazard assessments, and turnkey EHS program development from TDA Enterprises.",
+    "OSHA training, safety audits, equipment inspections, hazard assessments, and turnkey EHS program development from TDA Enterprise.",
 };
 
 const services = [
@@ -166,7 +166,7 @@ export default function BusinessServicesPage() {
       <ServiceHero
         title="Professional EHS Services"
         tagline="Practical safety, health, and environmental solutions for high-hazard workplaces."
-        description="TDA Enterprises reduces risk, improves compliance, and protects the people who keep your business running — from OSHA training and safety audits to turnkey program development."
+        description="TDA Enterprise reduces risk, improves compliance, and protects the people who keep your business running — from OSHA training and safety audits to turnkey program development."
         image="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
         imageAlt="Safety professionals reviewing workplace practices"
       />
@@ -252,7 +252,7 @@ export default function BusinessServicesPage() {
         <div className="container text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Contact us to discuss how TDA Enterprises can help your organization achieve its environmental,
+            Contact us to discuss how TDA Enterprise can help your organization achieve its environmental,
             health, and safety goals.
           </p>
           <Button size="lg" asChild>
@@ -266,3 +266,4 @@ export default function BusinessServicesPage() {
     </>
   );
 }
+

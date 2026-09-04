@@ -494,3 +494,4 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ connected: false, error: "Failed to connect to Apollo" });
   }
 }
+
