@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   creator: "TDA Enterprise / BLove First",
   publisher: "TDA Enterprise / BLove First",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/images/TDA_Enterprise_favicon.svg",
+    shortcut: "/images/TDA_Enterprise_favicon.svg",
+    apple: "/images/TDA_Enterprise_favicon.svg",
   },
   formatDetection: {
     email: false,
