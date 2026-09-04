@@ -31,8 +31,8 @@ const heroSlides = [
   },
   {
     id: "warehouse-safety",
-    image: "https://images.pexels.com/photos/4480505/pexels-photo-4480505.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
-    alt: "Warehouse safety and equipment inspection",
+    image: "https://images.pexels.com/photos/36398150/pexels-photo-36398150.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+    alt: "Industrial warehouse with forklift and shelving",
     title: "Practical Safety Solutions for High-Hazard Workplaces",
     description:
       "From OSHA training and safety audits to equipment inspections and turnkey program development, we help you stay compliant and keep operations running smoothly.",
@@ -41,8 +41,8 @@ const heroSlides = [
   },
   {
     id: "team-training",
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
-    alt: "Safety training session",
+    image: "https://images.pexels.com/photos/8470031/pexels-photo-8470031.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+    alt: "People in hard hats reviewing safety plans",
     title: "Training That Sticks. Results That Last.",
     description:
       "Bilingual, hands-on training and documentation support designed for multilingual workforces in manufacturing, construction, warehousing, and healthcare.",
