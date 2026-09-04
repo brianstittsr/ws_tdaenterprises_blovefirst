@@ -153,7 +153,7 @@ export function BrandNavbar() {
         <Link href={brand.routes.home} className="flex items-center gap-3">
           {brandId === "BLove" ? (
             <Image
-              src="/images/blove-logo.jpg"
+              src="/images/blove-logo.png"
               alt="B Love Foundation Logo"
               width={40}
               height={40}

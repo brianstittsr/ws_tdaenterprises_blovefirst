@@ -56,7 +56,7 @@ export default function HomePage() {
           <div className="relative z-10 flex flex-col h-full">
             <div className="mb-6 -ml-4 -mt-4">
               <Image
-                src="/images/blove-logo.jpg"
+                src="/images/blove-logo.png"
                 alt="B Love Foundation Logo"
                 width={280}
                 height={280}
