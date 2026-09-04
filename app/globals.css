@@ -265,4 +265,10 @@
     clip: auto;
     white-space: normal;
   }
+
+  /* Prevent browser extensions (e.g., Google Voice) from auto-linking the
+     phone number text during hydration and causing a mismatch. */
+  .phone-text::after {
+    content: attr(data-phone);
+  }
 }
