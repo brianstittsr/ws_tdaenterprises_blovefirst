@@ -8,13 +8,17 @@ export function OrganizationJsonLd() {
     name: "TDA Enterprise / B Love Foundation, Inc.",
     alternateName: "TDA Enterprise | BLove First",
     url: "https://tdaenterprises.com",
-    logo: "https://tdaenterprises.com/icons/icon-192x192.svg",
+    logo: "https://tdaenterprises.com/images/TDA_Enterprise_vector_logo.svg",
     description:
       "TDA Enterprise provides professional environmental, health, and safety services. BLove First (B Love Foundation, Inc.) offers faith-based community outreach, youth enrichment, and occupational empowerment.",
     foundingDate: "2020",
     address: {
       "@type": "PostalAddress",
       addressCountry: "US",
+      addressRegion: "TN",
+      addressLocality: "Nashville",
+      postalCode: "37229",
+      streetAddress: "P.O. Box 291521",
     },
     contactPoint: [
       {
@@ -65,7 +69,7 @@ export function LocalBusinessJsonLd() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "TDA Enterprise",
-    image: "https://tdaenterprises.com/icons/icon-192x192.svg",
+    image: "https://tdaenterprises.com/images/TDA_Enterprise_vector_logo.svg",
     url: "https://tdaenterprises.com",
     telephone: "+1-615-673-4323",
     email: "tdaentrprz@gmail.com",
@@ -73,6 +77,10 @@ export function LocalBusinessJsonLd() {
     address: {
       "@type": "PostalAddress",
       addressCountry: "US",
+      addressRegion: "TN",
+      addressLocality: "Nashville",
+      postalCode: "37229",
+      streetAddress: "P.O. Box 291521",
     },
     geo: {
       "@type": "GeoCoordinates",
@@ -248,7 +256,7 @@ export function ArticleJsonLd({
       name: "TDA Enterprise / B Love Foundation, Inc.",
       logo: {
         "@type": "ImageObject",
-        url: "https://tdaenterprises.com/icons/icon-192x192.svg",
+        url: "https://tdaenterprises.com/images/TDA_Enterprise_vector_logo.svg",
       },
     },
     mainEntityOfPage: {

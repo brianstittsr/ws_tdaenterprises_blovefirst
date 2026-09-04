@@ -13,19 +13,19 @@ export default function manifest(): MetadataRoute.Manifest {
     orientation: "portrait-primary",
     icons: [
       {
-        src: "/icons/icon-192x192.svg",
+        src: "/images/TDA_Enterprise_favicon.svg",
         sizes: "192x192",
         type: "image/svg+xml",
         purpose: "maskable",
       },
       {
-        src: "/icons/icon-512x512.svg",
+        src: "/images/TDA_Enterprise_favicon.svg",
         sizes: "512x512",
         type: "image/svg+xml",
         purpose: "any",
       },
       {
-        src: "/icons/icon-192x192.svg",
+        src: "/images/TDA_Enterprise_favicon.svg",
         sizes: "any",
         type: "image/svg+xml",
       },

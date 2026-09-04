@@ -20,6 +20,36 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/portal/", "/api/"],
       },
+      {
+        userAgent: "GPTBot",
+        allow: "/",
+        disallow: ["/portal/", "/api/"],
+      },
+      {
+        userAgent: "ClaudeBot",
+        allow: "/",
+        disallow: ["/portal/", "/api/"],
+      },
+      {
+        userAgent: "Claude-Web",
+        allow: "/",
+        disallow: ["/portal/", "/api/"],
+      },
+      {
+        userAgent: "CCBot",
+        allow: "/",
+        disallow: ["/portal/", "/api/"],
+      },
+      {
+        userAgent: "PerplexityBot",
+        allow: "/",
+        disallow: ["/portal/", "/api/"],
+      },
+      {
+        userAgent: "Google-Extended",
+        allow: "/",
+        disallow: ["/portal/", "/api/"],
+      },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, DM_Sans } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import { OrganizationJsonLd, WebsiteJsonLd, LocalBusinessJsonLd } from "@/components/seo/json-ld";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -71,7 +72,14 @@ export const metadata: Metadata = {
     title: "TDA Enterprise | BLove First — Empowering Safety. Transforming Lives.",
     description:
       "TDA Enterprise provides professional environmental, health, and safety services. BLove First offers faith-based community outreach, youth enrichment, and occupational empowerment.",
-    images: [],
+    images: [
+      {
+        url: "/images/TDA_Enterprise_vector_logo.svg",
+        width: 300,
+        height: 115,
+        alt: "TDA Enterprise Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -80,10 +88,10 @@ export const metadata: Metadata = {
       "TDA Enterprise provides professional environmental, health, and safety services. BLove First offers faith-based community outreach.",
     creator: "@tdaentrprz",
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
   category: "business",
+  other: {
+    "ai-content-snippet": "TDA Enterprise provides professional EHS services including OSHA training, safety audits, program development, and equipment inspections. BLove First (B Love Foundation, Inc.) provides faith-based community outreach, youth enrichment, and occupational empowerment.",
+  },
 };
 
 export default function RootLayout({
@@ -105,6 +113,9 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
+        <OrganizationJsonLd />
+        <WebsiteJsonLd />
+        <LocalBusinessJsonLd />
         {children}
         <Toaster />
       </body>
