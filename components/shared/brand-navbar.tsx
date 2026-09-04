@@ -149,8 +149,8 @@ export function BrandNavbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
-        <Link href={brand.routes.home} className="flex items-center gap-2">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
+        <Link href={brand.routes.home} className="flex items-center gap-3">
           {brandId === "BLove" ? (
             <Image
               src="/images/blove-logo.jpg"
@@ -163,9 +163,9 @@ export function BrandNavbar() {
             <Image
               src="/images/tda-logo.svg"
               alt="TDA Enterprise Logo"
-              width={80}
-              height={40}
-              className="h-10 w-auto"
+              width={240}
+              height={120}
+              className="h-16 w-auto"
             />
           )}
           <div className="flex flex-col">

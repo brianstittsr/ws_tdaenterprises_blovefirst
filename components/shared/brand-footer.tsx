@@ -56,7 +56,7 @@ export function BrandFooter({ brandId }: BrandFooterProps) {
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-4 space-y-4">
-            <Link href={brand.routes.home} className="flex items-center gap-2">
+            <Link href={brand.routes.home} className="flex items-center gap-3">
               {brandId === "BLove" ? (
                 <Image
                   src="/images/blove-logo.jpg"
@@ -69,9 +69,9 @@ export function BrandFooter({ brandId }: BrandFooterProps) {
                 <Image
                   src="/images/tda-logo.svg"
                   alt="TDA Enterprise Logo"
-                  width={80}
-                  height={40}
-                  className="h-10 w-auto"
+                  width={240}
+                  height={120}
+                  className="h-16 w-auto"
                 />
               )}
               <div className="flex flex-col">
