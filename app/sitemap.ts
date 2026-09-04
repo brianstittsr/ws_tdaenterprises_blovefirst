@@ -61,6 +61,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/foundation/programs/occupational-empowerment`, priority: 0.9 },
     { url: `${baseUrl}/foundation/programs/supportive-services`, priority: 0.9 },
     { url: `${baseUrl}/foundation/programs/environmental-health-safety`, priority: 0.9 },
+    { url: `${baseUrl}/foundation/programs/community-closet`, priority: 0.9 },
+    { url: `${baseUrl}/foundation/programs/osha-outreach-training`, priority: 0.9 },
   ];
 
   const serviceSitemap: MetadataRoute.Sitemap = servicePages.map((page) => ({

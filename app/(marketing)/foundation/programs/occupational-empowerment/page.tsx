@@ -15,7 +15,7 @@ const programs = [
   {
     title: "Transitioning Citizens Assistance Program (TCAP)",
     description:
-      "Helps underrepresented people reintegrate into society as employable citizens and restore hope from life&apos;s transition through education, training, and workshops.",
+      "Helps underrepresented people reintegrate into society as employable citizens and restore hope from life's transition through education, training, and workshops.",
   },
   {
     title: "Behavioral and Occupational Safety Program",
@@ -39,6 +39,7 @@ const jobReadiness = [
 const safetySkills = [
   "First Aid, CPR, and AED training",
   "Blood-borne pathogen safety protocols",
+  "COVID-19 awareness training",
   "OSHA 10-Hour and 30-Hour certifications",
   "Aerial Work Platform training and certification",
 ];
