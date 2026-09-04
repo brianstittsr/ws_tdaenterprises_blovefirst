@@ -54,13 +54,13 @@ export default function HomePage() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
           <div className="relative z-10 flex flex-col h-full">
-            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 overflow-hidden">
+            <div className="mb-6 -ml-4 -mt-4">
               <Image
                 src="/images/blove-logo.jpg"
                 alt="B Love Foundation Logo"
-                width={56}
-                height={56}
-                className="h-14 w-14 rounded-xl object-cover"
+                width={280}
+                height={280}
+                className="h-56 w-auto"
               />
             </div>
             <h2 className="text-2xl font-bold mb-2">BLove First</h2>
