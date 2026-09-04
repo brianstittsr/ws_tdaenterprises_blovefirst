@@ -168,12 +168,6 @@ export function BrandNavbar() {
               className="h-16 w-auto"
             />
           )}
-          <div className="flex flex-col">
-            <span className="text-lg font-bold leading-none">{brand.name}</span>
-            {brandId === "BLove" && (
-              <span className="text-xs text-muted-foreground">{brand.legalName}</span>
-            )}
-          </div>
         </Link>
 
         <NavigationMenu className="hidden lg:flex">
