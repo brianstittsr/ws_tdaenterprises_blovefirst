@@ -67,7 +67,7 @@ export function BrandFooter({ brandId }: BrandFooterProps) {
                 />
               ) : (
                 <Image
-                  src="/images/tda-logo.svg"
+                  src="/images/TDA_Enterprise_vector_logo.svg"
                   alt="TDA Enterprise Logo"
                   width={240}
                   height={120}
